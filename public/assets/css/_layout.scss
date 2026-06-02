@@ -1,0 +1,213 @@
+@use "variables" as *;
+
+/****************************************************************************************/
+/*************************** MOBILE FIRST NAVBAR ****************************************/
+/****************************************************************************************/
+
+.website-header {
+
+    .header-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 65px;
+        position: relative;
+        z-index: 10;
+
+        .header-right {
+            display: flex;
+            gap: 5px;
+            
+            .search-bar,
+            .change-language {
+                display: flex;
+                flex-direction: column;
+                gap: 5px;
+                justify-content: center;
+                align-items: center;
+                height: 65px;
+                width: 85px;
+                background-color: $dark;
+                color:white;
+            }
+
+            .search-bar {
+                position: relative;
+                
+                // if the search-bar is opened :
+                &.active {
+                    .search-toggle {
+                        display: none;
+                    }
+
+                    .search-close {
+                        display: block;
+                    }
+
+                    .search-menu {
+                        opacity: 1;
+                        pointer-events: auto;
+                        transform: translateY(0);
+                    }
+                }
+                .search-close {
+                    display: none;
+                }
+
+                .search-menu {
+                    position: absolute;
+                    top: 65px;
+                    right: 0;
+                    opacity: 0;
+                    pointer-events: none;
+                    transform: translateY(-10px);
+                    transition: 0.3s ease;
+
+                    form {
+                        display: flex;
+
+                        input {
+                            flex: 1;
+                            padding: 0.75rem;
+                            border: 1px solid #ccc;
+                            outline: none;
+                        }
+
+                        button {
+                            padding: 0 1rem;
+                            border: none;
+                            background-color: $dark;
+                            color: white;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        //  change language style : 
+        .change-language {
+            .language-close {
+                display: none;
+            }
+
+            .language-menu {
+                position: absolute;
+                top: 65px;
+                right: 0;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                transform: translateY(-10px);
+                opacity: 0;
+                pointer-events: none;
+                transition: 0.3s ease;
+                
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px 15px;
+                    color: white;
+                    text-decoration: none;
+                }
+            
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+        }
+
+        .change-language.active {
+            .language-close {
+                display: block;
+            }
+
+            .language-toggle {
+                display: none;
+            }
+
+            .language-menu {
+                transform: translateY(0);
+                opacity: 1;
+                pointer-events: auto;
+                
+                a {
+                    border-bottom: $border-menu;
+                    color: #C19E1D;
+
+                    &:hover {
+                        transform: translateX(10px);
+                        color: $dark;
+                    }
+                }
+            }
+        }
+    }
+
+    .burger-menu {
+        background-color: $dark;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 55px;
+        height: 65px;
+
+        .burger-icon {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+        span {
+            color: white;
+        }
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 65px; // under the header
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 65px);
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        margin-top: 2rem;
+        transform: translateY(-100%);
+        transition: transform 0.5s ease;
+        pointer-events: none;
+        opacity: 0;
+
+        a {
+            color: $dark;
+            display: block;
+            border-bottom: $border-menu;
+            padding: 1rem 1.5rem;
+        }
+
+        .buy-dvd {
+            color: rgb(234, 28, 28);
+            font-weight: bold;
+        }
+    }
+
+    .nav-links.active {
+        transform: translateY(0);
+        pointer-events: auto;
+        opacity: 1;
+    }
+}
+
+// effect when the mouse is on the elements :
+.burger-menu,
+.search-bar,
+.change-language {
+    cursor: pointer;
+}
+
+/****************************************************************************************/
+/*************************** MOBILE FIRST FOOTER ****************************************/
+/****************************************************************************************/

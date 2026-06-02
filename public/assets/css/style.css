@@ -1,0 +1,183 @@
+/****************************************************************************************/
+/*************************** MOBILE FIRST NAVBAR ****************************************/
+/****************************************************************************************/
+.website-header .header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 65px;
+  position: relative;
+  z-index: 10;
+}
+.website-header .header-top .header-right {
+  display: flex;
+  gap: 5px;
+}
+.website-header .header-top .header-right .search-bar,
+.website-header .header-top .header-right .change-language {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  width: 85px;
+  background-color: #050816;
+  color: white;
+}
+.website-header .header-top .header-right .search-bar {
+  position: relative;
+}
+.website-header .header-top .header-right .search-bar.active .search-toggle {
+  display: none;
+}
+.website-header .header-top .header-right .search-bar.active .search-close {
+  display: block;
+}
+.website-header .header-top .header-right .search-bar.active .search-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.website-header .header-top .header-right .search-bar .search-close {
+  display: none;
+}
+.website-header .header-top .header-right .search-bar .search-menu {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+}
+.website-header .header-top .header-right .search-bar .search-menu form {
+  display: flex;
+}
+.website-header .header-top .header-right .search-bar .search-menu form input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.website-header .header-top .header-right .search-bar .search-menu form button {
+  padding: 0 1rem;
+  border: none;
+  background-color: #050816;
+  color: white;
+  cursor: pointer;
+}
+.website-header .header-top .change-language .language-close {
+  display: none;
+}
+.website-header .header-top .change-language .language-menu {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(-10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+.website-header .header-top .change-language .language-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+.website-header .header-top .change-language .language-menu img {
+  width: 18px;
+  height: 18px;
+}
+.website-header .header-top .change-language.active .language-close {
+  display: block;
+}
+.website-header .header-top .change-language.active .language-toggle {
+  display: none;
+}
+.website-header .header-top .change-language.active .language-menu {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+.website-header .header-top .change-language.active .language-menu a {
+  border-bottom: 1px solid #ddd;
+  color: #C19E1D;
+}
+.website-header .header-top .change-language.active .language-menu a:hover {
+  transform: translateX(10px);
+  color: #050816;
+}
+.website-header .burger-menu {
+  background-color: #050816;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 55px;
+  height: 65px;
+}
+.website-header .burger-menu .burger-icon {
+  font-size: 1.5rem;
+  color: white;
+}
+.website-header .burger-menu span {
+  color: white;
+}
+.website-header .nav-links {
+  position: fixed;
+  top: 65px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 65px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  pointer-events: none;
+  opacity: 0;
+}
+.website-header .nav-links a {
+  color: #050816;
+  display: block;
+  border-bottom: 1px solid #ddd;
+  padding: 1rem 1.5rem;
+}
+.website-header .nav-links .buy-dvd {
+  color: rgb(234, 28, 28);
+  font-weight: bold;
+}
+.website-header .nav-links.active {
+  transform: translateY(0);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.burger-menu,
+.search-bar,
+.change-language {
+  cursor: pointer;
+}
+
+/****************************************************************************************/
+/*************************** MOBILE FIRST FOOTER ****************************************/
+/****************************************************************************************/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */
