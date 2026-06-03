@@ -62,7 +62,14 @@
         <a href="index.php?page=team">ÉQUIPES</a>
         <a href="index.php?page=services">SERVICES</a>
         <a href="index.php?page=dvd" class="buy-dvd">ACHETER LE DVD</a>
-        <a href="index.php?page=login">CONNEXION</a>
+
+        <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged'] === true): ?>
+            <a href="index.php?page=myAccount">MON COMPTE</a>
+            <a href="index.php?page=logout">DÉCONNEXION</a>
+        <?php else : ?>
+            <a href="index.php?page=login">CONNEXION</a>
+        <?php endif; ?>
+
     </nav>
 </header>
 
