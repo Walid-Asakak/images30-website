@@ -1,5 +1,5 @@
-<div class="register-page">
-    <div class="register-card">
+<div class="register-page auth-page">
+    <div class="register-card auth-card">
         <h1>Inscription</h1>
         
         <form method="POST">
