@@ -1,5 +1,5 @@
-<div class="login-page">
-    <div class="login-card">
+<div class="login-page auth-page">
+    <div class="login-card auth-card">
         <h1>Connexion</h1>
         
         <form action="" method="POST">
