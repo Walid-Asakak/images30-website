@@ -1,6 +1,8 @@
-@use 'variables';
-@use 'layout';
+@use "variables";
+@use "layout";
 @use "authentification/login-register";
+@use "team/all-team-members";
+@use 'team/detail-team';
 
 // GLOBAL : 
 * {

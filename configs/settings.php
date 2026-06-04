@@ -20,4 +20,14 @@ const AVAILABLE_ROUTES = [
         'controller' => 'AuthController',
         'method' => 'logout',
     ],
+
+    'team' => [
+        'controller' => 'TeamController',
+        'method' => 'getAllTeamMembers',
+    ],
+
+    'team-detail' => [
+        'controller' => 'TeamController',
+        'method' => 'displayTeamMemberById'
+    ],
 ];

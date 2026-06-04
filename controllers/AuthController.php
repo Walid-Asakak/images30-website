@@ -4,6 +4,7 @@ namespace Controllers;
 use Repositories\UserRepository;
 
 class AuthController {
+    
     public function register() {
         $error = null;
 
