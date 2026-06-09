@@ -13,24 +13,48 @@
 <body>
 <header class="website-header">
 
-    <!-- TOP BAR -->
     <div class="header-top">
+
         <div class="burger-menu">
             <i class="fa-solid fa-bars burger-icon"></i>
             <span>Menu</span>
         </div>
 
-        <!-- to group the elemnts on the right -->
-        <div class="header-right">
-            <div class="search-bar">
-                <i class="fa-solid fa-magnifying-glass"></i> <!-- search icon -->
-                <span class ="search-toggle">Rechercher</span>
+        <nav class="nav-links">
 
-                <!-- to close the search bar -->
+            <!-- Connexion (uniquement si pas connecté) -->
+            <?php if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] !== true): ?>
+                <a href="index.php?page=login">CONNEXION</a>
+            <?php endif; ?>
+
+            <a href="index.php?page=team">ÉQUIPE</a>
+            <a href="index.php?page=services">SERVICES</a>
+            <a href="index.php?page=cinema">CINÉMA</a>
+            <a href="index.php?page=events">ÉVÈNEMENTS</a>
+
+            <!-- Mon compte juste avant DVD -->
+            <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged'] === true): ?>
+                <a href="index.php?page=myAccount">MON COMPTE</a>
+            <?php endif; ?>
+
+            <a href="index.php?page=dvd" class="buy-dvd">ACHETER LE DVD</a>
+
+            <!-- Déconnexion en dernier -->
+            <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged'] === true): ?>
+                <a href="index.php?page=logout">DÉCONNEXION</a>
+            <?php endif; ?>
+
+        </nav>
+
+        <div class="header-right">
+
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <span class="search-toggle">Rechercher</span>
                 <i class="fa-solid fa-xmark search-close"></i>
 
                 <div class="search-menu">
-                    <form action="" method="GET">
+                    <form method="GET">
                         <input type="text" name="search" placeholder="Rechercher un film ou évènement...">
                         <button type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -38,39 +62,29 @@
                     </form>
                 </div>
             </div>
-            
+
             <div class="change-language">
                 <span class="language-toggle">Langue</span>
-
-                <!-- icon to close the menu -->
                 <i class="fa-solid fa-xmark language-close"></i>
 
                 <div class="language-menu">
-                    <a href=""><img src="public/assets/img/flag-fr.png" alt="Français">Français</a>
-                    <a href=""><img src="public/assets/img/flag-en.png" alt="English">English</a>
-                    <a href=""><img src="public/assets/img/flag-spanish.png" alt="Español">Español</a>
-                    <a href=""><img src="public/assets/img/flag-china.png" alt="中文 (中国)">中文 (中国)</a>
-                    <a href=""><img src="public/assets/img/flag-italiano.png" alt="Italiano">Italiano</a>
+                    <a href=""><img src="public/assets/img/flag-fr.png">Français</a>
+                    <a href=""><img src="public/assets/img/flag-en.png">English</a>
+                    <a href=""><img src="public/assets/img/flag-spanish.png">Español</a>
+                    <a href=""><img src="public/assets/img/flag-china.png">中文</a>
+                    <a href=""><img src="public/assets/img/flag-italiano.png">Italiano</a>
                 </div>
             </div>
+
         </div>
+
     </div>
 
-    <nav class="nav-links">
-        <a href="index.php?page=cinema">CINÉMA</a>
-        <a href="index.php?page=events">ÉVÈNEMENTS</a>
-        <a href="index.php?page=team">ÉQUIPES</a>
-        <a href="index.php?page=services">SERVICES</a>
-        <a href="index.php?page=dvd" class="buy-dvd">ACHETER LE DVD</a>
+    <div class="website-logo-title">
+        <img src="public/assets/img/logo-test.png" alt="">
+        <h1>Studio Cinéma Joël Daguerre</h1>
+    </div>
 
-        <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged'] === true): ?>
-            <a href="index.php?page=myAccount">MON COMPTE</a>
-            <a href="index.php?page=logout">DÉCONNEXION</a>
-        <?php else : ?>
-            <a href="index.php?page=login">CONNEXION</a>
-        <?php endif; ?>
-
-    </nav>
 </header>
 
 <main>

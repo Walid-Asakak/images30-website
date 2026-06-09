@@ -30,4 +30,14 @@ const AVAILABLE_ROUTES = [
         'controller' => 'TeamController',
         'method' => 'displayTeamMemberById'
     ],
+
+    'dvd' => [
+        'controller' => 'DvdController',
+        'method' => 'buyDvd'
+    ],
+
+    'payment-process' => [
+        'controller' => 'DvdController',
+        'method' => 'paymentProcessDvd'
+    ],
 ];

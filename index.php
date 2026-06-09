@@ -1,5 +1,11 @@
 <?php
 
+require_once 'vendor/autoload.php';
+
+// To load the file .env :
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 // Start the session for the authentification :
 session_start();
 

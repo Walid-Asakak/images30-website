@@ -5,7 +5,17 @@
 /****************************************************************************************/
 
 .website-header {
+    .website-logo-title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: red;
 
+        img {
+            width: 20%;
+        }
+    }
+    
     .header-top {
         display: flex;
         justify-content: space-between;
@@ -211,3 +221,87 @@
 /****************************************************************************************/
 /*************************** MOBILE FIRST FOOTER ****************************************/
 /****************************************************************************************/
+
+/****************************************************************************************/
+/*************************** TABLET *****************************************************/
+/****************************************************************************************/
+
+@media (min-width: 768px) {
+
+    .website-header {
+
+        .header-top {
+            padding: 0 1rem;
+        }
+
+        .burger-menu {
+            width: 70px;
+        }
+    }
+}
+
+/****************************************************************************************/
+/*************************** DESKTOP ****************************************************/
+/****************************************************************************************/
+
+@media (min-width: 1023px) {
+
+    .website-header {
+        .burger-menu {
+            display: none;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 2rem;
+            height: 65px;
+        }
+
+        .nav-links {
+            position: static;
+            max-height: none;
+            overflow: visible;
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 2rem;
+
+            a {
+                border: none;
+                padding: 0;
+                color: $dark;
+                text-decoration: none;
+                white-space: nowrap;
+            }
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .search-bar,
+        .change-language {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            height: 65px;
+            width: auto;
+            padding: 0 1rem;
+        }
+
+        .search-bar .search-menu {
+            right: 0;
+            width: 300px;
+        }
+
+        .change-language .language-menu {
+            right: 0;
+            width: 250px;
+        }
+    }
+}
