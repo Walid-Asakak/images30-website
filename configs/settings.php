@@ -40,4 +40,14 @@ const AVAILABLE_ROUTES = [
         'controller' => 'DvdController',
         'method' => 'paymentProcessDvd'
     ],
+
+    'cart' => [
+        'controller' => 'CartController',
+        'method' => 'showCart'
+    ],
+
+    'add-to-cart' => [
+        'controller' => 'CartController',
+        'method' => 'addToCart'
+    ],
 ];

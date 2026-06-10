@@ -30,7 +30,9 @@ class TeamRepository {
     public function getTeamMemberById(int $id): ?array {
         $request = $this->pdo->prepare("SELECT * FROM team_members WHERE id = :id");
         
-        $request->execute([':id' => $id]);
+        $request->execute([
+            ':id' => $id,
+        ]);
         
         $result = $request->fetch(PDO::FETCH_ASSOC);
 

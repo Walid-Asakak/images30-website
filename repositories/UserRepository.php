@@ -29,7 +29,7 @@ class UserRepository {
         try {
             $request = $this -> pdo -> prepare("SELECT * FROM users WHERE email = :email");
             $request -> execute([
-                'email' => $email,
+                ':email' => $email,
             ]);
 
             $user = $request->fetch(PDO::FETCH_ASSOC);

@@ -1,22 +1,41 @@
-<section class="dvd-payment">
+<?php foreach ($dvds as $dvd): ?>
+    <h2><?= htmlspecialchars($dvd->getTitle()) ?></h2>
+    <p><?= htmlspecialchars($dvd->getDescription()) ?></p>
+    <p><?= $dvd->getPrice() ?> €</p>
+
+    <form action="index.php?page=add-to-cart" method="POST">
+        <input type="hidden" name="dvd_id" value="<?= $dvd->getId() ?>">
+        
+        <input type="number" name="quantity"  value="1" min="1">
+        
+        <button type="submit">Ajouter au panier</button>
+    </form>
+<?php endforeach; ?>
+
+
+
+
+
+
+<!-- <section class="dvd-payment">
     <h1>Commander le DVD</h1>
-    <h2>Veuillez saisir les informations de livraison</h2>
+    <h2>Veuillez saisir les informations de livraison</h2> -->
 
     <!-- ERROR MESSAGE -->
-    <?php if (!empty($error)): ?>
+    <!-- <?php if (!empty($error)): ?>
         <div class="error-message">
             <p class ="error"><?= htmlspecialchars($error) ?></p>
         </div>
-    <?php endif; ?>
+    <?php endif; ?> -->
 
     <!-- PRODUCT SUMMARY -->
-    <div class="order-summary">
+    <!-- <div class="order-summary">
         <p>Produits : DVD - 2024, les toits de Paris en Seine</p>
         <p>Prix : 35,00€</p>
-    </div>
+    </div> -->
 
     <!-- FORM -->
-    <form action="index.php?page=payment-process" method="POST" class="payment-form">
+    <!-- <form action="index.php?page=payment-process" method="POST" class="payment-form">
         <div class="form-group">
             <label for="lastname">Nom</label>
             <input type="text" id="lastname" name="lastname" required value="<?= htmlspecialchars($_POST['lastname'] ?? '') ?>">
@@ -51,10 +70,10 @@
             <label for="postal">Code postal</label>
             <input type="text" id="postal" name="postal" required
                    value="<?= htmlspecialchars($_POST['postal'] ?? '') ?>">
-        </div>
+        </div> -->
 
         <!-- RGPD -->
-        <div class="form-group consent-group">
+        <!-- <div class="form-group consent-group">
             <input type="checkbox" id="consent" name="consent" required>
             <label for="consent">
                 J'accepte que mes données personnelles soient collectées et utilisées
@@ -64,4 +83,4 @@
 
         <button type="submit">Procéder au paiement</button>
     </form>
-</section>
+</section> -->
