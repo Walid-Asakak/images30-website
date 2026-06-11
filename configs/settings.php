@@ -33,12 +33,7 @@ const AVAILABLE_ROUTES = [
 
     'dvd' => [
         'controller' => 'DvdController',
-        'method' => 'buyDvd'
-    ],
-
-    'payment-process' => [
-        'controller' => 'DvdController',
-        'method' => 'paymentProcessDvd'
+        'method' => 'showAllDvds'
     ],
 
     'cart' => [
@@ -49,5 +44,25 @@ const AVAILABLE_ROUTES = [
     'add-to-cart' => [
         'controller' => 'CartController',
         'method' => 'addToCart'
+    ],
+    
+    'order' => [
+        'controller' => 'OrderController',
+        'method' => 'showOrder'
+    ],
+
+    'order-success' => [
+    'controller' => 'OrderController',
+    'method' => 'orderSuccess'
+    ],
+
+    'checkout' => [
+        'controller' => 'OrderController',
+        'method' => 'checkoutForm'
+    ],
+
+    'checkout-process' => [
+        'controller' => 'OrderController',
+        'method' => 'checkoutProcess'
     ],
 ];
