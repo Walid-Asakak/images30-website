@@ -10,10 +10,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background: linear-gradient(353deg, #494a94, rgb(177, 188, 241));
 }
 .website-header .website-logo-title img {
-  width: 20%;
+  width: 220px;
 }
 .website-header {
   /*************************** HEADER TOP ********************************************/
@@ -25,6 +25,7 @@
   height: 65px;
   position: relative;
   z-index: 20;
+  background: linear-gradient(353deg, #5051a0, rgb(177, 188, 241));
 }
 .website-header {
   /*************************** BURGER ********************************************/
@@ -56,7 +57,6 @@
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.5s ease;
-  background: white;
 }
 .website-header .nav-links a {
   color: #050816;
@@ -86,8 +86,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 65px;
   width: 85px;
+  height: 65px;
   background-color: #050816;
   color: white;
   position: relative;
@@ -142,9 +142,6 @@
 }
 .website-header .header-right .change-language .language-close {
   display: none;
-}
-.website-header .header-right .change-language .language-toggle {
-  display: block;
 }
 .website-header .header-right .change-language .language-menu {
   position: absolute;
@@ -201,9 +198,6 @@
 /****************************************************************************************/
 @media (min-width: 1023px) {
   .website-header .header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 0 3rem;
   }
   .website-header .burger-menu {
@@ -212,7 +206,6 @@
   .website-header .nav-links {
     max-height: none;
     overflow: visible;
-    display: flex;
     flex-direction: row;
     gap: 2rem;
     align-items: center;
@@ -223,7 +216,6 @@
     padding: 0;
   }
   .website-header .header-right {
-    display: flex;
     align-items: center;
     gap: 15px;
     margin-left: auto;
@@ -236,11 +228,9 @@
   }
   .website-header .search-bar .search-menu {
     width: 300px;
-    right: 0;
   }
   .website-header .change-language .language-menu {
     width: 260px;
-    right: 0;
   }
 }
 /****************************************************************************************/

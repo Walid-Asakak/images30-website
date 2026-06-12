@@ -12,10 +12,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        background-color: red;
+
+        background: linear-gradient(
+            353deg,
+            #494a94,
+            rgb(177 188 241)
+        );
 
         img {
-            width: 20%;
+            width: 220px;
         }
     }
 
@@ -27,6 +32,12 @@
         height: 65px;
         position: relative;
         z-index: 20;
+
+        background: linear-gradient(
+            353deg,
+            #5051a0,
+            rgb(177 188 241)
+        );
     }
 
     /*************************** BURGER ********************************************/
@@ -52,7 +63,6 @@
     }
 
     /*************************** NAV LINKS (MOBILE PUSH) ***************************/
-
     .nav-links {
         display: flex;
         flex-direction: column;
@@ -60,7 +70,6 @@
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease;
-        background: white;
 
         a {
             color: $dark;
@@ -93,8 +102,8 @@
             justify-content: center;
             align-items: center;
 
-            height: 65px;
             width: 85px;
+            height: 65px;
 
             background-color: $dark;
             color: white;
@@ -111,8 +120,14 @@
             }
 
             &.active {
-                .search-toggle { display: none; }
-                .search-close { display: block; }
+
+                .search-toggle {
+                    display: none;
+                }
+
+                .search-close {
+                    display: block;
+                }
 
                 .search-menu {
                     opacity: 1;
@@ -132,6 +147,7 @@
                 opacity: 0;
                 pointer-events: none;
                 transform: translateY(-10px);
+
                 transition: 0.3s ease;
 
                 form {
@@ -160,10 +176,6 @@
 
             .language-close {
                 display: none;
-            }
-
-            .language-toggle {
-                display: block;
             }
 
             .language-menu {
@@ -249,11 +261,7 @@
     .website-header {
 
         .header-top {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            padding: 0 3rem; 
+            padding: 0 3rem;
         }
 
         .burger-menu {
@@ -264,10 +272,10 @@
             max-height: none;
             overflow: visible;
 
-            display: flex;
             flex-direction: row;
             gap: 2rem;
             align-items: center;
+
             padding: 1rem 2rem;
 
             a {
@@ -277,10 +285,8 @@
         }
 
         .header-right {
-            display: flex;
             align-items: center;
             gap: 15px;
-
             margin-left: auto;
         }
 
@@ -293,12 +299,10 @@
 
         .search-bar .search-menu {
             width: 300px;
-            right: 0;
         }
 
         .change-language .language-menu {
             width: 260px;
-            right: 0;
         }
     }
 }
