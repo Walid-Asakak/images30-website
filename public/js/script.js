@@ -14,7 +14,7 @@ const languageToggle = document.querySelector(".language-toggle");
 const languageClose = document.querySelector(".language-close");
 
 
-// SCRIPT BURGER MENU (clic sur tout le carré)
+// SCRIPT BURGER MENU
 burgerMenu.addEventListener("click", () => {
     navLinks.classList.toggle("active");
 
@@ -43,7 +43,7 @@ searchClose.addEventListener("click", (e) => {
 // SCRIPT LANGUAGE MENU 
 languageBox.addEventListener("click", (e) => {
 
-    // si clic sur un lien → on ne ferme pas direct
+    // Don"t close instantly if we click on a link
     if (e.target.tagName === "A") return;
     languageBox.classList.add("active");
 });

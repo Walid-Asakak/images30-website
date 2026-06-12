@@ -1,7 +1,11 @@
 @charset "UTF-8";
 /****************************************************************************************/
-/*************************** MOBILE FIRST NAVBAR ****************************************/
+/*************************** GLOBAL *****************************************************/
 /****************************************************************************************/
+.website-header {
+  position: relative;
+  z-index: 50;
+}
 .website-header .website-logo-title {
   display: flex;
   align-items: center;
@@ -11,117 +15,19 @@
 .website-header .website-logo-title img {
   width: 20%;
 }
+.website-header {
+  /*************************** HEADER TOP ********************************************/
+}
 .website-header .header-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 65px;
   position: relative;
-  z-index: 10;
+  z-index: 20;
 }
-.website-header .header-top .header-right {
-  display: flex;
-  gap: 5px;
-}
-.website-header .header-top .header-right .search-bar,
-.website-header .header-top .header-right .change-language {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-  height: 65px;
-  width: 85px;
-  background-color: #050816;
-  color: white;
-}
-.website-header .header-top .header-right .search-bar {
-  position: relative;
-}
-.website-header .header-top .header-right .search-bar.active .search-toggle {
-  display: none;
-}
-.website-header .header-top .header-right .search-bar.active .search-close {
-  display: block;
-}
-.website-header .header-top .header-right .search-bar.active .search-menu {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0);
-}
-.website-header .header-top .header-right .search-bar .search-close {
-  display: none;
-}
-.website-header .header-top .header-right .search-bar .search-menu {
-  position: absolute;
-  top: 65px;
-  right: 0;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(-10px);
-  transition: 0.3s ease;
-}
-.website-header .header-top .header-right .search-bar .search-menu form {
-  display: flex;
-}
-.website-header .header-top .header-right .search-bar .search-menu form input {
-  flex: 1;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  outline: none;
-}
-.website-header .header-top .header-right .search-bar .search-menu form button {
-  padding: 0 1rem;
-  border: none;
-  background-color: #050816;
-  color: white;
-  cursor: pointer;
-}
-.website-header .header-top .change-language .language-close {
-  display: none;
-}
-.website-header .header-top .change-language .language-menu {
-  position: absolute;
-  top: 65px;
-  right: 0;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  transform: translateY(-10px);
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.3s ease;
-}
-.website-header .header-top .change-language .language-menu a {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 10px 15px;
-  color: white;
-  text-decoration: none;
-}
-.website-header .header-top .change-language .language-menu img {
-  width: 18px;
-  height: 18px;
-}
-.website-header .header-top .change-language.active .language-close {
-  display: block;
-}
-.website-header .header-top .change-language.active .language-toggle {
-  display: none;
-}
-.website-header .header-top .change-language.active .language-menu {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: auto;
-}
-.website-header .header-top .change-language.active .language-menu a {
-  border-bottom: 1px solid #ddd;
-  color: #C19E1D;
-}
-.website-header .header-top .change-language.active .language-menu a:hover {
-  transform: translateX(10px);
-  color: #050816;
+.website-header {
+  /*************************** BURGER ********************************************/
 }
 .website-header .burger-menu {
   background-color: #050816;
@@ -132,6 +38,7 @@
   gap: 5px;
   width: 55px;
   height: 65px;
+  cursor: pointer;
 }
 .website-header .burger-menu .burger-icon {
   font-size: 1.5rem;
@@ -140,46 +47,144 @@
 .website-header .burger-menu span {
   color: white;
 }
+.website-header {
+  /*************************** NAV LINKS (MOBILE PUSH) ***************************/
+}
 .website-header .nav-links {
-  position: fixed;
-  top: 65px;
-  left: 0;
-  width: 100%;
-  height: calc(100vh - 65px);
   display: flex;
   flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-  transform: translateY(-100%);
-  transition: transform 0.5s ease;
-  pointer-events: none;
-  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+  background: white;
 }
 .website-header .nav-links a {
   color: #050816;
   display: block;
   border-bottom: 1px solid #ddd;
   padding: 1rem 1.5rem;
+  text-decoration: none;
 }
 .website-header .nav-links .buy-dvd {
   color: rgb(234, 28, 28);
   font-weight: bold;
 }
 .website-header .nav-links.active {
-  transform: translateY(0);
-  pointer-events: auto;
-  opacity: 1;
+  max-height: 700px;
 }
-
-.burger-menu,
-.search-bar,
-.change-language {
+.website-header {
+  /*************************** HEADER RIGHT **************************************/
+}
+.website-header .header-right {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.website-header .header-right .search-bar,
+.website-header .header-right .change-language {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  width: 85px;
+  background-color: #050816;
+  color: white;
+  position: relative;
   cursor: pointer;
 }
+.website-header .header-right {
+  /******************** SEARCH ********************/
+}
+.website-header .header-right .search-bar .search-close {
+  display: none;
+}
+.website-header .header-right .search-bar.active .search-toggle {
+  display: none;
+}
+.website-header .header-right .search-bar.active .search-close {
+  display: block;
+}
+.website-header .header-right .search-bar.active .search-menu {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+.website-header .header-right .search-bar .search-menu {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  width: 260px;
+  background: white;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-10px);
+  transition: 0.3s ease;
+}
+.website-header .header-right .search-bar .search-menu form {
+  display: flex;
+}
+.website-header .header-right .search-bar .search-menu form input {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  outline: none;
+}
+.website-header .header-right .search-bar .search-menu form button {
+  padding: 0 1rem;
+  border: none;
+  background-color: #050816;
+  color: white;
+  cursor: pointer;
+}
+.website-header .header-right {
+  /******************** LANGUAGE ********************/
+}
+.website-header .header-right .change-language .language-close {
+  display: none;
+}
+.website-header .header-right .change-language .language-toggle {
+  display: block;
+}
+.website-header .header-right .change-language .language-menu {
+  position: absolute;
+  top: 65px;
+  right: 0;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  background-color: #050816;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+.website-header .header-right .change-language .language-menu a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+  border-bottom: 1px solid #ddd;
+}
+.website-header .header-right .change-language .language-menu img {
+  width: 18px;
+  height: 18px;
+}
+.website-header .header-right .change-language.active .language-toggle {
+  display: none;
+}
+.website-header .header-right .change-language.active .language-close {
+  display: block;
+}
+.website-header .header-right .change-language.active .language-menu {
+  max-height: 400px;
+  opacity: 1;
+  pointer-events: auto;
+}
 
-/****************************************************************************************/
-/*************************** MOBILE FIRST FOOTER ****************************************/
-/****************************************************************************************/
 /****************************************************************************************/
 /*************************** TABLET *****************************************************/
 /****************************************************************************************/
@@ -195,55 +200,58 @@
 /*************************** DESKTOP ****************************************************/
 /****************************************************************************************/
 @media (min-width: 1023px) {
-  .website-header .burger-menu {
-    display: none;
-  }
   .website-header .header-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 2rem;
-    height: 65px;
+    padding: 0 3rem;
+  }
+  .website-header .burger-menu {
+    display: none;
   }
   .website-header .nav-links {
-    position: static;
     max-height: none;
     overflow: visible;
     display: flex;
     flex-direction: row;
-    align-items: center;
     gap: 2rem;
+    align-items: center;
+    padding: 1rem 2rem;
   }
   .website-header .nav-links a {
     border: none;
     padding: 0;
-    color: #050816;
-    text-decoration: none;
-    white-space: nowrap;
   }
   .website-header .header-right {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
+    margin-left: auto;
   }
   .website-header .search-bar,
   .website-header .change-language {
-    display: flex;
     flex-direction: row;
-    align-items: center;
-    height: 65px;
     width: auto;
     padding: 0 1rem;
   }
   .website-header .search-bar .search-menu {
-    right: 0;
     width: 300px;
+    right: 0;
   }
   .website-header .change-language .language-menu {
+    width: 260px;
     right: 0;
-    width: 250px;
   }
 }
+/****************************************************************************************/
+/*************************** GLOBAL *****************************************************/
+/****************************************************************************************/
+.burger-menu,
+.search-bar,
+.change-language {
+  cursor: pointer;
+}
+
 .auth-page {
   min-height: 100vh;
   display: flex;

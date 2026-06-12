@@ -1,10 +1,13 @@
 @use "variables" as *;
 
 /****************************************************************************************/
-/*************************** MOBILE FIRST NAVBAR ****************************************/
+/*************************** GLOBAL *****************************************************/
 /****************************************************************************************/
 
 .website-header {
+    position: relative;
+    z-index: 50;
+
     .website-logo-title {
         display: flex;
         align-items: center;
@@ -15,147 +18,18 @@
             width: 20%;
         }
     }
-    
+
+    /*************************** HEADER TOP ********************************************/
     .header-top {
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 65px;
         position: relative;
-        z-index: 10;
-
-        .header-right {
-            display: flex;
-            gap: 5px;
-            
-            .search-bar,
-            .change-language {
-                display: flex;
-                flex-direction: column;
-                gap: 5px;
-                justify-content: center;
-                align-items: center;
-                height: 65px;
-                width: 85px;
-                background-color: $dark;
-                color:white;
-            }
-
-            .search-bar {
-                position: relative;
-                
-                // if the search-bar is opened :
-                &.active {
-                    .search-toggle {
-                        display: none;
-                    }
-
-                    .search-close {
-                        display: block;
-                    }
-
-                    .search-menu {
-                        opacity: 1;
-                        pointer-events: auto;
-                        transform: translateY(0);
-                    }
-                }
-                .search-close {
-                    display: none;
-                }
-
-                .search-menu {
-                    position: absolute;
-                    top: 65px;
-                    right: 0;
-                    opacity: 0;
-                    pointer-events: none;
-                    transform: translateY(-10px);
-                    transition: 0.3s ease;
-
-                    form {
-                        display: flex;
-
-                        input {
-                            flex: 1;
-                            padding: 0.75rem;
-                            border: 1px solid #ccc;
-                            outline: none;
-                        }
-
-                        button {
-                            padding: 0 1rem;
-                            border: none;
-                            background-color: $dark;
-                            color: white;
-                            cursor: pointer;
-                        }
-                    }
-                }
-            }
-        }
-
-        //  change language style : 
-        .change-language {
-            .language-close {
-                display: none;
-            }
-
-            .language-menu {
-                position: absolute;
-                top: 65px;
-                right: 0;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                transform: translateY(-10px);
-                opacity: 0;
-                pointer-events: none;
-                transition: 0.3s ease;
-                
-                a {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-                    padding: 10px 15px;
-                    color: white;
-                    text-decoration: none;
-                }
-            
-                img {
-                    width: 18px;
-                    height: 18px;
-                }
-            }
-        }
-
-        .change-language.active {
-            .language-close {
-                display: block;
-            }
-
-            .language-toggle {
-                display: none;
-            }
-
-            .language-menu {
-                transform: translateY(0);
-                opacity: 1;
-                pointer-events: auto;
-                
-                a {
-                    border-bottom: $border-menu;
-                    color: #C19E1D;
-
-                    &:hover {
-                        transform: translateX(10px);
-                        color: $dark;
-                    }
-                }
-            }
-        }
+        z-index: 20;
     }
 
+    /*************************** BURGER ********************************************/
     .burger-menu {
         background-color: $dark;
         display: flex;
@@ -165,6 +39,7 @@
         gap: 5px;
         width: 55px;
         height: 65px;
+        cursor: pointer;
 
         .burger-icon {
             font-size: 1.5rem;
@@ -176,51 +51,176 @@
         }
     }
 
+    /*************************** NAV LINKS (MOBILE PUSH) ***************************/
+
     .nav-links {
-        position: fixed;
-        top: 65px; // under the header
-        left: 0;
-        width: 100%;
-        height: calc(100vh - 65px);
         display: flex;
         flex-direction: column;
-        gap: 2rem;
-        margin-top: 2rem;
-        transform: translateY(-100%);
-        transition: transform 0.5s ease;
-        pointer-events: none;
-        opacity: 0;
+
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        background: white;
 
         a {
             color: $dark;
             display: block;
             border-bottom: $border-menu;
             padding: 1rem 1.5rem;
+            text-decoration: none;
         }
 
         .buy-dvd {
             color: rgb(234, 28, 28);
             font-weight: bold;
         }
+
+        &.active {
+            max-height: 700px;
+        }
     }
 
-    .nav-links.active {
-        transform: translateY(0);
-        pointer-events: auto;
-        opacity: 1;
+    /*************************** HEADER RIGHT **************************************/
+    .header-right {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+
+        .search-bar,
+        .change-language {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            height: 65px;
+            width: 85px;
+
+            background-color: $dark;
+            color: white;
+
+            position: relative;
+            cursor: pointer;
+        }
+
+        /******************** SEARCH ********************/
+        .search-bar {
+
+            .search-close {
+                display: none;
+            }
+
+            &.active {
+                .search-toggle { display: none; }
+                .search-close { display: block; }
+
+                .search-menu {
+                    opacity: 1;
+                    pointer-events: auto;
+                    transform: translateY(0);
+                }
+            }
+
+            .search-menu {
+                position: absolute;
+                top: 65px;
+                right: 0;
+
+                width: 260px;
+                background: white;
+
+                opacity: 0;
+                pointer-events: none;
+                transform: translateY(-10px);
+                transition: 0.3s ease;
+
+                form {
+                    display: flex;
+
+                    input {
+                        flex: 1;
+                        padding: 0.75rem;
+                        border: 1px solid #ccc;
+                        outline: none;
+                    }
+
+                    button {
+                        padding: 0 1rem;
+                        border: none;
+                        background-color: $dark;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        /******************** LANGUAGE ********************/
+        .change-language {
+
+            .language-close {
+                display: none;
+            }
+
+            .language-toggle {
+                display: block;
+            }
+
+            .language-menu {
+                position: absolute;
+                top: 65px;
+                right: 0;
+
+                width: 250px;
+
+                display: flex;
+                flex-direction: column;
+
+                background-color: $dark;
+
+                max-height: 0;
+                overflow: hidden;
+
+                opacity: 0;
+                pointer-events: none;
+
+                transition: 0.3s ease;
+
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 10px 15px;
+                    color: white;
+                    text-decoration: none;
+                    border-bottom: $border-menu;
+                }
+
+                img {
+                    width: 18px;
+                    height: 18px;
+                }
+            }
+
+            &.active {
+
+                .language-toggle {
+                    display: none;
+                }
+
+                .language-close {
+                    display: block;
+                }
+
+                .language-menu {
+                    max-height: 400px;
+                    opacity: 1;
+                    pointer-events: auto;
+                }
+            }
+        }
     }
 }
-
-// effect when the mouse is on the elements :
-.burger-menu,
-.search-bar,
-.change-language {
-    cursor: pointer;
-}
-
-/****************************************************************************************/
-/*************************** MOBILE FIRST FOOTER ****************************************/
-/****************************************************************************************/
 
 /****************************************************************************************/
 /*************************** TABLET *****************************************************/
@@ -247,61 +247,68 @@
 @media (min-width: 1023px) {
 
     .website-header {
-        .burger-menu {
-            display: none;
-        }
 
         .header-top {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 2rem;
-            height: 65px;
+
+            padding: 0 3rem; 
+        }
+
+        .burger-menu {
+            display: none;
         }
 
         .nav-links {
-            position: static;
             max-height: none;
             overflow: visible;
 
             display: flex;
             flex-direction: row;
-            align-items: center;
             gap: 2rem;
+            align-items: center;
+            padding: 1rem 2rem;
 
             a {
                 border: none;
                 padding: 0;
-                color: $dark;
-                text-decoration: none;
-                white-space: nowrap;
             }
         }
 
         .header-right {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+
+            margin-left: auto;
         }
 
         .search-bar,
         .change-language {
-            display: flex;
             flex-direction: row;
-            align-items: center;
-            height: 65px;
             width: auto;
             padding: 0 1rem;
         }
 
         .search-bar .search-menu {
-            right: 0;
             width: 300px;
+            right: 0;
         }
 
         .change-language .language-menu {
+            width: 260px;
             right: 0;
-            width: 250px;
         }
     }
+}
+
+/****************************************************************************************/
+/*************************** GLOBAL *****************************************************/
+/****************************************************************************************/
+
+.burger-menu,
+.search-bar,
+.change-language {
+    cursor: pointer;
 }
