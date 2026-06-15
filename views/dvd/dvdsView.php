@@ -1,4 +1,9 @@
 <?php foreach ($dvds as $dvd): ?>
+    <img
+        src="public/assets/img/<?= htmlspecialchars($dvd->getCoverImageDvd()) ?>"
+        alt="<?= htmlspecialchars($dvd->getTitle()) ?>"
+    >
+
     <h2><?= htmlspecialchars($dvd->getTitle()) ?></h2>
     <p><?= htmlspecialchars($dvd->getDescription()) ?></p>
     <p><?= $dvd->getPrice() ?> €</p>
