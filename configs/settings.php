@@ -65,4 +65,14 @@ const AVAILABLE_ROUTES = [
         'controller' => 'OrderController',
         'method' => 'checkoutProcess'
     ],
+
+    'cinema' => [
+        'controller' => 'CinemaController',
+        'method' => 'showAllCinema',
+    ],
+
+    'cinema-detail' => [
+        'controller' => 'CinemaController',
+        'method' => 'displayCinemaDetailById'
+    ]
 ];
