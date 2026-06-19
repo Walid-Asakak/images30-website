@@ -52,27 +52,27 @@
 
                 <div class="language-menu">
                     <a href="">
-                        <img src="public/assets/img/flag-fr.png" alt="">
+                        <img src="public/assets/img/flags/flag-fr.png" alt="">
                         Français
                     </a>
 
                     <a href="">
-                        <img src="public/assets/img/flag-en.png" alt="">
+                        <img src="public/assets/img/flags/flag-en.png" alt="">
                         English
                     </a>
 
                     <a href="">
-                        <img src="public/assets/img/flag-spanish.png" alt="">
+                        <img src="public/assets/img/flags/flag-spanish.png" alt="">
                         Español
                     </a>
 
                     <a href="">
-                        <img src="public/assets/img/flag-china.png" alt="">
+                        <img src="public/assets/img/flags/flag-china.png" alt="">
                         中文
                     </a>
 
                     <a href="">
-                        <img src="public/assets/img/flag-italiano.png" alt="">
+                        <img src="public/assets/img/flags/flag-italiano.png" alt="">
                         Italiano
                     </a>
                 </div>
@@ -111,7 +111,7 @@
     </nav>
 
     <div class="website-logo-title">
-        <img src="public/assets/img/logo-test.png" alt="Logo Studio Cinéma">
+        <img src="public/assets/img/logo.png" alt="Logo Studio Cinéma">
 
         <h1>Studio Cinéma Joël Daguerre</h1>
     </div>

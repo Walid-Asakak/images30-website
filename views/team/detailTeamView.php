@@ -19,7 +19,7 @@
             <?php endif; ?>
             
             <img
-                src="public/assets/img/<?= htmlspecialchars($teamMember['photo_url']) ?>"
+                src="public/assets/img/team/<?= htmlspecialchars($teamMember['photo_url']) ?>"
                 alt="<?= htmlspecialchars($teamMember['firstname'] . ' ' . $teamMember['lastname']) ?>"
             >
         </div>
