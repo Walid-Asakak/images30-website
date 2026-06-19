@@ -74,5 +74,15 @@ const AVAILABLE_ROUTES = [
     'cinema-detail' => [
         'controller' => 'CinemaController',
         'method' => 'displayCinemaDetailById'
-    ]
+    ],
+
+    'events' => [
+        'controller' => 'EventController',
+        'method' => 'showAllEvents',
+    ],
+
+    'event-detail' => [
+        'controller' => 'EventController',
+        'method' => 'showEventDetail',
+    ],
 ];
