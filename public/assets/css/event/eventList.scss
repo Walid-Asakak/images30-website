@@ -1,0 +1,85 @@
+.events-page {
+    padding: 2rem 1rem;
+
+    h1 {
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    justify-items: center;
+}
+
+.event-card {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+
+    h2 {
+        color: white;
+        margin-bottom: 1rem;
+        font-size: 1.25rem;
+    }
+
+    a {
+        display: block;
+        width: 100%;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+
+        transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+        transform: scale(1.02);
+    }
+}
+
+/*******************************************************************************/
+/***************************** TABLET MOD **************************************/
+/*******************************************************************************/
+
+@media screen and (min-width: 768px) {
+    .events-page {
+        padding: 3rem 2rem;
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*******************************************************************************/
+/***************************** DESKTOP MOD *************************************/
+/*******************************************************************************/
+
+@media screen and (min-width: 1023px) {
+    .events-page {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 4rem 2rem;
+
+        h1 {
+            font-size: 3.75rem;
+        }
+    }
+
+    .events-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .event-card h2 {
+        font-size: 1.5rem;
+    }
+}
