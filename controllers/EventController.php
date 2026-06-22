@@ -25,7 +25,8 @@ class EventController {
         $event = $eventRepository->getEventById($id);
     
         $photos = $photoRepository->getPhotosByEventId($id);
-    
-        require 'views/event/detailEventView.php';
+        
+        $view = 'views/event/detailEventView.php';
+        require 'views/layoutView.php';
     }
 }

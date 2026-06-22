@@ -764,6 +764,72 @@
     font-size: 1.5rem;
   }
 }
+/*******************************************************************************/
+/***************************** MOBILE FIRST ************************************/
+/*******************************************************************************/
+.event-detail-page {
+  padding: 2rem 1rem;
+}
+.event-detail-page h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.event-detail-page .gallery {
+  column-count: 1;
+  column-gap: 1rem;
+}
+.event-detail-page .gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+}
+.event-detail-page .gallery img:hover {
+  transform: scale(1.02);
+}
+
+/*******************************************************************************/
+/***************************** TABLET MOD **************************************/
+/*******************************************************************************/
+@media screen and (min-width: 768px) {
+  .event-detail-page {
+    padding: 3rem 2rem;
+  }
+  .event-detail-page h1 {
+    font-size: 2.3rem;
+  }
+  .event-detail-page .gallery {
+    column-count: 2;
+    column-gap: 1.5rem;
+  }
+  .event-detail-page .gallery img {
+    margin-bottom: 1.5rem;
+  }
+}
+/*******************************************************************************/
+/***************************** DESKTOP MOD *************************************/
+/*******************************************************************************/
+@media screen and (min-width: 1023px) {
+  .event-detail-page {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  .event-detail-page h1 {
+    font-size: 2.8rem;
+  }
+  .event-detail-page .gallery {
+    column-count: 3;
+    column-gap: 2rem;
+  }
+  .event-detail-page .gallery img {
+    margin-bottom: 2rem;
+  }
+}
 * {
   box-sizing: border-box;
   margin: 0;
