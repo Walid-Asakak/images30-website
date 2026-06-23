@@ -85,4 +85,9 @@ const AVAILABLE_ROUTES = [
         'controller' => 'EventController',
         'method' => 'showEventDetail',
     ],
+
+    'distribution' => [
+        'controller' => 'DistributionController',
+        'method' => 'showDistributionServices',
+    ],
 ];

@@ -7,21 +7,36 @@
 @use 'cinema/cinemaList';
 @use 'event/eventList';
 @use 'event/eventDetail';
-
-// GLOBAL : 
+@use 'distribution/distribution';
+  
+/**********************************************************************/
+/************************ GLOBAL **************************************/
+/**********************************************************************/
 * {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
-// GLOBAL TYPOGRAPHY :
+/**********************************************************************/
+/************************ TYPOGRAPHY GLOBAL ***************************/
+/**********************************************************************/
+h1 {
+    font-family: "Archivo Black", sans-serif;
+}
 
-h2 {
-    font-family: Helvetica, Arial, sans-serif;
+h2,
+h3 {
+    font-family: "Oswald", sans-serif;
+}
+
+p, 
+li {
+    font-family: "Nunito", sans-serif;
 }
 
 a {
+    font-family: "Nunito", sans-serif;
     text-decoration: none;
 }
 
