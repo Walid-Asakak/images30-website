@@ -75,10 +75,10 @@
         .distribution-image-logo {
             img {
                 width: 100%;
-                height: auto !important;
+                height: auto;
                 max-height: 220px;
 
-                object-fit: contain !important;
+                object-fit: contain;
                 object-position: center;
 
                 background: white;
