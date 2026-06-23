@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous">
 
     <script src="public/js/script.js" defer></script>
-
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    
     <title>Studio Cinéma Joël Daguerre</title>
 </head>
 
@@ -87,10 +91,10 @@
         <?php if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] !== true): ?>
             <a href="index.php?page=login">CONNEXION</a>
         <?php endif; ?>
-
+ 
         <a href="index.php?page=team">ÉQUIPE</a>
 
-        <a href="index.php?page=services">SERVICES</a>
+        <a href="index.php?page=distribution">DIFFUSION</a> 
 
         <a href="index.php?page=cinema">CINÉMA</a>
 
