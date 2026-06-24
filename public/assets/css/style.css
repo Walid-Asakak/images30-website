@@ -1066,6 +1066,205 @@
   }
 }
 /**********************************************************************/
+/************************ COMMUNICATION PAGE **************************/
+/**********************************************************************/
+.communication-page {
+  padding: 2rem 1rem;
+  color: white;
+  /************************ HEADER ************************/
+}
+.communication-page .communication-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.communication-page .communication-header h1 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.communication-page .communication-header h2 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  opacity: 0.8;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.communication-page {
+  /************************ SECTION ************************/
+}
+.communication-page .communication-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.communication-page .communication-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+.communication-page .communication-section {
+  /************************ IMAGE ************************/
+}
+.communication-page .communication-section .communication-image {
+  width: 100%;
+  flex-shrink: 0;
+}
+.communication-page .communication-section .communication-image img {
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  object-fit: contain;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+.communication-page .communication-section .communication-image-movie img {
+  max-height: 230px;
+  object-fit: contain;
+}
+.communication-page .communication-section {
+  /************************ CONTENT ************************/
+}
+.communication-page .communication-section .communication-content {
+  display: flex;
+  flex-direction: column;
+}
+.communication-page .communication-section .communication-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.communication-page .communication-section .communication-content p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+.communication-page .communication-section .communication-content ul {
+  padding-left: 1.5rem;
+}
+.communication-page .communication-section .communication-content ul li {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 0.6rem;
+  opacity: 0.95;
+}
+.communication-page .communication-contact {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  max-width: 900px;
+  margin: 3rem auto 0 auto;
+  padding: 2rem 1.5rem;
+  border-radius: 14px;
+}
+.communication-page .communication-contact h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.communication-page .communication-contact p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  opacity: 0.95;
+}
+.communication-page .communication-contact a {
+  color: #4da3ff;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+.communication-page .communication-contact a:hover {
+  color: #7fc1ff;
+}
+.communication-page .communication-contact a:visited {
+  color: #b38cff;
+}
+
+/**********************************************************************/
+/************************ TABLET MOD **********************************/
+/**********************************************************************/
+@media (min-width: 768px) {
+  .communication-page {
+    padding: 3rem 2rem;
+  }
+  .communication-page .communication-header h1 {
+    font-size: 2.8rem;
+  }
+  .communication-page .communication-header h2 {
+    font-size: 1.3rem;
+  }
+  .communication-page .communication-section {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 2rem;
+  }
+  .communication-page .communication-section.reverse {
+    flex-direction: row-reverse;
+  }
+  .communication-page .communication-section .communication-image {
+    width: 40%;
+  }
+  .communication-page .communication-section .communication-image-movie img {
+    max-height: 280px;
+    object-fit: contain;
+  }
+  .communication-page .communication-section .communication-content {
+    width: 60%;
+    justify-content: center;
+  }
+  .communication-page .communication-section .communication-content h3 {
+    font-size: 1.7rem;
+  }
+  .communication-page .communication-contact {
+    padding: 2.5rem 2rem;
+  }
+  .communication-page .communication-contact h2 {
+    font-size: 2rem;
+  }
+}
+/**********************************************************************/
+/************************ DESKTOP MOD *********************************/
+/**********************************************************************/
+@media (min-width: 1023px) {
+  .communication-page {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .communication-page .communication-header h1 {
+    font-size: 3rem;
+  }
+  .communication-page .communication-header h2 {
+    font-size: 1.4rem;
+  }
+  .communication-page .communication-section {
+    padding: 1.5rem;
+  }
+  .communication-page .communication-section .communication-image {
+    width: 38%;
+  }
+  .communication-page .communication-section .communication-content {
+    width: 62%;
+  }
+  .communication-page .communication-section .communication-content h3 {
+    font-size: 1.8rem;
+  }
+  .communication-page .communication-section .communication-content p,
+  .communication-page .communication-section .communication-content li {
+    font-size: 1.1rem;
+  }
+  .communication-page .communication-contact {
+    padding: 3rem 2rem;
+  }
+  .communication-page .communication-contact h2 {
+    font-size: 2.2rem;
+  }
+}
+/**********************************************************************/
 /************************ GLOBAL **************************************/
 /**********************************************************************/
 * {

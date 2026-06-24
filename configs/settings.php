@@ -90,4 +90,9 @@ const AVAILABLE_ROUTES = [
         'controller' => 'DistributionController',
         'method' => 'showDistributionServices',
     ],
+
+    'communication' => [
+        'controller' => 'CommunicationController',
+        'method' => 'showCommunicationServices',
+    ],
 ];

@@ -92,12 +92,10 @@
             <a href="index.php?page=login">CONNEXION</a>
         <?php endif; ?>
  
-        <a href="index.php?page=team">ÉQUIPE</a>
-
-        <a href="index.php?page=distribution">DIFFUSION</a> 
-
         <a href="index.php?page=cinema">CINÉMA</a>
-
+        <a href="index.php?page=communication">COMMUNICATION</a> 
+        <a href="index.php?page=distribution">DIFFUSION</a>         
+        <a href="index.php?page=team">ÉQUIPE</a>
         <a href="index.php?page=events">ÉVÈNEMENTS</a>
 
         <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged'] === true): ?>
