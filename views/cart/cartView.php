@@ -1,32 +1,43 @@
-<h1>Mon panier</h1>
+<div class="cart-page">
+    <h1>Mon panier</h1>
 
-<?php if (empty($cartItems)): ?>
-    <p>Votre panier est vide.</p>
-<?php else: ?>
+    <?php if (empty($cartItems)): ?>
+        <p class="cart-empty">Votre panier est vide.</p>
+    <?php else: ?>
 
-    <?php foreach ($cartItems as $cartItem): ?>
-        <div>
-            <h2><?= htmlspecialchars($cartItem['title']) ?></h2>
+        <div class="cart-items">
+            <?php foreach ($cartItems as $cartItem): ?>
+                <div class="cart-item">
+                    <img class="cart-img"
+                        src="public/assets/img/dvd/<?= htmlspecialchars($cartItem['cover_image_url']) ?>"
+                        alt="<?= htmlspecialchars($cartItem['title']) ?>"
+                    >
 
-            <p>Prix : <?= $cartItem['price'] ?> €</p>
+                    <div class="cart-info">
+                        <h2><?= htmlspecialchars($cartItem['title']) ?></h2>
 
-            <p>Quantité : <?= $cartItem['quantity'] ?></p>
+                        <p class="cart-price">Prix : <?= $cartItem['price'] ?> €</p>
 
-            <p>
-                Sous-total :
-                <?= $cartItem['price'] * $cartItem['quantity'] ?> €
-            </p>
+                        <p>Quantité : <?= $cartItem['quantity'] ?></p>
+
+                        <p class="cart-subtotal">
+                            Sous-total :
+                            <?= $cartItem['price'] * $cartItem['quantity'] ?> €
+                        </p>
+                    </div>
+                </div>
+            <?php endforeach; ?>
         </div>
-    <?php endforeach; ?>
 
-    <hr>
+        <div class="cart-summary">
+            <h3 class="cart-total">
+                Total : <?= $totalCartPrice ?>€
+            </h3>
 
-    <h3>
-        Total : <?= $totalCartPrice ?>€
-    </h3>
+            <a href="index.php?page=checkout">
+                Passer à la livraison
+            </a>
+        </div>
 
-    <a href="index.php?page=checkout">
-        Passer à la livraison
-    </a>
-
-<?php endif; ?>
+    <?php endif; ?>
+</div>
