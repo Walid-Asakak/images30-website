@@ -2,7 +2,7 @@
     <?php foreach ($dvds as $dvd): ?>
         <div class="dvd-card">
             <img
-                src="public/assets/img/<?= htmlspecialchars($dvd->getCoverImageDvd()) ?>"
+                src="public/assets/img/dvd/<?= htmlspecialchars($dvd->getCoverImageDvd()) ?>"
                 alt="<?= htmlspecialchars($dvd->getTitle()) ?>"
             >
 

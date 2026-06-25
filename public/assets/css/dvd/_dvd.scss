@@ -21,9 +21,7 @@
 
     img {
         width: 100%;
-        height: 400px;
-        object-fit: cover;
-        object-position: center;
+        height: auto;
         border-radius: 10px;
         margin-bottom: 1rem;
     }
@@ -67,28 +65,20 @@
     }
 }
 
-/* 📱 TABLET */
+/* TABLET */
 @media screen and (min-width: 768px) {
     .dvd-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 2rem;
     }
-
-    .dvd-card img {
-        height: 420px;
-    }
 }
 
-/* 🖥 DESKTOP */
+/* DESKTOP */
 @media screen and (min-width: 1023px) {
     .dvd-grid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         max-width: 1400px;
         margin: 0 auto;
-    }
-
-    .dvd-card img {
-        height: 450px;
     }
 
     .dvd-card h2 {
