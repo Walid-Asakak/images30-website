@@ -104,7 +104,8 @@ class OrderRepository {
                 order_items.id,
                 order_items.quantity,
                 order_items.unit_price,
-                dvds.title
+                dvds.title,
+                dvds.cover_image_url
             FROM order_items
             INNER JOIN dvds
                 ON order_items.dvd_id = dvds.id
