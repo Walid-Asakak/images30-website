@@ -113,7 +113,9 @@
     </nav>
 
     <div class="website-logo-title">
-        <img src="public/assets/img/logo.png" alt="Logo Studio Cinéma">
+        <a href="index.php?page=home">
+            <img src="public/assets/img/logo.png" alt="Logo Studio Cinéma">
+        </a>
 
         <h1>Studio Cinéma Joël Daguerre</h1>
     </div>
