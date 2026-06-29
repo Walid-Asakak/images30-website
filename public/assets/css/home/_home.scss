@@ -1,0 +1,260 @@
+/*************************************************************/
+/*********************** HOME PAGE ***************************/
+/*************************************************************/
+
+.home-page {
+    color: white;
+    padding: 2rem 1rem;
+
+    .home-intro {
+        max-width: 1000px;
+        margin: 0 auto 3rem;
+
+        text-align: center;
+
+        h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        p {
+            line-height: 1.8;
+        }
+    }
+
+    .movies-list {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3rem;
+
+        a {
+            padding: .9rem 2rem;
+            border-radius: 8px;
+            background-color: #4f5bd5;
+            color: white;
+            text-decoration: none;
+            transition: .3s;
+
+            &:hover {
+                background-color: #3d49b1;
+            }
+        }
+    }
+
+    .services {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+
+        .services-card {
+            display: flex;
+            flex-direction: column;
+            padding: 2rem 1.5rem;
+            border: 1px solid rgba(255, 255, 255, .08);
+            border-radius: 12px;
+            background-color: #252e4f;
+            transition: transform .3s ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            h3 {
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+            }
+
+            p {
+                flex: 1;
+                margin-bottom: 2rem;
+                line-height: 1.7;
+            }
+
+            a {
+                align-self: flex-start;
+                padding: .8rem 1.3rem;
+                border-radius: 8px;
+                background-color: #4f5bd5;
+                color: white;
+                text-decoration: none;
+                transition: .3s;
+
+                &:hover {
+                    background-color: #3d49b1;
+                }
+            }
+        }
+    }
+
+    .discover-more {
+        h2 {
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .discover-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+
+            .to-discover-card {
+                overflow: hidden;
+                border-radius: 12px;
+                background-color: #252e4f;
+                transition: transform .3s ease;
+
+                &:hover {
+                    transform: translateY(-5px);
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    color: white;
+                    text-decoration: none;
+
+                    .discover-title {
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        padding: 1rem;
+
+                        i {
+                            font-size: 1.3rem;
+                            color: black;
+                        }
+
+                        h3 {
+                            margin: 0;
+                            font-size: 1.2rem;
+                            line-height: 1.4;
+                        }
+                    }
+
+                    img {
+                        width: 100%;
+                        aspect-ratio: 16 / 9;
+                        object-fit: cover;
+                        display: block;
+                        transition: transform .3s ease;
+                    }
+
+                    &:hover img {
+                        transform: scale(1.05);
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*************************************************************/
+/********************** MOD TABLET ***************************/
+/*************************************************************/
+
+@media screen and (min-width: 768px) {
+
+    .home-page {
+
+        .home-intro {
+
+            h2 {
+                font-size: 2.3rem;
+            }
+
+            p {
+                font-size: 1.1rem;
+            }
+        }
+
+        .services {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .discover-more {
+
+            .discover-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+
+                .to-discover-card {
+
+                    a {
+
+                        .discover-title {
+                            padding: 1.25rem;
+
+                            h3 {
+                                font-size: 1.3rem;
+                            }
+
+                            i {
+                                font-size: 1.4rem;
+                            }
+                        }
+                    }
+                }
+            } 
+        }
+    }
+}
+
+/*************************************************************/
+/********************** MOD DESKTOP **************************/
+/*************************************************************/
+
+@media screen and (min-width: 1023px) {
+
+    .home-page {
+        max-width: 1400px;
+        margin: 0 auto;
+
+        .home-intro {
+
+            h2 {
+                font-size: 2.8rem;
+            }
+        }
+
+        .services {
+            gap: 2.5rem;
+
+            .services-card {
+                padding: 2.5rem;
+
+                h3 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        .discover-more {
+
+            h2 {
+                font-size: 2.5rem;
+            }
+
+            .discover-grid {
+
+                .to-discover-card {
+
+                    a {
+
+                        .discover-title {
+
+                            h3 {
+                                font-size: 1.4rem;
+                            }
+
+                            i {
+                                font-size: 1.5rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
