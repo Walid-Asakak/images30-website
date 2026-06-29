@@ -10,7 +10,8 @@ class HomeController {
     }
 
     public function showFormulasServices() {
-        
+        $view = 'views/home/formulasServicesView.php';
+        require 'views/layoutView.php';
     }
 
     public function showAdditionalServices() {

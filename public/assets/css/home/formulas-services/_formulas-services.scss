@@ -1,0 +1,260 @@
+.formulas-services-page {
+    color: white;
+
+    h2 {
+        margin-top: 3rem;
+        margin-bottom: 1.25rem;
+        text-align: center;
+    }
+
+    .formulas-services-introduction {
+        p {
+            text-align: center;
+        }
+    }
+
+    .drone-services {
+        padding: 2rem 1rem;
+        text-align: center;
+
+        img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            display: block;
+            margin: 0 auto 1.5rem;
+            border-radius: 4px;
+        }
+
+        h2 {
+            margin-bottom: 1rem;
+            font-size: 1.6rem;
+            color: #fddb8f;
+        }
+
+        p {
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+    }
+
+    .three-service-types {
+        padding: 3rem 1rem;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            color: #fddb8f;
+        }
+
+        .three-services-types-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .three-service-types-card {
+            border: 1px solid #222;
+            padding: 1.5rem;
+            background: white;
+            color: black;
+
+            h3 {
+                margin-bottom: 1rem;
+                font-size: 1.1rem;
+            }
+
+            p {
+                margin-bottom: 1rem;
+                line-height: 1.6;
+            }
+        }
+    }
+
+    .video-quality {
+        padding: 3rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        .video-quality-text {
+            max-width: 900px;
+
+            p {
+                line-height: 1.6;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+        }
+
+        .video-quality-image {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            img {
+                width: 100%;
+                max-width: 900px;
+                height: auto;
+                border-radius: 4px;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .formal-reportage {
+        padding: 4rem 1rem;
+        text-align: center;
+
+        h2 {
+            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            color: #fddb8f;
+        }
+
+        .formal-reportage-content {
+            max-width: 900px;
+            margin: 0 auto;
+
+            p {
+                line-height: 1.7;
+                margin-bottom: 1.5rem;
+                text-align: center;
+            }
+        }
+    }
+
+    /**********************************************************************/
+    /************************* TABLET MOD *********************************/
+    /**********************************************************************/
+
+    @media (min-width: 768px) {
+
+        .drone-services {
+            padding: 3rem 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+
+            img {
+                flex: 1;
+                max-width: 50%;
+                margin: 0;
+            }
+
+            .drone-content {
+                flex: 1;
+            }
+
+            h2 {
+                text-align: center;
+                font-size: 1.8rem;
+            }
+
+            p {
+                text-align: center;
+                margin: 0;
+            }
+        }
+
+        .three-service-types {
+            padding: 4rem 1rem;
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .three-services-types-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+            }
+
+            .three-service-types-card {
+                padding: 2rem;
+
+                h3 {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .video-quality {
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+
+            .video-quality-text {
+                flex: 1;
+
+                p {
+                    max-width: 750px;
+                    text-align: center;
+                }
+            }
+
+            .video-quality-image {
+                flex: 1;
+            }
+        }
+
+        .formal-reportage {
+            padding: 5rem 1rem;
+
+            h2 {
+                font-size: 1.8rem;
+            }
+
+            .formal-reportage-content {
+                p {
+                    text-align: center;
+                    max-width: 750px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
+    /**********************************************************************/
+    /************************ DESKTOP MOD *********************************/
+    /**********************************************************************/
+
+    @media (min-width: 1023px) {
+
+        .drone-services {
+
+            img {
+                max-width: 420px;
+                width: 100%;
+                height: auto;
+                flex-shrink: 0;
+            }
+
+            .drone-content {
+                max-width: 650px;
+            }
+        }
+
+        .video-quality {
+            padding: 3rem 8rem;
+            gap: 1rem;
+
+            .video-quality-image {
+        
+                img {
+                    max-width: 600px;  // limite propre (comme ton drone-services)
+                    width: 100%;
+                    height: auto;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
