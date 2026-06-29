@@ -16,6 +16,8 @@ class HomeController {
 
     public function showAdditionalServices() {
 
+        $view = 'views/home/AdditionalServicesView.php';
+        require 'views/layoutView.php';
     }
 
     public function showProgDistributionServices() {

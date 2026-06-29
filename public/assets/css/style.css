@@ -1896,6 +1896,136 @@
   }
 }
 
+.additional-services-page {
+  color: white;
+}
+.additional-services-page h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #fddb8f;
+  margin-bottom: 2rem;
+}
+.additional-services-page p {
+  line-height: 1.7;
+  text-align: center;
+}
+.additional-services-page .must-package-formula {
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.additional-services-page .must-package-formula .must-package-content {
+  max-width: 900px;
+}
+.additional-services-page .must-package-formula .must-package-content p {
+  margin-bottom: 1.5rem;
+}
+.additional-services-page .must-package-formula .must-package-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.additional-services-page .must-package-formula .must-package-image img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.additional-services-page .special-event-hotel {
+  padding: 4rem 1rem;
+}
+.additional-services-page .special-event-hotel p {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.additional-services-page .hotel-website {
+  padding: 4rem 1rem;
+}
+.additional-services-page .hotel-website .hotel-website-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.additional-services-page .hotel-website .hotel-website-case {
+  background: white;
+  color: black;
+  padding: 2rem;
+  border: 1px solid #222;
+}
+.additional-services-page .hotel-website .hotel-website-case h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+.additional-services-page .hotel-website .hotel-website-case p {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.additional-services-page {
+  /**********************************************************************/
+  /************************* TABLET MOD *********************************/
+  /**********************************************************************/
+}
+@media (min-width: 768px) {
+  .additional-services-page h2 {
+    font-size: 1.8rem;
+  }
+  .additional-services-page .must-package-formula {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+  }
+  .additional-services-page .must-package-formula .must-package-content {
+    flex: 1;
+  }
+  .additional-services-page .must-package-formula .must-package-content p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .additional-services-page .must-package-formula .must-package-image {
+    flex: 1;
+  }
+  .additional-services-page .hotel-website .hotel-website-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .additional-services-page .hotel-website .hotel-website-case {
+    padding: 2.5rem;
+  }
+}
+.additional-services-page {
+  /**********************************************************************/
+  /************************ DESKTOP MOD *********************************/
+  /**********************************************************************/
+}
+@media (min-width: 1023px) {
+  .additional-services-page .must-package-formula {
+    padding: 5rem 2rem;
+    gap: 2rem;
+  }
+  .additional-services-page .must-package-formula .must-package-content {
+    max-width: 650px;
+  }
+  .additional-services-page .must-package-formula .must-package-image img {
+    max-width: 550px;
+  }
+  .additional-services-page .special-event-hotel p {
+    max-width: 850px;
+  }
+  .additional-services-page .hotel-website {
+    padding: 5rem 2rem;
+  }
+  .additional-services-page .hotel-website .hotel-website-grid {
+    gap: 3rem;
+  }
+}
+
 /**********************************************************************/
 /************************ GLOBAL **************************************/
 /**********************************************************************/
