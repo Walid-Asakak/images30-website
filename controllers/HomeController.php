@@ -21,6 +21,8 @@ class HomeController {
     }
 
     public function showProgDistributionServices() {
-        
+
+        $view = 'views/home/prog-distribution-services/progDistributionServicesView.php';
+        require 'views/layoutView.php';
     }
 }

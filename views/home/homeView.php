@@ -44,7 +44,7 @@
                 comme TV5 Monde, Luxe TV et d'autres chaînes.
             </p>
 
-            <a href="index.php?page=">Voir plus</a>
+            <a href="index.php?page=prog-distribution">Voir plus</a>
         </article>
     </section>
 

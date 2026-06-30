@@ -2026,6 +2026,173 @@
   }
 }
 
+.distribution-prog-page {
+  color: white;
+}
+.distribution-prog-page h2 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #fddb8f;
+  margin-bottom: 2rem;
+}
+.distribution-prog-page h3 {
+  text-align: center;
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+.distribution-prog-page p {
+  text-align: center;
+  line-height: 1.7;
+}
+.distribution-prog-page {
+  /********************** INTRODUCTION **********************************/
+}
+.distribution-prog-page .distribution-introduction {
+  padding: 3rem 1rem;
+}
+.distribution-prog-page .distribution-introduction p {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.distribution-prog-page {
+  /********************** DOUBLE DIFFUSION ******************************/
+}
+.distribution-prog-page .double-distribution {
+  padding: 4rem 1rem;
+}
+.distribution-prog-page .double-distribution .double-distribution-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.distribution-prog-page .double-distribution .double-distribution-content p {
+  margin-bottom: 1.5rem;
+}
+.distribution-prog-page .double-distribution .double-distribution-content .double-distribution-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+.distribution-prog-page .double-distribution .double-distribution-content .double-distribution-images img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.distribution-prog-page {
+  /********************** LUXE TV ***************************************/
+}
+.distribution-prog-page .luxe-tv-broadcast {
+  padding: 4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+.distribution-prog-page .luxe-tv-broadcast .luxe-tv-image img {
+  width: 100%;
+  max-width: 700px;
+  height: auto;
+  border-radius: 4px;
+  object-fit: cover;
+}
+.distribution-prog-page .luxe-tv-broadcast .luxe-tv-content p {
+  margin-bottom: 1.5rem;
+}
+.distribution-prog-page {
+  /************************* REPORTS SECTION ****************************/
+}
+.distribution-prog-page .editorial-reports {
+  padding: 4rem 1rem;
+}
+.distribution-prog-page .editorial-reports p {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+.distribution-prog-page {
+  /********************** QUALITY SECTION *******************************/
+}
+.distribution-prog-page .broadcast-quality {
+  padding: 4rem 1rem;
+}
+.distribution-prog-page .broadcast-quality p {
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+.distribution-prog-page {
+  /**********************************************************************/
+  /************************* TABLET MOD *********************************/
+  /**********************************************************************/
+}
+@media (min-width: 768px) {
+  .distribution-prog-page h2 {
+    font-size: 1.8rem;
+  }
+  .distribution-prog-page h3 {
+    font-size: 1.5rem;
+  }
+  .distribution-prog-page .double-distribution .double-distribution-content .double-distribution-images {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .distribution-prog-page .double-distribution .double-distribution-content .double-distribution-images img {
+    max-width: 380px;
+  }
+  .distribution-prog-page .luxe-tv-broadcast {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+  }
+  .distribution-prog-page .luxe-tv-broadcast .luxe-tv-image {
+    flex: 1;
+  }
+  .distribution-prog-page .luxe-tv-broadcast .luxe-tv-content {
+    flex: 1;
+  }
+}
+.distribution-prog-page {
+  /**********************************************************************/
+  /************************ DESKTOP MOD *********************************/
+  /**********************************************************************/
+}
+@media (min-width: 1023px) {
+  .distribution-prog-page .distribution-introduction {
+    padding: 5rem 2rem;
+  }
+  .distribution-prog-page .double-distribution {
+    padding: 5rem 2rem;
+  }
+  .distribution-prog-page .double-distribution .double-distribution-content {
+    max-width: 850px;
+  }
+  .distribution-prog-page .double-distribution .double-distribution-content .double-distribution-images {
+    gap: 2rem;
+  }
+  .distribution-prog-page .double-distribution .double-distribution-content .double-distribution-images img {
+    max-width: 450px;
+  }
+  .distribution-prog-page .luxe-tv-broadcast {
+    padding: 5rem 2rem;
+    gap: 2rem;
+  }
+  .distribution-prog-page .luxe-tv-broadcast .luxe-tv-image {
+    flex: 0 0 420px;
+  }
+  .distribution-prog-page .luxe-tv-broadcast .luxe-tv-image img {
+    max-width: 420px;
+  }
+  .distribution-prog-page .luxe-tv-broadcast .luxe-tv-content {
+    max-width: 650px;
+  }
+  .distribution-prog-page .editorial-reports,
+  .distribution-prog-page .broadcast-quality {
+    padding: 5rem 2rem;
+  }
+}
+
 /**********************************************************************/
 /************************ GLOBAL **************************************/
 /**********************************************************************/

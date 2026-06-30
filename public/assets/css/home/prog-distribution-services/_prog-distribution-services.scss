@@ -1,0 +1,203 @@
+.distribution-prog-page {
+    color: white;
+
+    h2 {
+        text-align: center;
+        font-size: 1.6rem;
+        color: #fddb8f;
+        margin-bottom: 2rem;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 1.3rem;
+        margin-bottom: 1.5rem;
+    }
+
+    p {
+        text-align: center;
+        line-height: 1.7;
+    }
+
+    /********************** INTRODUCTION **********************************/
+    .distribution-introduction {
+        padding: 3rem 1rem;
+
+        p {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    }
+
+    /********************** DOUBLE DIFFUSION ******************************/
+    .double-distribution {
+        padding: 4rem 1rem;
+
+        .double-distribution-content {
+            max-width: 900px;
+            margin: 0 auto;
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+
+            .double-distribution-images {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+                margin: 2rem 0;
+
+                img {
+                    width: 100%;
+                    max-width: 700px;
+                    height: auto;
+                    border-radius: 4px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    /********************** LUXE TV ***************************************/
+    .luxe-tv-broadcast {
+        padding: 4rem 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+
+        .luxe-tv-image {
+
+            img {
+                width: 100%;
+                max-width: 700px;
+                height: auto;
+                border-radius: 4px;
+                object-fit: cover;
+            }
+        }
+
+        .luxe-tv-content {
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    /************************* REPORTS SECTION ****************************/
+    .editorial-reports {
+        padding: 4rem 1rem;
+
+        p {
+            max-width: 900px;
+            margin: 0 auto 1.5rem;
+        }
+    }
+
+
+    /********************** QUALITY SECTION *******************************/
+    .broadcast-quality {
+        padding: 4rem 1rem;
+
+        p {
+            max-width: 900px;
+            margin: 0 auto 1.5rem;
+        }
+    }
+
+    /**********************************************************************/
+    /************************* TABLET MOD *********************************/
+    /**********************************************************************/
+
+    @media (min-width: 768px) {
+
+        h2 {
+            font-size: 1.8rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+        }
+
+        .double-distribution {
+
+            .double-distribution-content {
+
+                .double-distribution-images {
+                    flex-direction: row;
+                    justify-content: center;
+
+                    img {
+                        max-width: 380px;
+                    }
+                }
+            }
+        }
+
+        .luxe-tv-broadcast {
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+
+            .luxe-tv-image {
+                flex: 1;
+            }
+
+            .luxe-tv-content {
+                flex: 1;
+            }
+        }
+    }
+
+    /**********************************************************************/
+    /************************ DESKTOP MOD *********************************/
+    /**********************************************************************/
+
+    @media (min-width: 1023px) {
+
+        .distribution-introduction {
+            padding: 5rem 2rem;
+        }
+
+        .double-distribution {
+            padding: 5rem 2rem;
+
+            .double-distribution-content {
+                max-width: 850px;
+
+                .double-distribution-images {
+                    gap: 2rem;
+
+                    img {
+                        max-width: 450px;
+                    }
+                }
+            }
+        }
+
+        .luxe-tv-broadcast {
+            padding: 5rem 2rem;
+            gap: 2rem;
+
+            .luxe-tv-image {
+                flex: 0 0 420px;
+
+                img {
+                    max-width: 420px;
+                }
+            }
+
+            .luxe-tv-content {
+                max-width: 650px;
+            }
+        }
+
+        .editorial-reports,
+        .broadcast-quality {
+            padding: 5rem 2rem;
+        }
+    }
+}
