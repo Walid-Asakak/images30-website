@@ -1524,12 +1524,104 @@
 .home-page .home-intro p {
   line-height: 1.8;
 }
+.home-page {
+  /*****************************************************/
+  /* MOVIES SCROLL SECTION */
+  /*****************************************************/
+}
 .home-page .movies-list {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 3rem;
 }
-.home-page .movies-list a {
+.home-page .movies-list h2 {
+  margin-bottom: 1.5rem;
+}
+.home-page .movies-list .movies-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.home-page .movies-list .movies-scroll {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  width: 100%;
+  padding: 1rem 3.5rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.home-page .movies-list .movies-scroll::-webkit-scrollbar {
+  display: none;
+}
+.home-page .movies-list .movie-card {
+  flex: 0 0 260px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s;
+}
+.home-page .movies-list .movie-card:hover {
+  transform: translateY(-5px);
+}
+.home-page .movies-list .movie-card a {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.home-page .movies-list .movie-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #000;
+}
+.home-page .movies-list .movie-card h3 {
+  padding: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  background: #252e4f;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-page .movies-list .scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.25s;
+}
+.home-page .movies-list .scroll-btn:hover {
+  background: #4f5bd5;
+}
+.home-page .movies-list .scroll-btn.left {
+  left: 0.5rem;
+}
+.home-page .movies-list .scroll-btn.right {
+  right: 0.5rem;
+}
+.home-page .movies-list .scroll-btn i {
+  font-size: 1.1rem;
+}
+.home-page .discover-more-btn {
+  display: inline-block;
+  margin-top: 2rem;
   padding: 0.9rem 2rem;
   border-radius: 8px;
   background-color: #4f5bd5;
@@ -1537,7 +1629,7 @@
   text-decoration: none;
   transition: 0.3s;
 }
-.home-page .movies-list a:hover {
+.home-page .discover-more-btn:hover {
   background-color: #3d49b1;
 }
 .home-page .services {

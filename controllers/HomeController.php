@@ -4,6 +4,15 @@ namespace Controllers;
 
 class HomeController {
     public function index() {
+        $movieRepo = new \Repositories\CinemaRepository();
+        $imageRepo = new \Repositories\MovieImageRepository();
+
+        $homeMovies = $movieRepo->getAllMovies();
+
+        foreach ($homeMovies as $key => $movie) {
+            $homeMovies[$key]['images'] = $imageRepo->getImagesByMovieId($movie['id']);
+        }
+        
         $view = 'views/home/homeView.php';
         include 'views/layoutView.php';
         
