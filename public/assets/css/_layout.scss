@@ -12,12 +12,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        background: linear-gradient(
-            353deg,
-            #494a94,
-            rgb(177 188 241)
-        );
+        background: linear-gradient(353deg, #494a94, rgb(177 188 241));
 
         img {
             width: 220px;
@@ -32,12 +27,7 @@
         height: 65px;
         position: relative;
         z-index: 20;
-
-        background: linear-gradient(
-            353deg,
-            #5051a0,
-            rgb(177 188 241)
-        );
+        background: linear-gradient(353deg, #5051a0, rgb(177 188 241));
     }
 
     /*************************** BURGER ********************************************/
@@ -62,11 +52,10 @@
         }
     }
 
-    /*************************** NAV LINKS (MOBILE PUSH) ***************************/
+    /*************************** NAV LINKS ***************************/
     .nav-links {
         display: flex;
         flex-direction: column;
-
         max-height: 0;
         overflow: hidden;
         transition: max-height 0.5s ease;
@@ -101,18 +90,14 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-
             width: 85px;
             height: 65px;
-
             background-color: $dark;
             color: white;
-
             position: relative;
             cursor: pointer;
         }
 
-        /******************** SEARCH ********************/
         .search-bar {
 
             .search-close {
@@ -120,14 +105,8 @@
             }
 
             &.active {
-
-                .search-toggle {
-                    display: none;
-                }
-
-                .search-close {
-                    display: block;
-                }
+                .search-toggle { display: none; }
+                .search-close { display: block; }
 
                 .search-menu {
                     opacity: 1;
@@ -140,14 +119,11 @@
                 position: absolute;
                 top: 65px;
                 right: 0;
-
                 width: 260px;
                 background: white;
-
                 opacity: 0;
                 pointer-events: none;
                 transform: translateY(-10px);
-
                 transition: 0.3s ease;
 
                 form {
@@ -171,7 +147,6 @@
             }
         }
 
-        /******************** LANGUAGE ********************/
         .change-language {
 
             .language-close {
@@ -182,20 +157,14 @@
                 position: absolute;
                 top: 65px;
                 right: 0;
-
                 width: 250px;
-
                 display: flex;
                 flex-direction: column;
-
                 background-color: $dark;
-
                 max-height: 0;
                 overflow: hidden;
-
                 opacity: 0;
                 pointer-events: none;
-
                 transition: 0.3s ease;
 
                 a {
@@ -215,14 +184,8 @@
             }
 
             &.active {
-
-                .language-toggle {
-                    display: none;
-                }
-
-                .language-close {
-                    display: block;
-                }
+                .language-toggle { display: none; }
+                .language-close { display: block; }
 
                 .language-menu {
                     max-height: 400px;
@@ -231,6 +194,82 @@
                 }
             }
         }
+    }
+}
+
+/*************************** FOOTER *****************************************************/
+.site-footer {
+    background: linear-gradient(353deg, #5051a0, rgb(177 188 241));
+    color: #000;
+    padding: 3rem 1rem 1rem;
+
+    .footer-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .footer-column {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h4 {
+            font-family: "Oswald", sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: #000;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 0.6rem;
+        }
+
+        a,
+        p {
+            color: #000;
+            text-decoration: none;
+            font-size: 0.95rem;
+        }
+
+        a:hover {
+            color: $dark;
+        }
+    }
+
+    .footer-logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        img {
+            width: 140px;
+            height: auto;
+            display: block;
+        }
+    }
+
+    .footer-bottom {
+        text-align: center;
+        font-weight: bold;
+        margin-top: 2.5rem;
+        padding-top: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        font-size: 1rem;
+        color: #000;
     }
 }
 
@@ -248,6 +287,30 @@
 
         .burger-menu {
             width: 70px;
+        }
+    }
+
+    .site-footer {
+
+        .footer-container {
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: flex-start;
+            text-align: left;
+        }
+
+        .footer-column {
+            flex: 1;
+            align-items: flex-start;
+        }
+
+        .footer-logo {
+            justify-content: flex-start;
+
+            img {
+                width: 160px;
+            }
         }
     }
 }
@@ -271,11 +334,9 @@
         .nav-links {
             max-height: none;
             overflow: visible;
-
             flex-direction: row;
             gap: 2rem;
             align-items: center;
-
             padding: 1rem 2rem;
 
             a {
@@ -296,13 +357,20 @@
             width: auto;
             padding: 0 1rem;
         }
+    }
 
-        .search-bar .search-menu {
-            width: 300px;
+    .site-footer {
+
+        .footer-container {
+            justify-content: space-between;
         }
 
-        .change-language .language-menu {
-            width: 260px;
+        .footer-column {
+            flex: 1;
+        }
+
+        .footer-logo img {
+            width: 170px;
         }
     }
 }

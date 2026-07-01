@@ -126,8 +126,54 @@
     <?php include $view; ?>
 </main>
 
-<footer>
+<footer class="site-footer">
 
+    <div class="footer-container">
+
+        <div class="footer-column">
+            <div class="footer-logo">
+                <a href="index.php?page=home">
+                    <img src="public/assets/img/logo.png" alt="Logo Studio Cinéma Joël Daguerre">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-column">
+            <h4>Navigation</h4>
+            <ul>
+                <li><a href="index.php?page=home">ACCUEIL</a></li>
+                <li><a href="index.php?page=cinema">CINÉMA</a></li>
+                <li><a href="index.php?page=communication">COMMUNICATION</a></li>
+                <li><a href="index.php?page=distribution">DIFFUSION</a></li>
+                <li><a href="index.php?page=team">ÉQUIPE</a></li>
+                <li><a href="index.php?page=events">ÉVÈNEMENTS</a></li>
+                <li><a href="index.php?page=dvd">ACHETER LE DVD</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-column">
+            <h4>Contact</h4>
+
+            <p>
+                Email :
+                <a href="mailto:jdaguerrej@gmail.com">jdaguerrej@gmail.com</a>
+            </p>
+
+            <p>
+                Téléphone :
+                <a href="tel:+33749101684">07 49 10 16 84</a>
+            </p>
+
+            <p>
+                Paris 14, France
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© <?= date('Y') ?> Studio Cinéma Joël Daguerre — Tous droits réservés</p>
+    </div>
 </footer>
 
 </body>

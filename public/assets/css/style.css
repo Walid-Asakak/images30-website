@@ -49,7 +49,7 @@
   color: white;
 }
 .website-header {
-  /*************************** NAV LINKS (MOBILE PUSH) ***************************/
+  /*************************** NAV LINKS ***************************/
 }
 .website-header .nav-links {
   display: flex;
@@ -93,9 +93,6 @@
   position: relative;
   cursor: pointer;
 }
-.website-header .header-right {
-  /******************** SEARCH ********************/
-}
 .website-header .header-right .search-bar .search-close {
   display: none;
 }
@@ -136,9 +133,6 @@
   background-color: #050816;
   color: white;
   cursor: pointer;
-}
-.website-header .header-right {
-  /******************** LANGUAGE ********************/
 }
 .website-header .header-right .change-language .language-close {
   display: none;
@@ -182,6 +176,72 @@
   pointer-events: auto;
 }
 
+/*************************** FOOTER *****************************************************/
+.site-footer {
+  background: linear-gradient(353deg, #5051a0, rgb(177, 188, 241));
+  color: #000;
+  padding: 3rem 1rem 1rem;
+}
+.site-footer .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+.site-footer .footer-column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.site-footer .footer-column h4 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #000;
+}
+.site-footer .footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.site-footer .footer-column li {
+  margin-bottom: 0.6rem;
+}
+.site-footer .footer-column a,
+.site-footer .footer-column p {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.site-footer .footer-column a:hover {
+  color: #050816;
+}
+.site-footer .footer-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.site-footer .footer-logo img {
+  width: 140px;
+  height: auto;
+  display: block;
+}
+.site-footer .footer-bottom {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 2.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  color: #000;
+}
+
 /****************************************************************************************/
 /*************************** TABLET *****************************************************/
 /****************************************************************************************/
@@ -191,6 +251,23 @@
   }
   .website-header .burger-menu {
     width: 70px;
+  }
+  .site-footer .footer-container {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+  }
+  .site-footer .footer-column {
+    flex: 1;
+    align-items: flex-start;
+  }
+  .site-footer .footer-logo {
+    justify-content: flex-start;
+  }
+  .site-footer .footer-logo img {
+    width: 160px;
   }
 }
 /****************************************************************************************/
@@ -226,11 +303,14 @@
     width: auto;
     padding: 0 1rem;
   }
-  .website-header .search-bar .search-menu {
-    width: 300px;
+  .site-footer .footer-container {
+    justify-content: space-between;
   }
-  .website-header .change-language .language-menu {
-    width: 260px;
+  .site-footer .footer-column {
+    flex: 1;
+  }
+  .site-footer .footer-logo img {
+    width: 170px;
   }
 }
 /****************************************************************************************/
