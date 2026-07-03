@@ -118,4 +118,26 @@ const AVAILABLE_ROUTES = [
         'controller' => 'CommunicationController',
         'method' => 'showCommunicationServices',
     ],
+
+    // ALL ROUTES FOR PROTECTED SECTIONS :
+    'protected-section' => [
+        'controller' => 'ProtectedSectionController',
+        'method' => 'showProtectedSectionForm',
+    ],
+
+    'protected-section-auth' => [
+        'controller' => 'ProtectedSectionController',
+        'method' => 'authenticateUser',
+    ],
+
+     // ALL ROUTES FOR DOCUMENTARIES :
+     'documentaries' => [
+        'controller' => 'DocumentaryController',
+        'method' => 'showAllDocumentaries',
+    ],
+
+    'documentary-detail' => [
+        'controller' => 'DocumentaryController',
+        'method' => 'showDocumentaryDetail',
+    ],
 ];

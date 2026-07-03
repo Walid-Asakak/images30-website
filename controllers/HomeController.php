@@ -2,19 +2,21 @@
 
 namespace Controllers;
 
+use Services\ProtectedSectionService;
+
 class HomeController {
     public function index() {
         $movieRepo = new \Repositories\CinemaRepository();
         $imageRepo = new \Repositories\MovieImageRepository();
 
-        $homeMovies = $movieRepo->getAllMovies();
+        $homeMovies = $movieRepo -> getAllMovies();
 
         foreach ($homeMovies as $key => $movie) {
-            $homeMovies[$key]['images'] = $imageRepo->getImagesByMovieId($movie['id']);
+            $homeMovies[$key]['images'] = $imageRepo -> getImagesByMovieId($movie['id']);
         }
         
         $view = 'views/home/homeView.php';
-        include 'views/layoutView.php';
+        require 'views/layoutView.php';
         
     }
 
@@ -24,7 +26,6 @@ class HomeController {
     }
 
     public function showAdditionalServices() {
-
         $view = 'views/home/AdditionalServicesView.php';
         require 'views/layoutView.php';
     }
