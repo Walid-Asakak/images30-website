@@ -7,23 +7,26 @@
         <p>Aucun documentaire n'est disponible pour l'instant.</p>
 
     <?php else: ?>
+        <section class="documentaries-list">
+            <?php foreach ($documentaries as $documentary): ?>
 
-        <?php foreach ($documentaries as $documentary): ?>
+                <article class="documentary-card">
+                    <?php if (!empty($documentary['cover_image'])): ?>
+                        <img 
+                            src="public/assets/img/documentaries/<?= htmlspecialchars($documentary['cover_image']) ?>" 
+                            alt="<?= htmlspecialchars($documentary['title']) ?>"
+                            class="documentary-cover"
+                        >
+                    <?php endif; ?>
 
-            <article class="documentary-card">
-                <h2><?= htmlspecialchars($documentary['title']) ?></h2>
+                    <h2><?= htmlspecialchars($documentary['title']) ?></h2>
 
-                <?php if (!empty($documentary['description'])): ?>
-                    <p><?= htmlspecialchars($documentary['description']) ?></p>
-                <?php endif; ?>
+                    <a href="index.php?page=documentary-detail&id=<?= $documentary['id'] ?>">
+                        Voir le documentaire
+                    </a>
+                </article>
 
-                <a href="index.php?page=documentary-detail&id=<?= $documentary['id'] ?>">
-                    Voir le documentaire
-                </a>
-            </article>
-
-        <?php endforeach; ?>
-
+            <?php endforeach; ?>
+        </section>
     <?php endif; ?>
-
 </section>

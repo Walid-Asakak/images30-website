@@ -1,0 +1,100 @@
+.documentaries-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    h1 {
+        color: white;
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 2rem;
+    }
+
+    p {
+        text-align: center;
+        opacity: 0.8;
+    }
+
+    .documentaries-list {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        
+        .documentary-card {
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 1.5rem;
+            border-radius: 12px;
+    
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+    
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+    
+            h2 {
+                font-size: 1.3rem;
+                margin: 0;
+            }
+    
+            p {
+                font-size: 1rem;
+                opacity: 0.85;
+                text-align: left;
+            }
+    
+            a {
+                margin-top: auto;
+                display: inline-block;
+                width: fit-content;
+                padding: 0.6rem 1rem;
+                background: #fff;
+                color: #000;
+                text-decoration: none;
+                border-radius: 6px;
+                transition: 0.2s ease;
+    
+                &:hover {
+                    background: #ddd;
+                }
+            }
+    
+            &:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            }
+        }
+    }
+
+    /**********************************************************************/
+    /************************ TABLET MOD **********************************/
+    /**********************************************************************/
+    @media (min-width: 768px) {
+        .documentaries-list {
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+
+    /**********************************************************************/
+    /************************ DESKTOP MOD *********************************/
+    /**********************************************************************/
+    @media (min-width: 1023px) {
+        .documentaries-list {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+
+            .documentary-card {
+                padding: 2rem;
+            } 
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+    }
+}

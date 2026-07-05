@@ -2365,6 +2365,95 @@
   }
 }
 
+.documentaries-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+.documentaries-page h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+.documentaries-page p {
+  text-align: center;
+  opacity: 0.8;
+}
+.documentaries-page .documentaries-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+.documentaries-page .documentaries-list .documentary-card {
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.documentaries-page .documentaries-list .documentary-card h2 {
+  font-size: 1.3rem;
+  margin: 0;
+}
+.documentaries-page .documentaries-list .documentary-card p {
+  font-size: 1rem;
+  opacity: 0.85;
+  text-align: left;
+}
+.documentaries-page .documentaries-list .documentary-card a {
+  margin-top: auto;
+  display: inline-block;
+  width: fit-content;
+  padding: 0.6rem 1rem;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: 0.2s ease;
+}
+.documentaries-page .documentaries-list .documentary-card a:hover {
+  background: #ddd;
+}
+.documentaries-page .documentaries-list .documentary-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+.documentaries-page {
+  /**********************************************************************/
+  /************************ TABLET MOD **********************************/
+  /**********************************************************************/
+}
+@media (min-width: 768px) {
+  .documentaries-page .documentaries-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+  .documentaries-page h1 {
+    font-size: 2.5rem;
+  }
+}
+.documentaries-page {
+  /**********************************************************************/
+  /************************ DESKTOP MOD *********************************/
+  /**********************************************************************/
+}
+@media (min-width: 1023px) {
+  .documentaries-page .documentaries-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+  }
+  .documentaries-page .documentaries-list .documentary-card {
+    padding: 2rem;
+  }
+  .documentaries-page h1 {
+    font-size: 3rem;
+  }
+}
+
 /**********************************************************************/
 /************************ GLOBAL **************************************/
 /**********************************************************************/
