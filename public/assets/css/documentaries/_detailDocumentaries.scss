@@ -1,0 +1,90 @@
+/*************************************************************/
+/**************** DOCUMENTARY DETAIL PAGE *********************/
+/*************************************************************/
+
+.documentary-detail-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: white;
+
+    h1 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        line-height: 1.3;
+    }
+
+    p {
+        max-width: 900px;
+        margin: 0 auto 2.5rem;
+        text-align: justify;
+        line-height: 1.8;
+        opacity: .9;
+    }
+
+    .video-container {
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        background: #000;
+
+        iframe {
+            display: block;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            height: auto;
+            border: 0;
+        }
+    }
+}
+
+/*************************************************************/
+/********************** TABLET MOD ****************************/
+/*************************************************************/
+
+@media screen and (min-width: 768px) {
+
+    .documentary-detail-page {
+
+        padding: 3rem 2rem;
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 3rem;
+        }
+
+        .video-container {
+            border-radius: 16px;
+        }
+    }
+}
+
+/*************************************************************/
+/********************** DESKTOP MOD ***************************/
+/*************************************************************/
+
+@media screen and (min-width: 1023px) {
+
+    .documentary-detail-page {
+
+        padding: 4rem 2rem;
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+        }
+
+        .video-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+    }
+}

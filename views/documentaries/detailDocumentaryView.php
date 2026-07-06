@@ -10,8 +10,6 @@
 
         <iframe
             src="https://player.vimeo.com/video/<?= htmlspecialchars($documentary['vimeo_id']) ?>"
-            width="900"
-            height="500"
             frameborder="0"
             allow="autoplay; fullscreen; picture-in-picture"
             allowfullscreen>
