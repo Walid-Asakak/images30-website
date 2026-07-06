@@ -54,4 +54,15 @@ class DocumentaryRepository {
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    public function getHomeDocumentaries(): array {
+        $stmt = $this->pdo->query("
+            SELECT *
+            FROM documentaries
+            WHERE show_on_home = 1
+            ORDER BY display_order ASC
+        ");
+    
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

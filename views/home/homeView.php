@@ -4,14 +4,14 @@
         <h2>Qui sommes-nous ?</h2>
 
         <p>
-            Studio Cinéma Joël Daguerre est une société spécialisée dans le développement, 
+            Studio Cinéma Joël Daguerre est une société spécialisée dans le développement,
             la production et la distribution de films et de séries destinés au marché international.
             Nous concevons des œuvres originales reposant sur des propriétés intellectuelles (IP) fortes,
-            pensées pour toucher un public mondial. La majorité de nos productions est tournée en langue 
-            anglaise afin de favoriser leur diffusion auprès des diffuseurs, plateformes et partenaires 
+            pensées pour toucher un public mondial. La majorité de nos productions est tournée en langue
+            anglaise afin de favoriser leur diffusion auprès des diffuseurs, plateformes et partenaires
             internationaux. Notre ambition est de créer des contenus à forte valeur artistique et commerciale,
-            capables de s'inscrire durablement sur les marchés internationaux. Chaque projet est développé avec 
-            une exigence de qualité, depuis sa conception jusqu'à sa production et sa distribution, afin de 
+            capables de s'inscrire durablement sur les marchés internationaux. Chaque projet est développé avec
+            une exigence de qualité, depuis sa conception jusqu'à sa production et sa distribution, afin de
             répondre aux attentes des acteurs majeurs de l'industrie audiovisuelle.
         </p>
     </section>
@@ -98,53 +98,30 @@
     </section>
 
     <section class="discover-more">
-        <h2>À DÉCOUVRIR</h2>
+        <h2>Nos documentaires</h2>
 
         <div class="discover-grid">
+            <?php foreach ($homeDocumentaries as $homeDocumentary): ?>
+                <article class="to-discover-card">
+                    <a href="index.php?page=documentary-detail&id=<?= $homeDocumentary['id'] ?>">
 
-            <article class="to-discover-card">
-                <a href="index.php?page=">
+                        <div class="discover-title">
+                            <i class="fas fa-play"></i>
+                            <h3><?= htmlspecialchars($homeDocumentary['title']) ?></h3>
+                        </div>
 
-                    <div class="discover-title">
-                        <i class="fas fa-play"></i>
-                        <h3>Palmeraie Palace Marrakech</h3>
-                    </div>
+                        <img
+                            src="public/assets/img/documentaries/<?= htmlspecialchars($homeDocumentary['cover_image']) ?>"
+                            alt="<?= htmlspecialchars($homeDocumentary['title']) ?>">
 
-                    <img
-                        src="public/assets/img/home/palmeraie.png"
-                        alt="Palmeraie Palace Marrakech">
-                </a>
-            </article>
+                    </a>
+                </article>
 
-            <article class="to-discover-card">
-                <a href="index.php?page=">
-
-                    <div class="discover-title">
-                        <i class="fas fa-play"></i>
-                        <h3>Si les toits de Paris m'étaient contés</h3>
-                    </div>
-
-                    <img
-                        src="public/assets/img/home/toits-paris-contes.png"
-                        alt="Si les toits de Paris m'étaient contés">
-                </a>
-            </article>
-
-            <article class="to-discover-card">
-                <a href="index.php?page=">
-
-                    <div class="discover-title">
-                        <i class="fas fa-play"></i>
-                        <h3>Top model made in Paris</h3>
-                    </div>
-
-                    <img
-                        src="public/assets/img/home/top-model-paris.png"
-                        alt="Top model made in Paris">
-                </a>
-            </article>
-
+            <?php endforeach; ?>
         </div>
-    </section>
 
+        <a class="btn-discover-more-documentaries" href="index.php?page=documentaries">
+            Découvrir plus
+        </a>
+    </section>
 </div>

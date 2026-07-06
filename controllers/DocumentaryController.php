@@ -13,7 +13,7 @@ class DocumentaryController {
         $documentaryRepository = new DocumentaryRepository();
 
         $documentaries = $documentaryRepository->getAllDocumentaries();
-
+        
         $view = 'views/documentaries/documentariesView.php';
         require 'views/layoutView.php';
     }

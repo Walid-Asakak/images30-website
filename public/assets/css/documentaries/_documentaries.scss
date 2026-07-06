@@ -33,8 +33,19 @@
             transition: transform 0.2s ease, box-shadow 0.2s ease;
     
             h2 {
+                text-align: center;
                 font-size: 1.3rem;
                 margin: 0;
+            }
+
+            .cover-img-documentary {
+                width: 100%;
+                height: 200px;
+                object-fit: contain;
+                object-position: center;
+                display: block;
+                background: #000;
+                border-radius: 10px;
             }
     
             p {
@@ -44,13 +55,12 @@
             }
     
             a {
-                margin-top: auto;
+                margin: auto;
                 display: inline-block;
                 width: fit-content;
                 padding: 0.6rem 1rem;
                 background: #fff;
                 color: #000;
-                text-decoration: none;
                 border-radius: 6px;
                 transition: 0.2s ease;
     

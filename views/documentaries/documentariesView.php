@@ -11,15 +11,15 @@
             <?php foreach ($documentaries as $documentary): ?>
 
                 <article class="documentary-card">
+                    <h2><?= htmlspecialchars($documentary['title']) ?></h2>
+
                     <?php if (!empty($documentary['cover_image'])): ?>
-                        <img 
+                        <img class="cover-img-documentary"
                             src="public/assets/img/documentaries/<?= htmlspecialchars($documentary['cover_image']) ?>" 
                             alt="<?= htmlspecialchars($documentary['title']) ?>"
                             class="documentary-cover"
                         >
                     <?php endif; ?>
-
-                    <h2><?= htmlspecialchars($documentary['title']) ?></h2>
 
                     <a href="index.php?page=documentary-detail&id=<?= $documentary['id'] ?>">
                         Voir le documentaire

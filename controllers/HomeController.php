@@ -4,17 +4,21 @@ namespace Controllers;
 
 use Services\ProtectedSectionService;
 
+
 class HomeController {
     public function index() {
         $movieRepo = new \Repositories\CinemaRepository();
         $imageRepo = new \Repositories\MovieImageRepository();
-
+        $documentaryRepo = new \Repositories\DocumentaryRepository();
+        
         $homeMovies = $movieRepo -> getAllMovies();
 
         foreach ($homeMovies as $key => $movie) {
             $homeMovies[$key]['images'] = $imageRepo -> getImagesByMovieId($movie['id']);
         }
-        
+
+        $homeDocumentaries = $documentaryRepo -> getHomeDocumentaries();
+
         $view = 'views/home/homeView.php';
         require 'views/layoutView.php';
         

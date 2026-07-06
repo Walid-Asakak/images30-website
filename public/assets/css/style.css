@@ -1801,6 +1801,20 @@
 .home-page .discover-more .discover-grid .to-discover-card a:hover img {
   transform: scale(1.05);
 }
+.home-page .discover-more .btn-discover-more-documentaries {
+  display: block;
+  width: fit-content;
+  margin: 2rem auto 0;
+  padding: 0.9rem 2rem;
+  border-radius: 8px;
+  background-color: #4f5bd5;
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.home-page .discover-more .btn-discover-more-documentaries:hover {
+  background-color: #3d49b1;
+}
 
 /*************************************************************/
 /********************** MOD TABLET ***************************/
@@ -2396,8 +2410,18 @@
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .documentaries-page .documentaries-list .documentary-card h2 {
+  text-align: center;
   font-size: 1.3rem;
   margin: 0;
+}
+.documentaries-page .documentaries-list .documentary-card .cover-img-documentary {
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+  object-position: center;
+  display: block;
+  background: #000;
+  border-radius: 10px;
 }
 .documentaries-page .documentaries-list .documentary-card p {
   font-size: 1rem;
@@ -2405,13 +2429,12 @@
   text-align: left;
 }
 .documentaries-page .documentaries-list .documentary-card a {
-  margin-top: auto;
+  margin: auto;
   display: inline-block;
   width: fit-content;
   padding: 0.6rem 1rem;
   background: #fff;
   color: #000;
-  text-decoration: none;
   border-radius: 6px;
   transition: 0.2s ease;
 }
