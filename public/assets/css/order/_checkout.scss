@@ -1,0 +1,114 @@
+.checkout-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+
+    h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: white;
+    }
+
+    form {
+        background: #ffffff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.12);
+
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    input {
+        width: 100%;
+        padding: 0.9rem 1rem;
+
+        border: 1px solid #ddd;
+        border-radius: 2px;
+
+        font-size: 1rem;
+        background: #fff;
+        color: #333;
+
+        transition: all 0.2s ease;
+
+        &::placeholder {
+            font-weight: bold;
+            color: #020202;
+        }
+
+        &:focus {
+            outline: none;
+            border-color: #d4b24c;
+            box-shadow: 0 0 0 2px rgba(212, 178, 76, 0.15);
+        }
+    }
+
+    button {
+        margin-top: 1rem;
+
+        padding: 1rem;
+
+        border: none;
+        border-radius: 2px;
+
+        background: #4f5bd5;
+        color: white;
+
+        font-size: 1rem;
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition: all 0.2s ease;
+
+        &:hover {
+            background: #b99632;
+        }
+
+        &:active {
+            transform: scale(0.98);
+        }
+    }
+}
+
+
+/****************************
+TABLET
+*****************************/
+@media (min-width: 768px) {
+
+    .checkout-page {
+
+        h1 {
+            font-size: 2.2rem;
+        }
+
+        form {
+            padding: 2rem;
+            gap: 1.2rem;
+        }
+    }
+}
+
+
+/****************************
+DESKTOP
+*****************************/
+@media (min-width: 1023px) {
+
+    .checkout-page {
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        form {
+            padding: 2.5rem;
+            gap: 1.5rem;
+        }
+    }
+}
