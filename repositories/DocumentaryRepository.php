@@ -65,4 +65,20 @@ class DocumentaryRepository {
     
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    // Method to search a documentary (for the searchbar)
+    public function searchDocumentaries(string $search): array {
+        $stmt = $this -> pdo -> prepare("
+            SELECT *
+            FROM documentaries
+            WHERE title LIKE :search
+            ORDER BY display_order ASC
+        ");
+    
+        $stmt -> execute([
+            ':search' => '%' . $search . '%'
+        ]);
+    
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

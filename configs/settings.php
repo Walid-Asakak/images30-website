@@ -140,4 +140,10 @@ const AVAILABLE_ROUTES = [
         'controller' => 'DocumentaryController',
         'method' => 'showDocumentaryDetail',
     ],
+
+    // ALL ROUTES FOR THE GLOBAL SEARCH BAR :
+    'search' => [
+        'controller' => 'SearchController',
+        'method' => 'search',
+    ],
 ];

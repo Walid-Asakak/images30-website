@@ -63,4 +63,20 @@ class EventRepository {
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+    // Method to search an event (for the searchbar) :
+    public function searchEvents(string $search): array {
+        $stmt = $this -> pdo -> prepare("
+            SELECT *
+            FROM events
+            WHERE title LIKE :search
+            ORDER BY id DESC
+        ");
+
+        $stmt -> execute([
+            ':search' => '%' . $search . '%'
+        ]);
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

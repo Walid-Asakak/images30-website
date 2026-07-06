@@ -45,4 +45,42 @@ class CinemaRepository {
     
         return $stmt -> fetch(PDO::FETCH_ASSOC);
     }
+
+    // Method to search a movie (for the searchbar) :
+        public function searchMovies(string $search): array {
+            $stmt = $this->pdo->prepare("
+                SELECT *
+                FROM movies
+                WHERE title LIKE :search
+            ");
+        
+            $stmt->execute([
+                ':search' => "%$search%"
+            ]);
+        
+            $movies = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+            foreach ($movies as &$movie) {
+                $movie['image'] = $this -> getCoverImageMovie($movie['id']);
+            }
+        
+            return $movies;
+        }
+
+        public function getCoverImageMovie(int $movieId): ?string {
+            $stmt = $this->pdo->prepare("
+                SELECT image_url
+                FROM movie_images
+                WHERE movie_id = :id
+                LIMIT 1
+            ");
+
+            $stmt->execute([
+                ':id' => $movieId
+            ]);
+
+            $image = $stmt->fetchColumn();
+
+            return $image ?: null;
+        }
 }

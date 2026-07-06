@@ -36,12 +36,10 @@
                 <i class="fa-solid fa-xmark search-close"></i>
 
                 <div class="search-menu">
-                    <form method="GET">
-                        <input
-                            type="text"
-                            name="search"
-                            placeholder="Rechercher un film ou évènement..."
-                        >
+                    <form method="GET" action="index.php">
+                        <input type="hidden" name="page" value="search">
+
+                        <input type="text" name="search" placeholder="Rechercher des films, documentaires ou évènements">
 
                         <button type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
