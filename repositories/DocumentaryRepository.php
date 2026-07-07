@@ -29,15 +29,22 @@ class DocumentaryRepository {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Method to retrieve all documentaries
+    // Method to retrieve all documentaries  with their protected section label
     public function getAllDocumentaries(): array {
         $stmt = $this->pdo->query("
-            SELECT *
+            SELECT
+                documentaries.*,
+                protected_sections.label as category
             FROM documentaries
-            ORDER BY display_order ASC
+            
+            INNER JOIN protected_sections
+                ON documentaries.protected_section_id = protected_sections.id
+            ORDER BY
+                protected_sections.id ASC,
+                documentaries.display_order ASC
         ");
 
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $stmt -> fetchAll(PDO::FETCH_ASSOC);
     }
     // Method to retrieve a documentary by its id
     public function getDocumentaryById(int $id): array|false {

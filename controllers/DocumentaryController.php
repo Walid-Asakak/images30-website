@@ -12,7 +12,17 @@ class DocumentaryController {
     public function showAllDocumentaries() {
         $documentaryRepository = new DocumentaryRepository();
 
-        $documentaries = $documentaryRepository->getAllDocumentaries();
+        $documentaries = $documentaryRepository -> getAllDocumentaries();
+
+        // To stock the documentaries by category
+        $documentariesOrderedByCategory = [];
+
+        foreach ($documentaries as $documentary) {
+
+            $category = $documentary['category'];
+    
+            $documentariesOrderedByCategory[$category][] = $documentary;
+        }
         
         $view = 'views/documentaries/documentariesView.php';
         require 'views/layoutView.php';
