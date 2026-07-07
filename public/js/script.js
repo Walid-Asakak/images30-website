@@ -98,3 +98,54 @@ if (moviesScroll && scrollLeft && scrollRight) {
     });
 
 }
+
+// SCRIPT TO MAKE MOVIE DETAIL IMG BE SCROLLABLE (carousel)
+document.querySelectorAll(".movie-gallery").forEach(gallery => {
+
+    const images = gallery.querySelectorAll(".gallery-container img");
+    const prevBtn = gallery.querySelector(".gallery-btn.prev");
+    const nextBtn = gallery.querySelector(".gallery-btn.next");
+
+    if (!images.length || !prevBtn || !nextBtn) {
+        return;
+    }
+
+    let currentIndex = 0;
+
+
+    function showImage(index) {
+
+        images[currentIndex].classList.remove("active");
+
+        currentIndex = index;
+
+        images[currentIndex].classList.add("active");
+    }
+
+
+    nextBtn.addEventListener("click", () => {
+
+        let nextIndex = currentIndex + 1;
+
+        if (nextIndex >= images.length) {
+            nextIndex = 0;
+        }
+
+        showImage(nextIndex);
+
+    });
+
+
+    prevBtn.addEventListener("click", () => {
+
+        let prevIndex = currentIndex - 1;
+
+        if (prevIndex < 0) {
+            prevIndex = images.length - 1;
+        }
+
+        showImage(prevIndex);
+
+    });
+
+});
