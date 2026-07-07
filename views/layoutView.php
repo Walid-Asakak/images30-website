@@ -95,11 +95,6 @@
         <a href="index.php?page=distribution">DIFFUSION</a>         
         <a href="index.php?page=team">ÉQUIPE</a>
         <a href="index.php?page=events">ÉVÈNEMENTS</a>
-
-        <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged'] === true): ?>
-            <a href="index.php?page=myAccount">MON COMPTE</a>
-        <?php endif; ?>
-
         <a href="index.php?page=dvd" class="buy-dvd">
             ACHETER LE DVD
         </a>
