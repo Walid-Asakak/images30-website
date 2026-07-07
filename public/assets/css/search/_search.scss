@@ -6,14 +6,12 @@
 
     h1 {
         text-align: center;
-        font-size: 2rem;
         margin-bottom: 2rem;
     }
 
     h2 {
         text-align: center;
         margin: 2rem 0 1rem;
-        font-size: 1.5rem;
         padding-left: 0.8rem;
     }
 
@@ -47,7 +45,6 @@
         }
 
         h3 {
-            font-size: 1.1rem;
             text-align: center;
             padding: 1rem;
             background: #252e4f;
@@ -71,10 +68,6 @@
      TABLET
     *****************************/
     @media (min-width: 768px) {
-        h1 {
-            font-size: 2.5rem;
-        }
-
         .search-grid {
             grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
@@ -91,10 +84,6 @@
      DESKTOP
     *****************************/
     @media (min-width: 1023px) {
-        h1 {
-            font-size: 3rem;
-        }
-
         .search-grid {
             grid-template-columns: repeat(3, 1fr);
             gap: 2.5rem;
@@ -103,10 +92,6 @@
         .search-card {
             img {
                 height: 300px;
-            }
-
-            h3 {
-                font-size: 1.2rem;
             }
         }
     }

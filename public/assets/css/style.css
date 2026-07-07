@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /****************************************************************************************/
 /*************************** GLOBAL *****************************************************/
 /****************************************************************************************/
@@ -201,7 +200,6 @@
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 1.2rem;
   margin-bottom: 1rem;
   color: #000;
 }
@@ -217,7 +215,6 @@
 .site-footer .footer-column p {
   color: #000;
   text-decoration: none;
-  font-size: 0.95rem;
 }
 .site-footer .footer-column a:hover {
   color: #050816;
@@ -238,7 +235,6 @@
   margin-top: 2.5rem;
   padding-top: 1rem;
   border-top: 1px solid rgba(0, 0, 0, 0.2);
-  font-size: 1rem;
   color: #000;
 }
 
@@ -342,7 +338,6 @@
 .auth-page .auth-card h1 {
   text-align: center;
   margin-bottom: 20px;
-  font-size: 1.6rem;
   color: #ffffff;
 }
 .auth-page .auth-card form {
@@ -351,7 +346,6 @@
   gap: 10px;
 }
 .auth-page .auth-card form label {
-  font-size: 0.9rem;
   color: #f0f4ff;
 }
 .auth-page .auth-card form input {
@@ -388,7 +382,6 @@
 
 .error {
   color: #ffd6d6;
-  font-size: 0.85rem;
   margin-top: 5px;
 }
 
@@ -396,8 +389,6 @@
   margin-top: 10px;
   text-align: center;
   color: #ffe082;
-  text-decoration: none;
-  font-size: 0.9rem;
 }
 
 .auth-card a:hover {
@@ -411,7 +402,6 @@
   text-align: center;
   color: white;
   margin-bottom: 1.8rem;
-  font-size: 1.8rem;
   position: relative;
   padding: 0 20px;
   padding-top: 4rem;
@@ -444,7 +434,6 @@
 }
 .team-members .team-card h2 {
   color: white;
-  font-size: 1.3rem;
   margin-bottom: 12px;
   font-weight: 500;
 }
@@ -468,7 +457,6 @@
 /****************************************************************************************/
 @media (min-width: 768px) {
   .team-title {
-    font-size: 2.2rem;
     margin-bottom: 2rem;
   }
   .team-members {
@@ -483,7 +471,6 @@
 /****************************************************************************************/
 @media (min-width: 1023px) {
   .team-title {
-    font-size: 2.5rem;
     margin-bottom: 2.2rem;
   }
   .team-members {
@@ -499,9 +486,6 @@
   }
   .team-members .team-card:hover {
     transform: scale(1.1) translateY(-6px);
-  }
-  .team-members .team-card h2 {
-    font-size: 1.5rem;
   }
   .team-members .team-card img {
     height: 420px;
@@ -523,11 +507,9 @@
   text-align: center;
 }
 .team-detail .team-detail-card h1 {
-  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 .team-detail .team-detail-card h2 {
-  font-size: 1.5rem;
   font-weight: 400;
   opacity: 0.8;
   margin-bottom: 1.5rem;
@@ -549,7 +531,6 @@
   background-color: rgba(0, 0, 0, 0.2);
 }
 .team-detail .team-detail-card p {
-  font-size: 1.25rem;
   text-align: left;
   line-height: 1.8;
 }
@@ -586,13 +567,6 @@
   .team-detail .team-detail-card {
     padding: 2rem;
   }
-  .team-detail .team-detail-card h1 {
-    font-size: 2.8rem;
-  }
-  .team-detail .team-detail-card h2,
-  .team-detail .team-detail-card p {
-    font-size: 1.5rem;
-  }
   .team-detail .team-detail-card .team-medias video,
   .team-detail .team-detail-card .team-medias img {
     height: 550px;
@@ -625,7 +599,6 @@
   margin-bottom: 1rem;
 }
 .dvd-card h2 {
-  font-size: 1.2rem;
   margin-bottom: 0.5rem;
 }
 .dvd-card p {
@@ -671,9 +644,6 @@
     max-width: 1400px;
     margin: 0 auto;
   }
-  .dvd-card h2 {
-    font-size: 1.3rem;
-  }
 }
 .cinema-page {
   padding: 2rem 1rem;
@@ -682,7 +652,6 @@
   color: white;
   margin-bottom: 2rem;
   text-align: center;
-  font-size: 2.5rem;
 }
 .cinema-page h2 {
   color: white;
@@ -690,7 +659,6 @@
   margin: 3rem 0 1.5rem;
   padding-bottom: 0.5rem;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  font-size: 2rem;
 }
 
 .cinema-grid {
@@ -717,7 +685,6 @@
   margin-bottom: 1rem;
   text-align: center;
   line-height: 1.4;
-  font-size: 1.6rem;
 }
 .movie-card a {
   display: block;
@@ -760,9 +727,6 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
   }
-  .movie-card h3 {
-    font-size: 1.1rem;
-  }
 }
 .movie-detail {
   max-width: 1200px;
@@ -772,7 +736,6 @@
 .movie-detail h1 {
   color: white;
   text-align: center;
-  font-size: 1.8rem;
   margin-bottom: 1.5rem;
 }
 .movie-detail .movie-gallery {
@@ -808,7 +771,6 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  font-size: 1.5rem;
   background: rgba(0, 0, 0, 0.7);
   color: white;
   transition: background 0.3s ease;
@@ -827,36 +789,23 @@
   max-width: 900px;
   margin: 1rem auto 0;
   line-height: 1.7;
-  font-size: 1rem;
   opacity: 0.9;
 }
 @media screen and (min-width: 768px) {
   .movie-detail {
     padding: 2rem;
   }
-  .movie-detail h1 {
-    font-size: 2.2rem;
-  }
   .movie-detail .movie-gallery .gallery-btn {
     width: 45px;
     height: 45px;
-  }
-  .movie-detail p {
-    font-size: 1.1rem;
   }
 }
 @media screen and (min-width: 1023px) {
   .movie-detail {
     padding: 3rem 0;
   }
-  .movie-detail h1 {
-    font-size: 2.8rem;
-  }
   .movie-detail .movie-gallery {
     max-width: 900px;
-  }
-  .movie-detail p {
-    font-size: 1.2rem;
   }
 }
 
@@ -867,7 +816,6 @@
   color: white;
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2rem;
 }
 
 .events-grid {
@@ -885,7 +833,6 @@
 .event-card h2 {
   color: white;
   margin-bottom: 1rem;
-  font-size: 1.25rem;
 }
 .event-card a {
   display: block;
@@ -922,14 +869,8 @@
     margin: 0 auto;
     padding: 4rem 2rem;
   }
-  .events-page h1 {
-    font-size: 3.75rem;
-  }
   .events-grid {
     grid-template-columns: repeat(3, 1fr);
-  }
-  .event-card h2 {
-    font-size: 1.5rem;
   }
 }
 /*******************************************************************************/
@@ -942,7 +883,6 @@
   color: white;
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2rem;
 }
 .event-detail-page .gallery {
   column-count: 1;
@@ -967,9 +907,6 @@
   .event-detail-page {
     padding: 3rem 2rem;
   }
-  .event-detail-page h1 {
-    font-size: 2.3rem;
-  }
   .event-detail-page .gallery {
     column-count: 2;
     column-gap: 1.5rem;
@@ -986,9 +923,6 @@
     max-width: 1400px;
     margin: 0 auto;
     padding: 4rem 2rem;
-  }
-  .event-detail-page h1 {
-    font-size: 2.8rem;
   }
   .event-detail-page .gallery {
     column-count: 3;
@@ -1007,7 +941,6 @@
 }
 .distribution-page h1 {
   text-align: center;
-  font-size: 2.2rem;
   margin-bottom: 2rem;
 }
 .distribution-page {
@@ -1019,11 +952,9 @@
   text-align: center;
 }
 .distribution-page .distribution-introduction h2 {
-  font-size: 1.9rem;
   margin-bottom: 1rem;
 }
 .distribution-page .distribution-introduction p {
-  font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 1rem;
   opacity: 0.95;
@@ -1084,17 +1015,14 @@
   flex-direction: column;
 }
 .distribution-page .distribution-card .distribution-content h2 {
-  font-size: 1.6rem;
   margin-bottom: 0.75rem;
 }
 .distribution-page .distribution-card .distribution-content p {
-  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 1rem;
   opacity: 0.95;
 }
 .distribution-page .distribution-card .distribution-content a {
-  font-size: 1.05rem;
   color: #4da3ff;
   text-decoration: underline;
   font-weight: 600;
@@ -1113,7 +1041,6 @@
   padding-left: 1.5rem;
 }
 .distribution-page .distribution-card .distribution-content ul li {
-  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 0.6rem;
   opacity: 0.95;
@@ -1131,11 +1058,9 @@
   text-align: center;
 }
 .distribution-page .distribution-contact h2 {
-  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 .distribution-page .distribution-contact p {
-  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 1rem;
   opacity: 0.95;
@@ -1160,9 +1085,6 @@
   .distribution-page {
     padding: 3rem 2rem;
   }
-  .distribution-page h1 {
-    font-size: 2.8rem;
-  }
   .distribution-page .distribution-card {
     flex-direction: row;
     align-items: stretch;
@@ -1182,14 +1104,8 @@
     width: 60%;
     justify-content: center;
   }
-  .distribution-page .distribution-card .distribution-content h2 {
-    font-size: 1.7rem;
-  }
   .distribution-page .distribution-contact {
     padding: 2.5rem 2rem;
-  }
-  .distribution-page .distribution-contact h2 {
-    font-size: 2rem;
   }
 }
 /**********************************************************************/
@@ -1199,9 +1115,6 @@
   .distribution-page {
     max-width: 1200px;
     margin: 0 auto;
-  }
-  .distribution-page h1 {
-    font-size: 3rem;
   }
   .distribution-page .distribution-card {
     padding: 1.5rem;
@@ -1218,19 +1131,8 @@
   .distribution-page .distribution-card .distribution-content {
     width: 62%;
   }
-  .distribution-page .distribution-card .distribution-content h2 {
-    font-size: 1.8rem;
-  }
-  .distribution-page .distribution-card .distribution-content p,
-  .distribution-page .distribution-card .distribution-content a,
-  .distribution-page .distribution-card .distribution-content li {
-    font-size: 1.1rem;
-  }
   .distribution-page .distribution-contact {
     padding: 3rem 2rem;
-  }
-  .distribution-page .distribution-contact h2 {
-    font-size: 2.2rem;
   }
 }
 /**********************************************************************/
@@ -1246,11 +1148,9 @@
   margin-bottom: 3rem;
 }
 .communication-page .communication-header h1 {
-  font-size: 2.2rem;
   margin-bottom: 0.5rem;
 }
 .communication-page .communication-header h2 {
-  font-size: 1.2rem;
   font-weight: 400;
   opacity: 0.8;
   text-transform: uppercase;
@@ -1293,7 +1193,6 @@
 }
 .communication-page .communication-section .communication-image-movie img {
   max-height: 230px;
-  object-fit: contain;
 }
 .communication-page .communication-section {
   /************************ CONTENT ************************/
@@ -1303,11 +1202,9 @@
   flex-direction: column;
 }
 .communication-page .communication-section .communication-content h3 {
-  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 .communication-page .communication-section .communication-content p {
-  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 1rem;
   opacity: 0.95;
@@ -1316,7 +1213,6 @@
   padding-left: 1.5rem;
 }
 .communication-page .communication-section .communication-content ul li {
-  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 0.6rem;
   opacity: 0.95;
@@ -1326,16 +1222,14 @@
   background: rgba(0, 0, 0, 0.6);
   border: 1px solid rgba(255, 255, 255, 0.08);
   max-width: 900px;
-  margin: 3rem auto 0 auto;
+  margin: 3rem auto 0;
   padding: 2rem 1.5rem;
   border-radius: 14px;
 }
 .communication-page .communication-contact h2 {
-  font-size: 1.8rem;
   margin-bottom: 1rem;
 }
 .communication-page .communication-contact p {
-  font-size: 1.05rem;
   line-height: 1.8;
   margin-bottom: 1rem;
   opacity: 0.95;
@@ -1360,39 +1254,26 @@
   .communication-page {
     padding: 3rem 2rem;
   }
-  .communication-page .communication-header h1 {
-    font-size: 2.8rem;
-  }
-  .communication-page .communication-header h2 {
-    font-size: 1.3rem;
-  }
   .communication-page .communication-section {
     flex-direction: row;
-    align-items: stretch;
     gap: 2rem;
   }
   .communication-page .communication-section.reverse {
     flex-direction: row-reverse;
   }
   .communication-page .communication-section .communication-image {
+    margin: auto;
     width: 40%;
   }
   .communication-page .communication-section .communication-image-movie img {
     max-height: 280px;
-    object-fit: contain;
   }
   .communication-page .communication-section .communication-content {
     width: 60%;
     justify-content: center;
   }
-  .communication-page .communication-section .communication-content h3 {
-    font-size: 1.7rem;
-  }
   .communication-page .communication-contact {
     padding: 2.5rem 2rem;
-  }
-  .communication-page .communication-contact h2 {
-    font-size: 2rem;
   }
 }
 /**********************************************************************/
@@ -1403,12 +1284,6 @@
     max-width: 1200px;
     margin: 0 auto;
   }
-  .communication-page .communication-header h1 {
-    font-size: 3rem;
-  }
-  .communication-page .communication-header h2 {
-    font-size: 1.4rem;
-  }
   .communication-page .communication-section {
     padding: 1.5rem;
   }
@@ -1418,18 +1293,8 @@
   .communication-page .communication-section .communication-content {
     width: 62%;
   }
-  .communication-page .communication-section .communication-content h3 {
-    font-size: 1.8rem;
-  }
-  .communication-page .communication-section .communication-content p,
-  .communication-page .communication-section .communication-content li {
-    font-size: 1.1rem;
-  }
   .communication-page .communication-contact {
     padding: 3rem 2rem;
-  }
-  .communication-page .communication-contact h2 {
-    font-size: 2.2rem;
   }
 }
 .cart-page {
@@ -1439,126 +1304,108 @@
   color: white;
 }
 .cart-page h1 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
   text-align: center;
+  margin-bottom: 2rem;
 }
 .cart-page p {
   margin-bottom: 0.5rem;
 }
-
-.cart-empty {
+.cart-page .cart-empty {
   text-align: center;
-  font-size: 1.2rem;
   opacity: 0.8;
 }
-
-.cart-items {
+.cart-page .cart-items {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
-.cart-item {
-  background-color: #252e4f;
+.cart-page .cart-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  text-align: center;
+  background: #252e4f;
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
-  padding: 1.5rem;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
   transition: transform 0.3s ease;
 }
-.cart-item:hover {
+.cart-page .cart-item:hover {
   transform: translateY(-3px);
 }
-
-.cart-img {
-  width: 220px;
+.cart-page .cart-img {
+  width: 260px;
+  max-width: 100%;
   height: auto;
+  margin: 0 auto;
   border-radius: 10px;
-  flex-shrink: 0;
 }
-
-.cart-info {
+.cart-page .cart-info {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  flex: 1;
 }
-.cart-info h2 {
-  font-size: 1.4rem;
+.cart-page .cart-info h2 {
   margin-bottom: 0.5rem;
 }
-
-.cart-price {
+.cart-page .cart-price {
   font-weight: bold;
-  font-size: 1.1rem;
 }
-
-.cart-subtotal {
+.cart-page .cart-subtotal {
   color: #b8c0ff;
 }
-
-.cart-summary {
+.cart-page .cart-summary {
   margin-top: 2rem;
   padding-top: 1.5rem;
+  text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  text-align: right;
 }
-.cart-summary .cart-total {
-  font-size: 1.8rem;
+.cart-page .cart-summary .cart-total {
   font-weight: bold;
 }
-.cart-summary a {
+.cart-page .cart-summary a {
   display: inline-block;
   margin-top: 1rem;
   padding: 0.9rem 1.5rem;
-  background-color: #4f5bd5;
-  color: white;
   border-radius: 8px;
-  text-decoration: none;
-  transition: background 0.3s ease;
+  background: #4f5bd5;
+  color: white;
+  transition: background 0.3s;
 }
-.cart-summary a:hover {
-  background-color: #3d49b1;
+.cart-page .cart-summary a:hover {
+  background: #3d49b1;
 }
-
-/* TABLET */
-@media screen and (min-width: 768px) {
-  .cart-img {
+.cart-page {
+  /************************ TABLET ************************/
+}
+@media (min-width: 768px) {
+  .cart-page .cart-item {
+    flex-direction: row;
+    align-items: center;
+    text-align: left;
+    gap: 2rem;
+  }
+  .cart-page .cart-img {
     width: 280px;
+    margin: 0;
+    flex-shrink: 0;
   }
-  .cart-info h2 {
-    font-size: 1.6rem;
+  .cart-page .cart-info {
+    flex: 1;
+  }
+  .cart-page .cart-summary {
+    text-align: right;
   }
 }
-/* DESKTOP */
-@media screen and (min-width: 1023px) {
-  .cart-page h1 {
-    font-size: 2.5rem;
-  }
-  .cart-img {
+.cart-page {
+  /************************ DESKTOP ************************/
+}
+@media (min-width: 1023px) {
+  .cart-page .cart-img {
     width: 320px;
   }
-  .cart-info h2 {
-    font-size: 1.8rem;
-  }
 }
-/* MOBILE */
-@media screen and (max-width: 767px) {
-  .cart-item {
-    flex-direction: column;
-    text-align: center;
-  }
-  .cart-img {
-    width: 260px;
-    max-width: 100%;
-  }
-  .cart-summary {
-    text-align: center;
-  }
-}
+
 .order-details-page {
   max-width: 1000px;
   margin: 2rem auto;
@@ -1568,11 +1415,9 @@
 .order-details-page h1 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2rem;
 }
 .order-details-page h2 {
   margin-bottom: 1rem;
-  font-size: 1.5rem;
 }
 .order-details-page p {
   margin-bottom: 0.5rem;
@@ -1609,7 +1454,6 @@
 }
 .order-item h3 {
   margin-bottom: 1rem;
-  font-size: 1.3rem;
 }
 
 .order-img {
@@ -1633,7 +1477,6 @@
 
 .order-error {
   text-align: center;
-  font-size: 1.1rem;
 }
 
 /*************************************************************/
@@ -1661,17 +1504,11 @@
   .order-img {
     width: 260px;
   }
-  .order-item h3 {
-    font-size: 1.4rem;
-  }
 }
 /*************************************************************/
 /********************** MOD DESKTOP ***************************/
 /*************************************************************/
 @media screen and (min-width: 1023px) {
-  .order-details-page h1 {
-    font-size: 2.4rem;
-  }
   .order-summary,
   .delivery-infos,
   .order-item {
@@ -1689,7 +1526,6 @@
 .checkout-page h1 {
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 1.8rem;
   font-weight: 600;
   color: white;
 }
@@ -1707,7 +1543,6 @@
   padding: 0.9rem 1rem;
   border: 1px solid #ddd;
   border-radius: 2px;
-  font-size: 1rem;
   background: #fff;
   color: #333;
   transition: all 0.2s ease;
@@ -1728,7 +1563,6 @@
   border-radius: 2px;
   background: #4f5bd5;
   color: white;
-  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -1744,9 +1578,6 @@
 TABLET
 *****************************/
 @media (min-width: 768px) {
-  .checkout-page h1 {
-    font-size: 2.2rem;
-  }
   .checkout-page form {
     padding: 2rem;
     gap: 1.2rem;
@@ -1756,9 +1587,6 @@ TABLET
 DESKTOP
 *****************************/
 @media (min-width: 1023px) {
-  .checkout-page h1 {
-    font-size: 2.5rem;
-  }
   .checkout-page form {
     padding: 2.5rem;
     gap: 1.5rem;
@@ -1777,7 +1605,6 @@ DESKTOP
   text-align: center;
 }
 .home-page .home-intro h2 {
-  font-size: 2rem;
   margin-bottom: 1.5rem;
 }
 .home-page .home-intro p {
@@ -1842,7 +1669,6 @@ DESKTOP
 .home-page .movies-list .movie-card h3 {
   padding: 1rem;
   text-align: center;
-  font-size: 1rem;
   background: #252e4f;
   min-height: 70px;
   display: flex;
@@ -1911,7 +1737,6 @@ DESKTOP
 }
 .home-page .services .services-card h3 {
   margin-bottom: 1rem;
-  font-size: 1.4rem;
 }
 .home-page .services .services-card p {
   flex: 1;
@@ -1933,7 +1758,6 @@ DESKTOP
 .home-page .discover-more h2 {
   margin-bottom: 2rem;
   text-align: center;
-  font-size: 2rem;
 }
 .home-page .discover-more .discover-grid {
   display: grid;
@@ -1967,7 +1791,6 @@ DESKTOP
 }
 .home-page .discover-more .discover-grid .to-discover-card a .discover-title h3 {
   margin: 0;
-  font-size: 1.2rem;
   line-height: 1.4;
 }
 .home-page .discover-more .discover-grid .to-discover-card a img {
@@ -1999,12 +1822,6 @@ DESKTOP
 /********************** MOD TABLET ***************************/
 /*************************************************************/
 @media screen and (min-width: 768px) {
-  .home-page .home-intro h2 {
-    font-size: 2.3rem;
-  }
-  .home-page .home-intro p {
-    font-size: 1.1rem;
-  }
   .home-page .services {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -2014,9 +1831,6 @@ DESKTOP
   }
   .home-page .discover-more .discover-grid .to-discover-card a .discover-title {
     padding: 1.25rem;
-  }
-  .home-page .discover-more .discover-grid .to-discover-card a .discover-title h3 {
-    font-size: 1.3rem;
   }
   .home-page .discover-more .discover-grid .to-discover-card a .discover-title i {
     font-size: 1.4rem;
@@ -2030,23 +1844,11 @@ DESKTOP
     max-width: 1400px;
     margin: 0 auto;
   }
-  .home-page .home-intro h2 {
-    font-size: 2.8rem;
-  }
   .home-page .services {
     gap: 2.5rem;
   }
   .home-page .services .services-card {
     padding: 2.5rem;
-  }
-  .home-page .services .services-card h3 {
-    font-size: 1.5rem;
-  }
-  .home-page .discover-more h2 {
-    font-size: 2.5rem;
-  }
-  .home-page .discover-more .discover-grid .to-discover-card a .discover-title h3 {
-    font-size: 1.4rem;
   }
   .home-page .discover-more .discover-grid .to-discover-card a .discover-title i {
     font-size: 1.5rem;
@@ -2077,7 +1879,6 @@ DESKTOP
 }
 .formulas-services-page .drone-services h2 {
   margin-bottom: 1rem;
-  font-size: 1.6rem;
   color: #fddb8f;
 }
 .formulas-services-page .drone-services p {
@@ -2091,7 +1892,6 @@ DESKTOP
 }
 .formulas-services-page .three-service-types h2 {
   margin-bottom: 2rem;
-  font-size: 1.6rem;
   color: #fddb8f;
 }
 .formulas-services-page .three-service-types .three-services-types-grid {
@@ -2109,7 +1909,6 @@ DESKTOP
 }
 .formulas-services-page .three-service-types .three-service-types-card h3 {
   margin-bottom: 1rem;
-  font-size: 1.1rem;
 }
 .formulas-services-page .three-service-types .three-service-types-card p {
   margin-bottom: 1rem;
@@ -2148,7 +1947,6 @@ DESKTOP
 }
 .formulas-services-page .formal-reportage h2 {
   margin-bottom: 2rem;
-  font-size: 1.6rem;
   color: #fddb8f;
 }
 .formulas-services-page .formal-reportage .formal-reportage-content {
@@ -2183,7 +1981,6 @@ DESKTOP
   }
   .formulas-services-page .drone-services h2 {
     text-align: center;
-    font-size: 1.8rem;
   }
   .formulas-services-page .drone-services p {
     text-align: center;
@@ -2192,18 +1989,12 @@ DESKTOP
   .formulas-services-page .three-service-types {
     padding: 4rem 1rem;
   }
-  .formulas-services-page .three-service-types h2 {
-    font-size: 1.8rem;
-  }
   .formulas-services-page .three-service-types .three-services-types-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
   }
   .formulas-services-page .three-service-types .three-service-types-card {
     padding: 2rem;
-  }
-  .formulas-services-page .three-service-types .three-service-types-card h3 {
-    font-size: 1.2rem;
   }
   .formulas-services-page .video-quality {
     flex-direction: row;
@@ -2223,9 +2014,6 @@ DESKTOP
   }
   .formulas-services-page .formal-reportage {
     padding: 5rem 1rem;
-  }
-  .formulas-services-page .formal-reportage h2 {
-    font-size: 1.8rem;
   }
   .formulas-services-page .formal-reportage .formal-reportage-content p {
     text-align: center;
@@ -2266,7 +2054,6 @@ DESKTOP
 }
 .additional-services-page h2 {
   text-align: center;
-  font-size: 1.6rem;
   color: #fddb8f;
   margin-bottom: 2rem;
 }
@@ -2325,7 +2112,6 @@ DESKTOP
 .additional-services-page .hotel-website .hotel-website-case h3 {
   text-align: center;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
 }
 .additional-services-page .hotel-website .hotel-website-case p {
   text-align: center;
@@ -2337,9 +2123,6 @@ DESKTOP
   /**********************************************************************/
 }
 @media (min-width: 768px) {
-  .additional-services-page h2 {
-    font-size: 1.8rem;
-  }
   .additional-services-page .must-package-formula {
     flex-direction: row;
     justify-content: center;
@@ -2396,13 +2179,11 @@ DESKTOP
 }
 .distribution-prog-page h2 {
   text-align: center;
-  font-size: 1.6rem;
   color: #fddb8f;
   margin-bottom: 2rem;
 }
 .distribution-prog-page h3 {
   text-align: center;
-  font-size: 1.3rem;
   margin-bottom: 1.5rem;
 }
 .distribution-prog-page p {
@@ -2492,12 +2273,6 @@ DESKTOP
   /**********************************************************************/
 }
 @media (min-width: 768px) {
-  .distribution-prog-page h2 {
-    font-size: 1.8rem;
-  }
-  .distribution-prog-page h3 {
-    font-size: 1.5rem;
-  }
   .distribution-prog-page .double-distribution .double-distribution-content .double-distribution-images {
     flex-direction: row;
     justify-content: center;
@@ -2567,7 +2342,6 @@ DESKTOP
   color: white;
   text-align: center;
   margin-bottom: 2rem;
-  font-size: 2rem;
 }
 .documentaries-page p {
   text-align: center;
@@ -2590,7 +2364,6 @@ DESKTOP
 }
 .documentaries-page .documentaries-list .documentary-card h2 {
   text-align: center;
-  font-size: 1.3rem;
   margin: 0;
 }
 .documentaries-page .documentaries-list .documentary-card .cover-img-documentary {
@@ -2603,7 +2376,6 @@ DESKTOP
   border-radius: 10px;
 }
 .documentaries-page .documentaries-list .documentary-card p {
-  font-size: 1rem;
   opacity: 0.85;
   text-align: left;
 }
@@ -2634,9 +2406,6 @@ DESKTOP
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
   }
-  .documentaries-page h1 {
-    font-size: 2.5rem;
-  }
 }
 .documentaries-page {
   /**********************************************************************/
@@ -2651,9 +2420,6 @@ DESKTOP
   .documentaries-page .documentaries-list .documentary-card {
     padding: 2rem;
   }
-  .documentaries-page h1 {
-    font-size: 3rem;
-  }
 }
 
 /*************************************************************/
@@ -2667,7 +2433,6 @@ DESKTOP
 }
 .documentary-detail-page h1 {
   text-align: center;
-  font-size: 2rem;
   margin-bottom: 2rem;
   line-height: 1.3;
 }
@@ -2699,11 +2464,7 @@ DESKTOP
   .documentary-detail-page {
     padding: 3rem 2rem;
   }
-  .documentary-detail-page h1 {
-    font-size: 2.5rem;
-  }
   .documentary-detail-page p {
-    font-size: 1.05rem;
     margin-bottom: 3rem;
   }
   .documentary-detail-page .video-container {
@@ -2716,12 +2477,6 @@ DESKTOP
 @media screen and (min-width: 1023px) {
   .documentary-detail-page {
     padding: 4rem 2rem;
-  }
-  .documentary-detail-page h1 {
-    font-size: 3rem;
-  }
-  .documentary-detail-page p {
-    font-size: 1.1rem;
   }
   .documentary-detail-page .video-container {
     max-width: 1000px;
@@ -2736,13 +2491,11 @@ DESKTOP
 }
 .search-page h1 {
   text-align: center;
-  font-size: 2rem;
   margin-bottom: 2rem;
 }
 .search-page h2 {
   text-align: center;
   margin: 2rem 0 1rem;
-  font-size: 1.5rem;
   padding-left: 0.8rem;
 }
 .search-page p {
@@ -2771,7 +2524,6 @@ DESKTOP
   color: white;
 }
 .search-page .search-card h3 {
-  font-size: 1.1rem;
   text-align: center;
   padding: 1rem;
   background: #252e4f;
@@ -2793,9 +2545,6 @@ DESKTOP
   *****************************/
 }
 @media (min-width: 768px) {
-  .search-page h1 {
-    font-size: 2.5rem;
-  }
   .search-page .search-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -2810,9 +2559,6 @@ DESKTOP
   *****************************/
 }
 @media (min-width: 1023px) {
-  .search-page h1 {
-    font-size: 3rem;
-  }
   .search-page .search-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
@@ -2820,14 +2566,8 @@ DESKTOP
   .search-page .search-card img {
     height: 300px;
   }
-  .search-page .search-card h3 {
-    font-size: 1.2rem;
-  }
 }
 
-/**********************************************************************/
-/************************ GLOBAL **************************************/
-/**********************************************************************/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -2839,23 +2579,97 @@ DESKTOP
 /**********************************************************************/
 h1 {
   font-family: "Archivo Black", sans-serif;
+  font-size: 2rem;
+  line-height: 1.2;
 }
 
-h2,
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.75rem;
+  line-height: 1.3;
+}
+
 h3 {
   font-family: "Oswald", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.3;
+}
+
+h4 {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.35rem;
 }
 
 p,
 li {
   font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.7;
 }
 
 a {
   font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
   text-decoration: none;
 }
 
+button,
+input,
+textarea,
+select {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.25rem;
+}
+
+/**********************************************************************/
+/************************ TYPOGRAPHY TABLET ***************************/
+/**********************************************************************/
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  h2 {
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.35rem;
+  }
+  p,
+  li,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    font-size: 1.3rem;
+  }
+}
+/**********************************************************************/
+/************************ TYPOGRAPHY DESKTOP **************************/
+/**********************************************************************/
+@media screen and (min-width: 1023px) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 2.4rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  p,
+  li,
+  a,
+  button,
+  input,
+  textarea,
+  select {
+    font-size: 1.25rem;
+  }
+}
 main {
   min-height: 100vh;
   position: relative;
@@ -2863,7 +2677,7 @@ main {
   background: radial-gradient(circle at top, #1b2a6b, #050814 70%);
 }
 
-/* couche principale étoiles */
+/* main stars layer */
 main::before {
   content: "";
   position: absolute;
@@ -2872,10 +2686,9 @@ main::before {
   background-repeat: repeat;
   background-size: 900px 500px;
   opacity: 0.6;
-  pointer-events: none;
 }
 
-/* petite couche secondaire (plus fine = profondeur) */
+/* secondary finer layer for depth */
 main::after {
   content: "";
   position: absolute;
@@ -2883,10 +2696,9 @@ main::after {
   background-image: radial-gradient(1px 1px, rgba(255, 255, 255, 0.5) 60%, transparent 61%);
   background-size: 40px 40px;
   opacity: 0.4;
-  pointer-events: none;
 }
 
-/* contenu au-dessus */
+/* content above */
 main > * {
   position: relative;
   z-index: 1;

@@ -21,9 +21,7 @@
 @use 'documentaries/detailDocumentaries';
 @use 'search/search';
   
-/**********************************************************************/
-/************************ GLOBAL **************************************/
-/**********************************************************************/
+// Global
 * {
     box-sizing: border-box;
     margin: 0;
@@ -35,23 +33,115 @@
 /**********************************************************************/
 h1 { 
     font-family: "Archivo Black", sans-serif;
+    font-size: 2rem;
+    line-height: 1.2;
 }
 
-h2,
+h2 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.75rem;
+    line-height: 1.3;
+}
+
 h3 {
     font-family: "Oswald", sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+h4 {
+    font-family: "Oswald", sans-serif;
+    font-size: 1.35rem;
 }
 
 p, 
 li {
     font-family: "Nunito", sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.7;
 }
 
 a {
     font-family: "Nunito", sans-serif;
+    font-size: 1.25rem;
     text-decoration: none;
 }
 
+button,
+input,
+textarea,
+select {
+    font-family: "Nunito", sans-serif;
+    font-size: 1.25rem;
+}
+
+/**********************************************************************/
+/************************ TYPOGRAPHY TABLET ***************************/
+/**********************************************************************/
+
+@media screen and (min-width: 768px) {
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.35rem;
+    }
+
+    p,
+    li,
+    a,
+    button,
+    input,
+    textarea,
+    select {
+        font-size: 1.30rem;
+    }
+
+}
+
+
+/**********************************************************************/
+/************************ TYPOGRAPHY DESKTOP **************************/
+/**********************************************************************/
+
+@media screen and (min-width: 1023px) {
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    p,
+    li,
+    a,
+    button,
+    input,
+    textarea,
+    select {
+        font-size: 1.25rem;
+    }
+
+}
+
+
+// Main style :
 main {
     min-height: 100vh;
     position: relative;
@@ -60,7 +150,7 @@ main {
     background: radial-gradient(circle at top, #1b2a6b, #050814 70%);
 }
 
-/* couche principale étoiles */
+/* main stars layer */
 main::before {
     content: "";
     position: absolute;
@@ -84,10 +174,9 @@ main::before {
     background-size: 900px 500px;
 
     opacity: 0.6;
-    pointer-events: none;
 }
 
-/* petite couche secondaire (plus fine = profondeur) */
+/* secondary finer layer for depth */
 main::after {
     content: "";
     position: absolute;
@@ -99,10 +188,9 @@ main::after {
     background-size: 40px 40px;
 
     opacity: 0.4;
-    pointer-events: none;
 }
 
-/* contenu au-dessus */
+/* content above */
 main > * {
     position: relative;
     z-index: 1;

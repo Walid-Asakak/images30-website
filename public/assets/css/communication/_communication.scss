@@ -12,12 +12,10 @@
         margin-bottom: 3rem;
 
         h1 { 
-            font-size: 2.2rem;
             margin-bottom: 0.5rem;
         }
 
         h2 {
-            font-size: 1.2rem;
             font-weight: 400;
             opacity: 0.8;
             text-transform: uppercase;
@@ -66,7 +64,6 @@
         .communication-image-movie {
             img {
                 max-height: 230px;
-                object-fit: contain;
             }
         }
 
@@ -76,12 +73,10 @@
             flex-direction: column;
 
             h3 {
-                font-size: 1.5rem;
                 margin-bottom: 1rem;
             }
 
             p {
-                font-size: 1.05rem;
                 line-height: 1.8;
                 margin-bottom: 1rem;
                 opacity: 0.95;
@@ -91,7 +86,6 @@
                 padding-left: 1.5rem;
 
                 li {
-                    font-size: 1.05rem;
                     line-height: 1.8;
                     margin-bottom: 0.6rem;
                     opacity: 0.95;
@@ -105,17 +99,15 @@
         background: rgba(0, 0, 0, 0.6);
         border: 1px solid rgba(255, 255, 255, 0.08);
         max-width: 900px;
-        margin: 3rem auto 0 auto;
+        margin: 3rem auto 0;
         padding: 2rem 1.5rem;
         border-radius: 14px;
 
         h2 {
-            font-size: 1.8rem;
             margin-bottom: 1rem;
         }
 
         p {
-            font-size: 1.05rem;
             line-height: 1.8;
             margin-bottom: 1rem;
             opacity: 0.95;
@@ -146,19 +138,8 @@
     .communication-page {
         padding: 3rem 2rem;
 
-        .communication-header {
-            h1 {
-                font-size: 2.8rem;
-            }
-
-            h2 {
-                font-size: 1.3rem;
-            }
-        }
-
         .communication-section {
             flex-direction: row;
-            align-items: stretch;
             gap: 2rem;
 
             &.reverse {
@@ -166,32 +147,24 @@
             }
 
             .communication-image {
+                margin: auto;
                 width: 40%;
             }
 
             .communication-image-movie {
                 img {
                     max-height: 280px;
-                    object-fit: contain;
                 }
             }
 
             .communication-content {
                 width: 60%;
                 justify-content: center;
-
-                h3 {
-                    font-size: 1.7rem;
-                }
             }
         }
 
         .communication-contact {
             padding: 2.5rem 2rem;
-    
-            h2 {
-                font-size: 2rem;
-            }
         }
     }
 }
@@ -205,16 +178,6 @@
         max-width: 1200px;
         margin: 0 auto;
 
-        .communication-header {
-            h1 {
-                font-size: 3rem;
-            }
-
-            h2 {
-                font-size: 1.4rem;
-            }
-        }
-
         .communication-section {
             padding: 1.5rem;
 
@@ -224,24 +187,11 @@
 
             .communication-content {
                 width: 62%;
-
-                h3 {
-                    font-size: 1.8rem;
-                }
-
-                p,
-                li {
-                    font-size: 1.1rem;
-                }
             }
         }
 
         .communication-contact {
             padding: 3rem 2rem;
-    
-            h2 {
-                font-size: 2.2rem;
-            }
         }
     }
 }
