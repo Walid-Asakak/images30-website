@@ -64,6 +64,16 @@ const AVAILABLE_ROUTES = [
         'controller' => 'CartController',
         'method' => 'addToCart'
     ],
+
+    'update-cart' => [
+        'controller' => 'CartController',
+        'method' => 'updateCart'
+    ],
+
+    'remove-from-cart' => [
+        'controller' => 'CartController',
+        'method' => 'removeFromCart'
+    ],
     
     'order' => [
         'controller' => 'OrderController',

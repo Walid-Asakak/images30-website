@@ -123,4 +123,36 @@ class CartRepository {
             ':user_id' => $userId,
         ]);
     }
+
+    // Method to update items quantity in the cart
+    public function updateCartItemQuantity(int $cartItemId, int $userId, int $quantity): void {
+    
+        $request = $this->pdo->prepare("
+            UPDATE cart_items
+            SET quantity = :quantity
+            WHERE id = :id
+            AND user_id = :user_id
+        ");
+    
+        $request->execute([
+            ':quantity' => $quantity,
+            ':id' => $cartItemId,
+            ':user_id' => $userId,
+        ]);
+    }
+
+    // Method to remove one item from a user's cart
+    public function removeCartItem(int $cartItemId, int $userId): void {
+
+        $request = $this->pdo->prepare("
+            DELETE FROM cart_items
+            WHERE id = :id
+            AND user_id = :user_id
+        ");
+
+        $request->execute([
+            ':id' => $cartItemId,
+            ':user_id' => $userId,
+        ]);
+    }
 }

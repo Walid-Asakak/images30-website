@@ -18,12 +18,38 @@
 
                         <p class="cart-price">Prix : <?= $cartItem['price'] ?> €</p>
 
-                        <p>Quantité : <?= $cartItem['quantity'] ?></p>
+                        <form action="index.php?page=update-cart" method="POST">
+
+                            <input 
+                                type="hidden" 
+                                name="cart_item_id" 
+                                value="<?= $cartItem['id'] ?>"
+                            >
+
+                            <label>
+                                Quantité :
+                                <input 
+                                    type="number"
+                                    name="quantity"
+                                    value="<?= $cartItem['quantity'] ?>"
+                                    min="1"
+                                >
+                            </label>
+
+                            <button type="submit">
+                                Modifier
+                            </button>
+                        </form>
 
                         <p class="cart-subtotal">
                             Sous-total :
                             <?= $cartItem['price'] * $cartItem['quantity'] ?> €
                         </p>
+
+                        <a class="cart-remove"
+                            href="index.php?page=remove-from-cart&id=<?= $cartItem['id'] ?>">
+                                Tout supprimer
+                        </a>
                     </div>
                 </div>
             <?php endforeach; ?>

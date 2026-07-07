@@ -48,4 +48,50 @@ class CartController {
         header('Location: index.php?page=cart');
         exit;
     }
+
+    public function updateCart(): void {
+
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: index.php?page=login');
+            exit;
+        }
+    
+        $userId = $_SESSION['user_id'];
+    
+        $cartItemId = (int) $_POST['cart_item_id'];
+        $quantity = (int) $_POST['quantity'];
+    
+        if ($quantity < 1) {
+            $quantity = 1;
+        }
+    
+        $cartRepository = new CartRepository();
+    
+        $cartRepository->updateCartItemQuantity(
+            $cartItemId,
+            $userId,
+            $quantity
+        );
+    
+        header('Location: index.php?page=cart');
+        exit;
+    }
+
+    public function removeFromCart(): void {
+
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: index.php?page=login');
+            exit;
+        }
+    
+        $userId = $_SESSION['user_id'];
+        $cartItemId = (int) $_GET['id'];
+    
+        $cartRepository = new CartRepository();
+    
+        $cartRepository->removeCartItem($cartItemId, $userId);
+    
+        header('Location: index.php?page=cart');
+        exit;
+    }
 }
