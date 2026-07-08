@@ -6,6 +6,7 @@ use Repositories\CinemaRepository;
 use Repositories\MovieImageRepository;
 
 class CinemaController extends BaseController {
+    
     // Function to display all the movies in the view Cinema
     public function showAllCinema() {
         $movieRepo = new CinemaRepository();

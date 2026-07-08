@@ -2,18 +2,19 @@
 
 namespace Repositories;
 
-use Exception;
 use Services\Database;
 use PDO;
 
 class CinemaRepository {
     private PDO $pdo;
 
+    // Method to initialize the database connection used by the repository.
     public function __construct() {
         $db = new Database();
         $this->pdo = $db->getConnexionDb();
     }
 
+     // Method to retrieve all active movies ordered by category and their order for each category
     public function getAllMovies(): array {
         $stmt = $this->pdo->prepare("
             SELECT *
@@ -26,6 +27,7 @@ class CinemaRepository {
                     WHEN 'long-metrage' THEN 3
                     ELSE 4
                 END,
+                display_order ASC,
                 title ASC
         ");
     
@@ -34,6 +36,7 @@ class CinemaRepository {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    // Method to retrieve a movie by its ID
     public function getMovieById(int $id): array|false {
         $stmt = $this -> pdo->prepare("
             SELECT *
@@ -46,7 +49,7 @@ class CinemaRepository {
         return $stmt -> fetch(PDO::FETCH_ASSOC);
     }
 
-    // Method to search a movie (for the searchbar) :
+    // Method to search a movie by his title (for the search bar)
         public function searchMovies(string $search): array {
             $stmt = $this->pdo->prepare("
                 SELECT *
@@ -67,6 +70,7 @@ class CinemaRepository {
             return $movies;
         }
 
+        // Method to retrieve the cover image of a movie
         public function getCoverImageMovie(int $movieId): ?string {
             $stmt = $this->pdo->prepare("
                 SELECT image_url
