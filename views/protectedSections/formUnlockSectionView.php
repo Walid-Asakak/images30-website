@@ -1,10 +1,10 @@
 <section class="protected-section">
     <div class="protected-section-container">
 
-        <h1>Accès protégé</h1>
+        <h1>><?= $translations['protected_title'] ?></h1>
 
         <p>
-            Cette section est protégée. Veuillez entrer le mot de passe pour continuer.
+            <?= $translations['protected_description'] ?>
         </p>
 
         <?php if (!empty($error)): ?>
@@ -14,11 +14,11 @@
         <?php endif; ?>
 
         <form action="index.php?page=protected-section-auth&section=<?= urlencode($sectionKey) ?>&id=<?= $id ?>" method="POST">
-            <label for="password">Mot de passe</label>
-            <input type="password" name="password" id="password" placeholder="Entrer le mot de passe" required>
+            <label for="password"><?= $translations['password'] ?></label>
+            <input type="password" name="password" id="password" placeholder="<?= $translations['password_placeholder'] ?>" required>
 
             <button type="submit">
-                Accéder au contenu
+                <?= $translations['access_content'] ?>
             </button>
         </form>
 

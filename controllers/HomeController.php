@@ -5,7 +5,7 @@ namespace Controllers;
 use Services\ProtectedSectionService;
 
 
-class HomeController {
+class HomeController extends BaseController {
     public function index() {
         $movieRepo = new \Repositories\CinemaRepository();
         $imageRepo = new \Repositories\MovieImageRepository();
@@ -19,24 +19,22 @@ class HomeController {
 
         $homeDocumentaries = $documentaryRepo -> getHomeDocumentaries();
 
-        $view = 'views/home/homeView.php';
-        require 'views/layoutView.php';
+        $this->render('views/home/homeView.php', [
+            'homeMovies' => $homeMovies,
+            'homeDocumentaries' => $homeDocumentaries
+        ]);
         
     }
 
     public function showFormulasServices() {
-        $view = 'views/home/formulasServicesView.php';
-        require 'views/layoutView.php';
+        $this->render('views/home/formulasServicesView.php');
     }
 
     public function showAdditionalServices() {
-        $view = 'views/home/AdditionalServicesView.php';
-        require 'views/layoutView.php';
+        $this->render('views/home/AdditionalServicesView.php');
     }
 
     public function showProgDistributionServices() {
-
-        $view = 'views/home/prog-distribution-services/progDistributionServicesView.php';
-        require 'views/layoutView.php';
+        $this->render('views/home/prog-distribution-services/progDistributionServicesView.php');
     }
 }

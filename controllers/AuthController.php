@@ -3,7 +3,7 @@
 namespace Controllers;
 use Repositories\UserRepository;
 
-class AuthController {
+class AuthController extends BaseController {
     
     public function register() {
         $error = null;
@@ -32,8 +32,12 @@ class AuthController {
             exit;
         }
         
-        $view = 'views/register/registerView.php';
-        include 'views/layoutView.php';
+        $this -> render(
+            'views/register/registerView.php',
+            [
+                'error' => $error
+            ]
+        );
     }
 
     public function login() {
@@ -60,8 +64,12 @@ class AuthController {
             $error = 'Identifiants incorrects';
         }
         
-        $view = 'views/login/loginView.php';
-        include 'views/layoutView.php';
+        $this->render(
+            'views/login/loginView.php',
+            [
+                'error' => $error
+            ]
+        );
     }
 
     public function logout() {

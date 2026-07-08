@@ -1,10 +1,10 @@
 <section class="documentaries-page">
 
-    <h1>Documentaires</h1>
+    <h1><?= $translations['documentaries_title'] ?></h1>
 
     <?php if (empty($documentariesOrderedByCategory)): ?>
 
-        <p>Aucun documentaire n'est disponible pour l'instant.</p>
+        <p><?= $translations['no_documentaries_available'] ?></p>
 
     <?php else: ?>
 
@@ -39,7 +39,7 @@
 
 
                             <a href="index.php?page=documentary-detail&id=<?= $documentary['id'] ?>">
-                                Voir le documentaire
+                                <?= $translations['view_documentary'] ?>
                             </a>
                         </article>
                     <?php endforeach; ?>

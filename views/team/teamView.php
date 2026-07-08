@@ -1,4 +1,4 @@
-<h1 class="team-title">Notre équipe</h1>
+<h1 class="team-title"><?= $translations['team_title'] ?></h1>
 
 <section class="team-members">
     <?php foreach ($teamMembers as $teamMember): ?>

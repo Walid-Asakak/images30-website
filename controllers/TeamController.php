@@ -4,15 +4,19 @@ namespace Controllers;
 
 use Repositories\TeamRepository;
 
-class TeamController {
+class TeamController extends BaseController {
 
     public function getAllTeamMembers() {
 
         $teamRepository = new TeamRepository();
         $teamMembers = $teamRepository->getAllTeamMembers();
 
-        $view = 'views/team/teamView.php';
-        include 'views/layoutView.php';
+        $this->render(
+            'views/team/teamView.php',
+            [
+                'teamMembers' => $teamMembers
+            ]
+        );
     }
 
     public function displayTeamMemberById() {
@@ -31,7 +35,11 @@ class TeamController {
             exit;
         }
     
-        $view = 'views/team/detailTeamView.php';
-        include 'views/layoutView.php';
+        $this->render(
+            'views/team/detailTeamView.php',
+            [
+                'teamMember' => $teamMember
+            ]
+        );
     }
 }

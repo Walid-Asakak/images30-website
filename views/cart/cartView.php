@@ -1,8 +1,8 @@
 <div class="cart-page">
-    <h1>Mon panier</h1>
+    <h1><?= $translations['my_cart'] ?></h1>
 
     <?php if (empty($cartItems)): ?>
-        <p class="cart-empty">Votre panier est vide.</p>
+        <p class="cart-empty"><?= $translations['cart_empty'] ?></p>
     <?php else: ?>
 
         <div class="cart-items">
@@ -16,7 +16,7 @@
                     <div class="cart-info">
                         <h2><?= htmlspecialchars($cartItem['title']) ?></h2>
 
-                        <p class="cart-price">Prix : <?= $cartItem['price'] ?> €</p>
+                        <p class="cart-price"><?= $translations['price'] ?> : <?= $cartItem['price'] ?> €</p>
 
                         <form action="index.php?page=update-cart" method="POST">
 
@@ -27,7 +27,7 @@
                             >
 
                             <label>
-                                Quantité :
+                                <?= $translations['quantity_cart'] ?> :
                                 <input 
                                     type="number"
                                     name="quantity"
@@ -37,18 +37,18 @@
                             </label>
 
                             <button type="submit">
-                                Modifier
+                                <?= $translations['modify'] ?>
                             </button>
                         </form>
 
                         <p class="cart-subtotal">
-                            Sous-total :
+                            <?= $translations['subtotal_cart'] ?> :
                             <?= $cartItem['price'] * $cartItem['quantity'] ?> €
                         </p>
 
                         <a class="cart-remove"
                             href="index.php?page=remove-from-cart&id=<?= $cartItem['id'] ?>">
-                                Tout supprimer
+                                <?= $translations['remove_all'] ?>
                         </a>
                     </div>
                 </div>
@@ -57,11 +57,11 @@
 
         <div class="cart-summary">
             <h3 class="cart-total">
-                Total : <?= $totalCartPrice ?>€
+                <?= $translations['total_cart'] ?> : <?= $totalCartPrice ?>€
             </h3>
 
             <a href="index.php?page=checkout">
-                Passer à la livraison
+                <?= $translations['go_to_delivery'] ?>
             </a>
         </div>
 

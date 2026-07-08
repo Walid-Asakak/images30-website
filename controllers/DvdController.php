@@ -6,12 +6,13 @@ use Repositories\DvdRepository;
 use Stripe\Stripe;
 use Stripe\Checkout\Session;
 
-class DvdController {
+class DvdController extends BaseController {
     public function showAllDvds() {
         $dvdRepository = new DvdRepository();
         $dvds = $dvdRepository -> findAll();
         
-        $view = 'views/dvd/dvdsView.php';
-        include 'views/layoutView.php';
+        $this->render('views/dvd/dvdsView.php', [
+            'dvds' => $dvds
+        ]);
     }
 }

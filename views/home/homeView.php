@@ -1,27 +1,17 @@
 <div class="home-page">
 
     <section class="home-intro">
-        <h2>Qui sommes-nous ?</h2>
+        <h2><?= $translations['who_are_we'] ?></h2>
 
-        <p>
-            Studio Cinéma Joël Daguerre est une société spécialisée dans le développement,
-            la production et la distribution de films et de séries destinés au marché international.
-            Nous concevons des œuvres originales reposant sur des propriétés intellectuelles (IP) fortes,
-            pensées pour toucher un public mondial. La majorité de nos productions est tournée en langue
-            anglaise afin de favoriser leur diffusion auprès des diffuseurs, plateformes et partenaires
-            internationaux. Notre ambition est de créer des contenus à forte valeur artistique et commerciale,
-            capables de s'inscrire durablement sur les marchés internationaux. Chaque projet est développé avec
-            une exigence de qualité, depuis sa conception jusqu'à sa production et sa distribution, afin de
-            répondre aux attentes des acteurs majeurs de l'industrie audiovisuelle.
-        </p>
+        <p><?= $translations['home_intro'] ?></p>
     </section>
 
     <section class="movies-list">
-        <h2>Nos films</h2>
+        <h2><?= $translations['our_movies'] ?></h2>
 
         <div class="movies-container">
 
-            <!-- Flèche gauche -->
+            <!-- left arro< -->
             <button class="scroll-btn left" id="scrollLeft">
                 <i class="fas fa-chevron-left"></i>
             </button>
@@ -54,7 +44,7 @@
         </div>
 
         <a class="discover-more-btn" href="index.php?page=cinema">
-            Découvrir plus
+            <?= $translations['discover_more'] ?>
         </a>
     </section>
 
@@ -62,43 +52,41 @@
 
         <article class="services-card">
             <i class="fa-solid fa-video"></i>
-            <h3>FORMULES ET SERVICES</h3>
+            <h3><?= $translations['formulas_services'] ?></h3>
 
             <p>
-                Nous réalisons des films avec une expertise reconnue dans les documentaires de
-                cinéma et les programmes courts.
+                <?= $translations['formulas_description'] ?>
             </p>
 
-            <a href="index.php?page=formulas-services">Voir plus</a>
+            <a href="index.php?page=formulas-services"><?= $translations['see_more'] ?></a>
         </article>
 
         <article class="services-card">
             <i class="fab fa-servicestack"></i>
-            <h3>SERVICES ADDITIFS</h3>
+            <h3><?= $translations['additional_services'] ?></h3>
 
             <p>
-                Nous proposons plusieurs services additionnels afin de parfaire votre demande.
+                <?= $translations['additional_description'] ?>
             </p>
 
-            <a href="index.php?page=additional-services">Voir plus</a>
+            <a href="index.php?page=additional-services"><?= $translations['see_more'] ?></a>
         </article>
 
         <article class="services-card">
             <i class="fas fa-film"></i>
-            <h3>DIFFUSION ET PROGRAMMES</h3>
+            <h3><?= $translations['distribution_programs'] ?></h3>
 
             <p>
-                Nous diffusons la plupart de nos films sur différentes chaînes télévisuelles
-                comme TV5 Monde, Luxe TV et d'autres chaînes.
+                <?= $translations['distribution_description'] ?>
             </p>
 
-            <a href="index.php?page=prog-distribution">Voir plus</a>
+            <a href="index.php?page=prog-distribution"><?= $translations['see_more'] ?></a>
         </article>
 
     </section>
 
     <section class="discover-more">
-        <h2>Nos documentaires</h2>
+        <h2><?= $translations['our_documentaries'] ?></h2>
 
         <div class="discover-grid">
             <?php foreach ($homeDocumentaries as $homeDocumentary): ?>
@@ -121,7 +109,7 @@
         </div>
 
         <a class="btn-discover-more-documentaries" href="index.php?page=documentaries">
-            Découvrir plus
+            <?= $translations['discover_more'] ?>
         </a>
     </section>
 </div>

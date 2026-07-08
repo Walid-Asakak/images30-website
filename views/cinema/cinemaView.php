@@ -1,9 +1,9 @@
 <div class="cinema-page">
 
-    <h1>Films</h1>
+    <h1><?= $translations['movies'] ?></h1>
 
     <?php if (!empty($moviesInProgress)): ?>
-        <h2>Films en cours</h2>
+        <h2><?= $translations['movies_in_progress'] ?></h2>
 
         <div class="cinema-grid">
             <?php foreach ($moviesInProgress as $movie): ?>
@@ -25,7 +25,7 @@
 
 
     <?php if (!empty($shortMovies)): ?>
-        <h2>Courts métrages</h2>
+        <h2><?= $translations['short_movies'] ?></h2>
 
         <div class="cinema-grid">
             <?php foreach ($shortMovies as $movie): ?>
@@ -47,7 +47,7 @@
 
 
     <?php if (!empty($featureFilms)): ?>
-        <h2>Longs métrages</h2>
+        <h2><?= $translations['feature_films'] ?></h2>
 
         <div class="cinema-grid">
             <?php foreach ($featureFilms as $movie): ?>

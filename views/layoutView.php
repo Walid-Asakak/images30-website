@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="<?= $_SESSION['language'] ?? 'fr' ?>">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
     
-    <title>Studio Cinéma Joël Daguerre</title>
+    <title>Joël Daguerre Studio Cinéma</title>
 </head>
 
 <body>
@@ -32,14 +32,14 @@
 
             <div class="search-bar">
                 <i class="fa-solid fa-magnifying-glass"></i>
-                <span class="search-toggle">Rechercher</span>
+                <span class="search-toggle"><?= $translations['search'] ?></span>
                 <i class="fa-solid fa-xmark search-close"></i>
 
                 <div class="search-menu">
                     <form method="GET" action="index.php">
                         <input type="hidden" name="page" value="search">
 
-                        <input type="text" name="search" placeholder="Rechercher des films, documentaires ou évènements">
+                        <input type="text" name="search" placeholder="<?= $translations['search_placeholder'] ?>">
 
                         <button type="submit">
                             <i class="fa-solid fa-magnifying-glass"></i>
@@ -49,31 +49,31 @@
             </div>
 
             <div class="change-language">
-                <span class="language-toggle">Langue</span>
+                <span class="language-toggle"><?= $translations['language'] ?></span>
                 <i class="fa-solid fa-xmark language-close"></i>
 
                 <div class="language-menu">
-                    <a href="">
+                    <a href="index.php?page=change-language&lang=fr">
                         <img src="public/assets/img/flags/flag-fr.png" alt="">
                         Français
                     </a>
 
-                    <a href="">
+                    <a href="index.php?page=change-language&lang=en">
                         <img src="public/assets/img/flags/flag-en.png" alt="">
                         English
                     </a>
 
-                    <a href="">
+                    <a href="index.php?page=change-language&lang=es">
                         <img src="public/assets/img/flags/flag-spanish.png" alt="">
                         Español
                     </a>
 
-                    <a href="">
+                    <a href="index.php?page=change-language&lang=zh">
                         <img src="public/assets/img/flags/flag-china.png" alt="">
                         中文
                     </a>
 
-                    <a href="">
+                    <a href="index.php?page=change-language&lang=it">
                         <img src="public/assets/img/flags/flag-italiano.png" alt="">
                         Italiano
                     </a>
@@ -87,20 +87,20 @@
     <nav class="nav-links">
 
         <?php if (!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] !== true): ?>
-            <a href="index.php?page=login">CONNEXION</a>
+            <a href="index.php?page=login"><?= $translations['login'] ?></a>
         <?php endif; ?>
  
-        <a href="index.php?page=cinema">CINÉMA</a>
-        <a href="index.php?page=communication">COMMUNICATION</a> 
-        <a href="index.php?page=distribution">DIFFUSION</a>         
-        <a href="index.php?page=team">ÉQUIPE</a>
-        <a href="index.php?page=events">ÉVÈNEMENTS</a>
+        <a href="index.php?page=cinema"><?= $translations['cinema'] ?></a>
+        <a href="index.php?page=communication"><?= $translations['communication'] ?></a> 
+        <a href="index.php?page=distribution"><?= $translations['distribution'] ?></a>         
+        <a href="index.php?page=team"><?= $translations['team'] ?></a>
+        <a href="index.php?page=events"><?= $translations['events'] ?></a>
         <a href="index.php?page=dvd" class="buy-dvd">
-            ACHETER LE DVD
+            <?= $translations['buy_dvd'] ?>
         </a>
 
         <?php if (isset($_SESSION['isLogged']) && $_SESSION['isLogged'] === true): ?>
-            <a href="index.php?page=logout">DÉCONNEXION</a>
+            <a href="index.php?page=logout"><?= $translations['logout'] ?></a>
         <?php endif; ?>
 
     </nav>
@@ -110,7 +110,7 @@
             <img src="public/assets/img/logo.png" alt="Logo Studio Cinéma">
         </a>
 
-        <h1>Studio Cinéma Joël Daguerre</h1>
+        <h1>Joël Daguerre Studio Cinéma</h1>
     </div>
 
 </header>
@@ -132,40 +132,42 @@
         </div>
 
         <div class="footer-column">
-            <h4>Navigation</h4>
+            <h4><?= $translations['navigation'] ?></h4>
             <ul>
-                <li><a href="index.php?page=home">ACCUEIL</a></li>
-                <li><a href="index.php?page=cinema">CINÉMA</a></li>
-                <li><a href="index.php?page=communication">COMMUNICATION</a></li>
-                <li><a href="index.php?page=distribution">DIFFUSION</a></li>
-                <li><a href="index.php?page=team">ÉQUIPE</a></li>
-                <li><a href="index.php?page=events">ÉVÈNEMENTS</a></li>
-                <li><a href="index.php?page=dvd">ACHETER LE DVD</a></li>
+                <li><a href="index.php?page=home"><?= $translations['home'] ?></a></li>
+                <li><a href="index.php?page=cinema"><?= $translations['cinema'] ?></a></li>
+                <li><a href="index.php?page=communication"><?= $translations['communication'] ?></a></li>
+                <li><a href="index.php?page=distribution"><?= $translations['distribution'] ?></a></li>
+                <li><a href="index.php?page=team"><?= $translations['team'] ?></a></li>
+                <li><a href="index.php?page=events"><?= $translations['events'] ?></a></li>
+                <li><a href="index.php?page=dvd"><?= $translations['buy_dvd'] ?></a></li>
             </ul>
         </div>
 
         <div class="footer-column">
-            <h4>Contact</h4>
+            <h4><?= $translations['contact'] ?></h4>
 
             <p>
-                Email :
+                <?= $translations['email'] ?> :
                 <a href="mailto:jdaguerrej@gmail.com">jdaguerrej@gmail.com</a>
             </p>
 
             <p>
-                Téléphone :
+                <?= $translations['phone'] ?> :
                 <a href="tel:+33749101684">07 49 10 16 84</a>
             </p>
 
-            <p>
-                Paris 14, France
-            </p>
+            <br>
+
+            <P>Bureau 326</p>
+            <p>78 avenue des Champs-Élysées</p>
+            <p>75008 Paris - France</p>
         </div>
 
     </div>
 
     <div class="footer-bottom">
-        <p>© <?= date('Y') ?> Studio Cinéma Joël Daguerre — Tous droits réservés</p>
+        <p>© <?= date('Y') ?> Joël Daguerre Studio Cinéma — <?= $translations['all_rights_reserved'] ?></p>
     </div>
 </footer>
 

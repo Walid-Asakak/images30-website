@@ -1,5 +1,5 @@
 <div class="events-page">
-    <h1>Événements</h1>
+    <h1><?= $translations['events_title'] ?></h1>
 
     <div class="events-grid">
         <?php foreach ($events as $event): ?>

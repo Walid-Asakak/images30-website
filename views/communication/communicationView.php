@@ -1,8 +1,8 @@
 <section class="communication-page">
 
     <header class="communication-header">
-        <h1>Conseil communication</h1>
-        <h2>Nous vous proposons diverses services adaptés à vos besoins</h2>
+        <h1><?= $translations['communication_title'] ?></h1>
+        <h2><?= $translations['communication_subtitle'] ?></h2>
     </header>
 
     <article class="communication-section">
@@ -11,14 +11,10 @@
         </figure>
 
         <div class="communication-content">
-            <h3>EXCELLENCE EN COMMUNICATION</h3>
+            <h3><?= $translations['communication_excellence'] ?></h3>
 
             <p>
-                Studio Cinéma Joël Daguerre vous guide dans votre démarche en vous proposant diverses 
-                possibilités de communication sur les supports film, TV, Internet, réseaux sociaux et autres. 
-                Studio Cinéma Joël Daguerre vous conseillera sur le type de réalisation adapté à votre activité, 
-                à votre message et à votre cible. Vous aurez une idée plus claire de votre projet et pourrez 
-                prendre votre décision.
+                <?= $translations['communication_excellence_text'] ?>
             </p>
         </div>
     </article>
@@ -29,20 +25,18 @@
         </figure>
 
         <div class="communication-content">
-            <h3>VIDEOS ET SUPPORTS MULTIMEDIAS</h3>
+            <h3><?= $translations['video_multimedia'] ?></h3>
 
             <p>
-                Nous offrons des prestations vidéo HAUT DE GAMME et des supports multimédias adaptés.
+                <?= $translations['video_multimedia_text_1'] ?>
             </p>
 
             <p>
-                La recherche infographique, graphique, polyvisuelle et sonore de nos créations, ainsi que leur 
-                mise en scène, sont nos préoccupations et nos atouts majeurs.
+                <?= $translations['video_multimedia_text_2'] ?>
             </p>
 
             <p>
-                Mais au-delà de notre passion pour les images, la 3D et l'immersion en réalité virtuelle, 
-                c'est votre satisfaction dans votre communication qui nous motive et nous rend performants.
+                <?= $translations['video_multimedia_text_3'] ?>
             </p>
         </div>
     </article>
@@ -53,13 +47,10 @@
         </figure>
 
         <div class="communication-content">
-            <h3>LA PRISE EN CHARGE DE VOTRE FILM :</h3>
+            <h3><?= $translations['film_management'] ?></h3>
 
             <p>
-                Nous prenons en charge chaque étape de fabrication de votre film, vidéo ou contenu multimédia, 
-                selon vos besoins et vos préoccupations, depuis les points forts de son scénario original jusqu'à 
-                la copie finale. Nous proposons des films artistiquement exigeants et conformes aux souhaits de 
-                nos clients.
+                <?= $translations['film_management_text'] ?>
             </p>
         </div>
     </article>
@@ -70,11 +61,10 @@
         </figure>
 
         <div class="communication-content">
-            <h3>LE TOURNAGE :</h3>
+            <h3><?= $translations['filming'] ?></h3>
 
             <p>
-                Nous proposons la location de studios, un équipement professionnel, le choix de maquilleuses,
-                la sélection de comédiens, de figurants ou de présentateurs.
+                <?= $translations['filming_text'] ?>
             </p>
         </div>
     </article>
@@ -85,14 +75,14 @@
         </figure>
 
         <div class="communication-content">
-            <h3>LES POINTS CLES DE VOTRE VIDEO:</h3>
+            <h3><?= $translations['video_key_points'] ?></h3>
 
             <ul>
-                <li>Fonds virtuels animés</li>
-                <li>Graphisme</li>
-                <li>Dynamisme</li>
-                <li>Animation sonore</li>
-                <li>Transition</li>
+                <li><?= $translations['virtual_backgrounds'] ?></li>
+                <li><?= $translations['graphics'] ?></li>
+                <li><?= $translations['dynamism'] ?></li>
+                <li><?= $translations['sound_animation'] ?></li>
+                <li><?= $translations['transition'] ?></li>
             </ul>
         </div>
     </article>
@@ -103,19 +93,19 @@
         </figure>
 
         <div class="communication-content">
-            <h3>APPLICATION VIDEO :</h3>
+            <h3><?= $translations['video_application'] ?></h3>
 
             <ul>
-                <li>Publicité</li>
-                <li>Clip</li>
-                <li>Institutionnel</li>
-                <li>Interviews</li>
-                <li>Reportages</li>
-                <li>Vidéos virales</li>
-                <li>Animés 2D</li>
-                <li>Formation / pédagogique</li>
-                <li>Prestige, luxe</li>
-                <li>Autre, sur demande</li>
+                <li><?= $translations['advertising'] ?></li>
+                <li><?= $translations['clip'] ?></li>
+                <li><?= $translations['institutional'] ?></li>
+                <li><?= $translations['interviews'] ?></li>
+                <li><?= $translations['reports'] ?></li>
+                <li><?= $translations['viral_videos'] ?></li>
+                <li><?= $translations['animated_2d'] ?></li>
+                <li><?= $translations['training'] ?></li>
+                <li><?= $translations['luxury'] ?></li>
+                <li><?= $translations['other_request'] ?></li>
             </ul>
         </div>
     </article>
@@ -126,30 +116,23 @@
         </figure>
 
         <div class="communication-content">
-            <h3>SERVICES</h3>
+            <h3><?= $translations['services'] ?></h3>
 
             <ul>
                 <li>
-                    Préparation : idées, concept, rédaction de contenus, script détaillé du film, dessins. 
-                    Un dossier préparatoire complet de la production vous est proposé.
+                    <?= $translations['services_preparation'] ?>
                 </li>
 
                 <li>
-                    Tournage : Studio, extérieurs, décors naturels, tout est possible. Engagement de l'équipe,
-                    sélection rigoureuse des matériels, des lieux et des partenaires. Un chargé de production
-                    s'occupe de tout.
+                    <?= $translations['services_filming'] ?>
                 </li>
 
                 <li>
-                    Postproduction : montage vidéo, graphisme, musique originale, dessin vectoriel et 
-                    animation 2D / 3D sont des compétences internes.
+                    <?= $translations['services_postproduction'] ?>
                 </li>
 
                 <li>
-                    Accompagnement : bande antenne pour la télévision, lecteur vidéo pour le web, kinescopage
-                    cinéma, diffusion sur mobiles, conseils marketing et référencement vidéo pour booster le 
-                    trafic vers votre site. L.B.I Communication et Terria Films vous accompagnent et font vivre
-                    votre campagne.
+                    <?= $translations['services_support'] ?>
                 </li>
             </ul>
         </div>
@@ -161,16 +144,16 @@
         </figure>
 
         <div class="communication-content">
-            <h3>DIFFUSION</h3>
+            <h3><?= $translations['diffusion'] ?></h3>
 
             <ul>
-                <li>Web</li>
-                <li>Affichage dynamique (écrans dans lieux publics)</li>
-                <li>Cinéma</li>
-                <li>Télévision</li>
-                <li>Sur mobile avec Keezin</li>
-                <li>Disques (DVD, Blu-ray, etc.)</li>
-                <li>Réalité Virtuelle</li>
+                <li><?= $translations['web'] ?></li>
+                <li><?= $translations['dynamic_display'] ?></li>
+                <li><?= $translations['communication_cinema'] ?></li>
+                <li><?= $translations['television'] ?></li>
+                <li><?= $translations['mobile_keezin'] ?></li>
+                <li><?= $translations['discs'] ?></li>
+                <li><?= $translations['virtual_reality'] ?></li>
             </ul>
         </div>
     </article>
@@ -181,21 +164,18 @@
         </figure>
 
         <div class="communication-content">
-            <h3>MEDIA MOBILE</h3>
+            <h3><?= $translations['mobile_media'] ?></h3>
 
             <p>
-                Le MEDIA MOBILE étant désormais au cœur des stratégies de communication d'entreprise, 
-                nous proposons un service clés en main de gestion de contenu publicitaire sur tout 
-                type de mobile.
+            <?= $translations['mobile_media_text_1'] ?>
             </p>
 
             <p>
-                Nous vous accompagnons dans l'apprentissage de ce nouveau support, et vous proposons 
-                ainsi d'inscrire le MEDIA MOBILE dans votre logique et votre « parcours média ».
+                <?= $translations['mobile_media_text_2'] ?>
             </p>
 
             <p>
-                Contactez nous pour la démonstration complète de nos solutions.
+                <?= $translations['mobile_media_text_3'] ?>
             </p>
         </div>
     </article>
@@ -206,14 +186,10 @@
         </figure>
 
         <div class="communication-content">
-            <h3>APPLICATIONS SMARTPHONES TABLETTES TACTILES</h3>
+            <h3><?= $translations['mobile_apps'] ?></h3>
 
             <p>
-                Les Smartphones et Tablettes Tactiles ont donnés naissance à une nouvelle 
-                forme de communication et de services. Il est désormais nécessaire d'intégrer ces 
-                « devices » dans toute stratégie de marketing / communication, c'est pourquoi nous 
-                proposons la création d'applications mobiles de qualité qui répondent aux besoins de
-                votre société et de vos clients.
+                <?= $translations['mobile_apps_text'] ?>
             </p>
         </div>
     </article>
@@ -224,13 +200,10 @@
         </figure>
 
         <div class="communication-content">
-            <h3>UN ANIMATEUR VIRTUEL POUR VOTRE SITE</h3>
+            <h3><?= $translations['virtual_host'] ?></h3>
 
             <p>
-                Découvrez le nouveau concept « d'Animateur virtuel » pour votre site Internet, vitrine
-                ou e-commerce. Captez l'attention de vos prospects ou clients d'une manière surprenante
-                et ludique. Dynamiser votre site Internet avec un(e) comédien(ne) personnalisable à 
-                volonté (texte, vêtement, intonation…) et valorisez vos produits ou services.
+                <?= $translations['virtual_host_text'] ?>
             </p>
         </div>
     </article>
@@ -241,18 +214,18 @@
         </figure>
 
         <div class="communication-content">
-            <h3>REFERENCEMENT</h3>
-
-            <p>Nous développons votre référencement professionnel sur Internet.</p>
+            <h3><?= $translations['seo'] ?></h3>
 
             <p>
-                Nous proposons l'intégralité des possibilités de référencement pour une visibilité optimale
-                de votre site.
+                <?= $translations['seo_text_1'] ?>
             </p>
 
             <p>
-                Nous créons et optimisons le trafic et l'audience de votre site au travers des actions les 
-                plus pertinentes et les plus adaptées à votre activité.
+                <?= $translations['seo_text_2'] ?>
+            </p>
+
+            <p>
+                <?= $translations['seo_text_3'] ?>
             </p>
         </div>
     </article>
@@ -263,37 +236,34 @@
         </figure>
 
         <div class="communication-content">
-            <h3>IDENTITE VISUELLE</h3>
+            <h3><?= $translations['visual_identity'] ?></h3>
 
             <p>
-                8 ans d'expérience en communication globale pour les entreprises, LBI Communication vous 
-                apporte son savoir faire pour adapter votre identité visuelle aux nouvelles tendances du marché.
+                <?= $translations['visual_identity_text_1'] ?>
             </p>
 
             <p>
-                Création ou Relooking, nous travaillons sur l'ensemble des supports existants et développons
-                l'homogénéité de votre marque.
+                <?= $translations['visual_identity_text_2'] ?>
             </p>
         </div>
     </article>
     
     <section class="communication-contact">
-        <h2>Contact</h2>
+        <h2><?= $translations['communication_contact'] ?></h2>
 
         <p>
-            Pour toute demande de diffusion, partenariat ou information complémentaire,
-            vous pouvez nous contacter directement :
+            <?= $translations['contact_description'] ?>
         </p>
 
         <p>
-            Email :
+            <?= $translations['communication_email'] ?>
             <a href="mailto:jdaguerrej@gmail.com">
                 jdaguerrej@gmail.com
             </a>
         </p>
 
         <p>
-            Téléphone :
+            <?= $translations['communication_phone'] ?>
             <a href="tel:0749101684">
                 07 49 10 16 84
             </a>

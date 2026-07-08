@@ -6,7 +6,7 @@ use Repositories\DocumentaryRepository;
 use Services\ProtectedSectionService;
 use Repositories\ProtectedSectionRepository;
 
-class DocumentaryController {
+class DocumentaryController extends BaseController {
 
     // Method to display all documentaries
     public function showAllDocumentaries() {
@@ -24,8 +24,9 @@ class DocumentaryController {
             $documentariesOrderedByCategory[$category][] = $documentary;
         }
         
-        $view = 'views/documentaries/documentariesView.php';
-        require 'views/layoutView.php';
+        $this->render('views/documentaries/documentariesView.php', [
+            'documentariesOrderedByCategory' => $documentariesOrderedByCategory
+        ]);
     }
 
     // Method to display the details for each documentary
@@ -53,7 +54,10 @@ class DocumentaryController {
         $section = $sectionRepo->getProtectedSectionById($documentary['protected_section_id']);
         $sectionKey = $section['section_key'] ?? '';
 
-        $view = 'views/documentaries/detailDocumentaryView.php';
-        require 'views/layoutView.php';
+        $this->render('views/documentaries/detailDocumentaryView.php', [
+            'documentary' => $documentary,
+            'isUnlocked' => $isUnlocked,
+            'sectionKey' => $sectionKey
+        ]);
     }
 }

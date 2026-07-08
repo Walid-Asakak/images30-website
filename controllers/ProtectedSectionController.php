@@ -4,7 +4,7 @@ namespace Controllers;
 
 use Repositories\ProtectedSectionRepository;
 
-class ProtectedSectionController {
+class ProtectedSectionController extends BaseController {
     
     // Method to show the form to access the content hidden behind a password
     public function showProtectedSectionForm() {
@@ -16,8 +16,14 @@ class ProtectedSectionController {
             exit;
         }
 
-        $view = 'views/protectedSections/formUnlockSectionView.php';
-        require 'views/layoutView.php';
+        $this -> render(
+            'views/protectedSections/formUnlockSectionView.php',
+            [
+                'sectionKey' => $sectionKey,
+                'id' => $id,
+                'error' => null
+            ]
+        );
     }
     
     // Method to authenticate the user and grant access to the protected section
@@ -52,9 +58,17 @@ class ProtectedSectionController {
             exit;
         }
 
-        $error = "Identifiants incorrects.";
+        $translations = $this->loadTranslations();
 
-        $view = 'views/protectedSections/formUnlockSectionView.php';
-        require 'views/layoutView.php';
+        $error = $translations['invalid_credentials'];
+
+        $this -> render(
+            'views/protectedSections/formUnlockSectionView.php',
+            [
+                'sectionKey' => $sectionKey,
+                'id' => $id,
+                'error' => $error
+            ]
+        );
     }
 }

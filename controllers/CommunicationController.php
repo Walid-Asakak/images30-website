@@ -2,10 +2,9 @@
 
 namespace Controllers;
 
- class CommunicationController {
+ class CommunicationController extends BaseController {
     public function showCommunicationServices() {
-
-        $view = 'views/communication/communicationView.php';
-        require 'views/layoutView.php';
+        $this->render('views/communication/communicationView.php');
+        
     }
  }

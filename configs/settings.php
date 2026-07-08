@@ -156,4 +156,10 @@ const AVAILABLE_ROUTES = [
         'controller' => 'SearchController',
         'method' => 'search',
     ],
+
+    // LANGUAGE SYSTEM :
+    'change-language' => [
+        'controller' => 'LanguageController',
+        'method' => 'changeLanguage'
+    ],
 ];

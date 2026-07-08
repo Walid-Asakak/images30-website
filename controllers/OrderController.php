@@ -7,7 +7,7 @@ use Repositories\CartRepository;
 use Stripe\Stripe;
 use Stripe\Checkout\Session;
 
-class OrderController{
+class OrderController extends BaseController {
     public function showOrder(): void {
 
         // Security : The user must be connected to access to his orders
@@ -36,8 +36,10 @@ class OrderController{
     
         $orderItems = $orderRepository->findOrderItemsByOrderId($orderId);
     
-        $view = 'views/order/orderView.php';
-        include 'views/layoutView.php';
+        $this->render('views/order/orderView.php', [
+            'order' => $order,
+            'orderItems' => $orderItems
+        ]);
     }
     
     public function checkoutStripe(): void {
@@ -95,8 +97,7 @@ class OrderController{
             exit;
         }
     
-        $view = 'views/order/checkoutView.php';
-        include 'views/layoutView.php';
+        $this->render('views/order/checkoutView.php');
     }
 
     // To Process the delivery form & to redirects to Stripe to pay 

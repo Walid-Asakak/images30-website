@@ -2,10 +2,9 @@
 
 namespace Controllers;
 
-class DistributionController {
+class DistributionController extends BaseController {
     public function showDistributionServices() {
-
-        $view = 'views/distribution/distributionServicesView.php';
-        require 'views/layoutView.php'; 
+        
+        $this->render('views/distribution/distributionServicesView.php');
     }
 }

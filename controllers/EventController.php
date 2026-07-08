@@ -5,15 +5,16 @@ namespace Controllers;
 use Repositories\EventRepository;
 use Repositories\PhotoRepository;
 
-class EventController {
+class EventController extends BaseController {
 
     public function showAllEvents() {
 
         $eventRepository = new EventRepository();
         $events = $eventRepository->getAllEvents();
         
-        $view = 'views/event/eventsView.php';
-        include 'views/layoutView.php';
+        $this->render('views/event/eventsView.php', [
+            'events' => $events
+        ]);
     }
 
     public function showEventDetail() {
@@ -26,7 +27,9 @@ class EventController {
     
         $photos = $photoRepository->getPhotosByEventId($id);
         
-        $view = 'views/event/detailEventView.php';
-        require 'views/layoutView.php';
+        $this->render('views/event/detailEventView.php', [
+            'event' => $event,
+            'photos' => $photos
+        ]);
     }
 }

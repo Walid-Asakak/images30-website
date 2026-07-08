@@ -1,34 +1,34 @@
 <div class="order-details-page">
-    <h1>Commande n°<?= $order['id'] ?></h1>
+    <h1><?= $translations['order_number'] ?> <?= $order['id'] ?></h1>
 
     <div class="order-summary">
-        <p>Statut : <?= htmlspecialchars($order['status']) ?></p>
+        <p><?= $translations['status'] ?> : <?= htmlspecialchars($order['status']) ?></p>
 
-        <p>Total : <?= number_format($order['total_price'], 2, ',', ' ') ?> €</p>
+        <p><?= $translations['total'] ?> : <?= number_format($order['total_price'], 2, ',', ' ') ?> €</p>
 
-        <p>Commande effectuée le : <?= (new DateTime($order['created_at']))->format('d/m/Y à H:i') ?></p>
+        <p><?= $translations['order_date'] ?> : <?= (new DateTime($order['created_at']))->format('d/m/Y à H:i') ?></p>
     </div>
 
     <div class="delivery-infos">
-        <h2>Informations de livraison</h2>
+        <h2><?= $translations['delivery_information'] ?></h2>
 
-        <p>Prénom : <?= htmlspecialchars($order['firstname']) ?></p>
+        <p><?= $translations['firstname_order'] ?> : <?= htmlspecialchars($order['firstname']) ?></p>
 
-        <p>Nom : <?= htmlspecialchars($order['lastname']) ?></p>
+        <p><?= $translations['lastname_order'] ?> : <?= htmlspecialchars($order['lastname']) ?></p>
 
-        <p>Email : <?= htmlspecialchars($order['email']) ?></p>
+        <p><?= $translations['email_order'] ?> : <?= htmlspecialchars($order['email']) ?></p>
 
-        <p>Téléphone : <?= htmlspecialchars($order['phone']) ?></p>
+        <p><?= $translations['phone_order'] ?> : <?= htmlspecialchars($order['phone']) ?></p>
 
-        <p>Adresse : <?= htmlspecialchars($order['address']) ?></p>
+        <p> <?= $translations['address_order'] ?> : <?= htmlspecialchars($order['address']) ?></p>
 
-        <p>Ville : <?= htmlspecialchars($order['city']) ?></p>
+        <p><?= $translations['city_order'] ?> : <?= htmlspecialchars($order['city']) ?></p>
 
-        <p>Code postal : <?= htmlspecialchars($order['postal']) ?></p>
+        <p><?= $translations['postal_code_order'] ?> : <?= htmlspecialchars($order['postal']) ?></p>
     </div>
 
     <?php if (!empty($orderItems)): ?>
-        <h2>Articles commandés</h2>
+        <h2><?= $translations['ordered_items'] ?></h2>
 
         <div class="order-items">
             <?php foreach ($orderItems as $orderItem): ?>
@@ -42,12 +42,12 @@
                         
                         <h3><?= htmlspecialchars($orderItem['title']) ?></h3>
 
-                        <p>Prix unitaire : <?= number_format($orderItem['unit_price'], 2, ',', ' ') ?> €</p>
+                        <p><?= $translations['unit_price'] ?> : <?= number_format($orderItem['unit_price'], 2, ',', ' ') ?> €</p>
 
-                        <p>Quantité : <?= $orderItem['quantity'] ?></p>
+                        <p><?= $translations['quantity'] ?> : <?= $orderItem['quantity'] ?></p>
 
                         <p>
-                            Sous-total :
+                            <?= $translations['subtotal'] ?> :
                             <?= number_format($orderItem['unit_price'] * $orderItem['quantity'], 2, ',', ' ') ?> €
                         </p>
                     </div>
@@ -56,6 +56,6 @@
         </div>
 
     <?php else: ?>
-        <p class="order-error">Erreur : Aucun article trouvé pour cette commande.</p>
+        <p class="order-error"><?= $translations['order_error'] ?></p>
     <?php endif; ?>
 </div>

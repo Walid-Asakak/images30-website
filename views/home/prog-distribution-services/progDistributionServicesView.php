@@ -1,14 +1,12 @@
 <div class="distribution-prog-page">
 
     <section class="distribution-introduction">
-        <h2>Diffusion et programmes</h2>
+        <h2><?= $translations['distribution_title'] ?></h2>
 
-        <h3>La Formule Plus</h3>
+        <h3><?= $translations['plus_formula'] ?></h3>
 
         <p>
-            UNE DIFFUSION LARGE et multimédia dans le cadre d'un contrat Gold.
-            Studio Cinéma Joël Daguerre assure une large diffusion sur divers médias, dont 
-            Luxe TV et le site internet ABC Luxe pour un coût de 3000 euros.
+            <?= $translations['plus_formula_description'] ?>
         </p>
     </section>
 
@@ -16,17 +14,14 @@
 
         <div class="double-distribution-content">
 
-            <h2>Double diffusion incluse</h2>
+            <h2><?= $translations['double_distribution'] ?></h2>
 
             <p>
-                DIFFUSION TÉLÉVISUELLE LUXE TV
-                (303 millions de spectateurs dans le monde, en français et en anglais).
+                <?= $translations['luxe_tv_broadcast_text'] ?>
             </p>
 
             <p>
-                DIFFUSION INTERNET ABC LUXE
-                (newsletter adressée à 38 000 professionnels du secteur du luxe, dont des patrons, des 
-                directeurs marketing et des directeurs de la communication...)
+                <?= $translations['abc_luxe_broadcast_text'] ?>
             </p>
 
             <div class="double-distribution-images">
@@ -38,14 +33,11 @@
             </div>
 
             <p>
-                Ceci avec une livraison à la chaîne télévisuelle, en version française
-                ou anglaise, sur le thème des grandes destinations de rêve dans le monde,
-                dans le cadre du tourisme de luxe avec ses nombreuses activités annexes.
+                <?= $translations['destination_delivery'] ?>
             </p>
 
             <p>
-                Cette série DESTINATIONS DE RÊVE est écrite et réalisée par Joël Daguerre, un cinéaste 
-                habitué à sculpter la lumière et à travailler chaque plan.
+                <?= $translations['dream_destinations'] ?>
             </p>
         </div>
     </section>
@@ -57,67 +49,52 @@
 
         <div class="luxe-tv-content">
             <p>
-                La chaîne télévisuelle LUXE TV programme pour chaque vidéo une multidiffusion de 50 
-                passages : ils sont diffusés dans la semaine suivant la livraison, dont 24 diffusions 
-                le premier jour choisi, puis des diffusions complémentaires le week-end suivant.
+                <?= $translations['luxe_tv_program'] ?>
             </p>
 
             <p>
-                Les programmes sont diffusés en anglais et en français.
+                <?= $translations['program_languages'] ?>
             </p>
 
             <p>
-                Cela représente une audience mondiale estimée à 20,5 millions de foyers abonnés à la chaîne.
+                <?= $translations['worldwide_audience'] ?>
             </p>
 
             <p>
-                À savoir que 303 millions de foyers dans le monde ont accès
-                à la version linéaire de LUXE TV et 97 millions de foyers
-                à la version non linéaire. LUXE TV est également diffusée
-                sur internet via son propre site.
+                <?= $translations['luxe_tv_reach'] ?>
             </p>
         </div>
     </section>
 
     <section class="editorial-reports">
-        <h2>Des reportages</h2>
-
+        <h2><?= $translations['editorial_reports'] ?></h2>
+        
         <p>
-            Les reportages vidéos haut de gamme sont complétés par des
-            contenus éditoriaux (textes et photos) diffusés sur internet via
-            le site ABC Luxe. Le reportage vidéo est également relayé dans la
-            newsletter.
+            <?= $translations['editorial_intro'] ?>
         </p>
 
         <p>
-            Pour chaque programme vidéo et page web, le site internet ABC Luxe
-            compte environ 60 000 lecteurs par mois, ainsi que de 38 000 abonnés
-            à la newsletter hebdomadaire.
+            <?= $translations['editorial_readers'] ?>
         </p>
 
         <p>
-            Les abonnés de la newsletter sont pour la plupart des responsables
-            et décideurs dans le domaine du luxe : PDG, directeurs commerciaux,
-            directeurs marketing, directeurs de la communication...
+            <?= $translations['editorial_subscribers'] ?>
         </p>
 
         <p>
-            Les reportages restent publiés sur le site internet ABC Luxe pendant
-            au moins un an.
+            <?= $translations['editorial_duration'] ?>
         </p>
     </section>
 
     <section class="broadcast-quality">
-        <h2>De la qualité</h2>
+        <h2><?= $translations['broadcast_quality'] ?></h2>
 
         <p>
-            Chaque programme est livré en Full HD (1920 x 1080)
-            ou en 4K, soit le plus haut niveau de définition actuel,
-            conformément aux normes de LUXE TV.
+            <?= $translations['full_hd_delivery'] ?>
         </p>
 
         <p>
-            L'aspect formel, en cohérence avec l'univers du luxe et celui de LUXE TV, est primordial.
+            <?= $translations['luxury_quality'] ?>
         </p>
     </section>
 </div>

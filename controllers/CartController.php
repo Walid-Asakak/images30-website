@@ -3,7 +3,7 @@
 namespace Controllers;
 use Repositories\CartRepository;
 
-class CartController {
+class CartController extends BaseController {
 
     public function showCart() {
         // Check if the user is connected
@@ -25,8 +25,10 @@ class CartController {
             $totalCartPrice += $cartItem['price'] * $cartItem['quantity'];
         }
 
-        $view = 'views/cart/cartView.php';
-        include 'views/layoutView.php';
+        $this->render('views/cart/cartView.php', [
+            'cartItems' => $cartItems,
+            'totalCartPrice' => $totalCartPrice
+        ]);
     }
 
     public function addToCart(): void {

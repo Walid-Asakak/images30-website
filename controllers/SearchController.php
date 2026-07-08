@@ -6,7 +6,7 @@ use Repositories\DocumentaryRepository;
 use Repositories\CinemaRepository;
 use Repositories\EventRepository;
 
-class SearchController {
+class SearchController extends BaseController {
     public function search() {
 
         // Retrieve the searched text
@@ -28,7 +28,14 @@ class SearchController {
         $movies = $cinemaRepo->searchMovies($search);
         $events = $eventRepo->searchEvents($search);
 
-        $view = 'views/search/searchView.php';
-        require 'views/layoutView.php';
+        $this -> render(
+            'views/search/searchView.php',
+            [
+                'search' => $search,
+                'documentaries' => $documentaries,
+                'movies' => $movies,
+                'events' => $events
+            ]
+        );
     }
 }

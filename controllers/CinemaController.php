@@ -5,7 +5,7 @@ namespace Controllers;
 use Repositories\CinemaRepository;
 use Repositories\MovieImageRepository;
 
-class CinemaController {
+class CinemaController extends BaseController {
     // Function to display all the movies in the view Cinema
     public function showAllCinema() {
         $movieRepo = new CinemaRepository();
@@ -39,8 +39,15 @@ class CinemaController {
             }
         }
 
-        $view = 'views/cinema/cinemaView.php';
-        include 'views/layoutView.php';
+        $this -> render(
+            'views/cinema/cinemaView.php',
+            [
+                'movies' => $movies,
+                'moviesInProgress' => $moviesInProgress,
+                'shortMovies' => $shortMovies,
+                'featureFilms' => $featureFilms
+            ]
+        );
     }
 
     public function displayCinemaDetailById() {
@@ -57,7 +64,11 @@ class CinemaController {
     
         $movie['images'] = $imageRepo->getImagesByMovieId($movieId);
     
-        $view = 'views/cinema/cinemaDetailView.php';
-        include 'views/layoutView.php';
+        $this -> render(
+            'views/cinema/cinemaDetailView.php',
+            [
+                'movie' => $movie
+            ]
+        );
     } 
 }
