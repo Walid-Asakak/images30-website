@@ -98,6 +98,13 @@ return [
     a la versión no lineal. LUXE TV también se emite por internet
     a través de su propio sitio web.",
 
+    'france_3_text' => 'Los programas también pueden ser difundidos en France 3, 
+    un canal generalista francés del servicio público, ofreciendo visibilidad ante un amplio 
+    público gracias a su implantación regional y nacional. France 3 reúne cada semana a varios 
+    millones de espectadores y constituye un medio privilegiado para poner en valor las 
+    producciones audiovisuales ante una audiencia diversa. Esta difusión contribuye a aumentar 
+    la notoriedad de los programas y a reforzar su presencia en todo el territorio francés.',
+
     'editorial_reports' => 'Reportajes',
 
     'editorial_intro' => "Los reportajes de vídeo de alta gama se complementan con

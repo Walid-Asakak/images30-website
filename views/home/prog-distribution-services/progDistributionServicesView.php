@@ -66,6 +66,18 @@
         </div>
     </section>
 
+    <section class="france-three-broadcast">
+        <div class="france-three-image">
+            <img src="public/assets/img/home/prog-distribution-services/france-3-logo.png" alt="France 3">
+        </div>
+
+        <div class="france-three-content">
+            <p>
+                <?= $translations['france_3_text'] ?>
+            </p>
+        </div>
+    </section>
+
     <section class="editorial-reports">
         <h2><?= $translations['editorial_reports'] ?></h2>
         

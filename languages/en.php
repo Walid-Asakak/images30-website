@@ -99,6 +99,13 @@ return [
     to the non-linear version. LUXE TV is also available online
     through its own website.",
 
+    'france_3_text' => 'The programs can also be broadcast on France 3, 
+    a French public service general-interest television channel, offering visibility to a wide 
+    audience thanks to its regional and national presence. France 3 reaches several million 
+    viewers every week and represents a privileged platform for showcasing audiovisual 
+    productions to a diverse audience. This broadcasting opportunity helps increase the 
+    recognition of the programs and strengthen their presence throughout French territory.',
+
     'editorial_reports' => 'Reports',
 
     'editorial_intro' => "High-end video reports are complemented by

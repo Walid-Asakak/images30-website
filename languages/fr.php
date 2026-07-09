@@ -98,6 +98,14 @@ return [
     à la version non linéaire. LUXE TV est également diffusée
     sur internet via son propre site.",
 
+    'france_3_text' => 'Les programmes peuvent également être diffusés sur France 3, 
+    chaîne généraliste française du service public, offrant une visibilité auprès d\'un large 
+    public grâce à son implantation régionale et nationale. France 3 rassemble chaque semaine 
+    plusieurs millions de téléspectateurs et constitue un relais privilégié pour mettre en valeur 
+    les productions audiovisuelles auprès d\'une audience variée. Cette diffusion contribue à 
+    accroître la notoriété des programmes et à renforcer leur présence sur l\'ensemble du 
+    territoire français.',
+
     'editorial_reports' => 'Des reportages',
 
     'editorial_intro' => "Les reportages vidéos haut de gamme sont complétés par des

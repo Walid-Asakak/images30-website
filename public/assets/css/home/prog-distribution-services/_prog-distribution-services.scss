@@ -57,29 +57,52 @@
         }
     }
 
-    /********************** LUXE TV ***************************************/
-    .luxe-tv-broadcast {
+    /********************** BROADCAST SECTIONS ****************************/
+    .luxe-tv-broadcast,
+    .france-three-broadcast {
         padding: 4rem 1rem;
         display: flex;
         flex-direction: column;
-        gap: 2rem;
         align-items: center;
+        gap: 2rem;
+
+        .luxe-tv-image,
+        .france-three-image {
+
+            img {
+                width: 100%;
+                height: auto;
+                border-radius: 4px;
+            }
+        }
+
+        .luxe-tv-content,
+        .france-three-content {
+
+            p {
+                margin-bottom: 1.5rem;
+            }
+        }
+    }
+
+    .luxe-tv-broadcast {
 
         .luxe-tv-image {
 
             img {
-                width: 100%;
                 max-width: 700px;
-                height: auto;
-                border-radius: 4px;
                 object-fit: cover;
             }
         }
+    }
 
-        .luxe-tv-content {
+    .france-three-broadcast {
 
-            p {
-                margin-bottom: 1.5rem;
+        .france-three-image {
+
+            img {
+                max-width: 200px;
+                object-fit: contain;
             }
         }
     }
@@ -93,7 +116,6 @@
             margin: 0 auto 1.5rem;
         }
     }
-
 
     /********************** QUALITY SECTION *******************************/
     .broadcast-quality {
@@ -125,18 +147,35 @@
             }
         }
 
-        .luxe-tv-broadcast {
+        .luxe-tv-broadcast,
+        .france-three-broadcast {
             flex-direction: row;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             gap: 3rem;
+        }
 
-            .luxe-tv-image {
+        .luxe-tv-broadcast {
+
+            .luxe-tv-image,
+            .luxe-tv-content {
+                flex: 1;
+            }
+        }
+
+        .france-three-broadcast {
+            flex-direction: row-reverse;
+
+            .france-three-image,
+            .france-three-content {
                 flex: 1;
             }
 
-            .luxe-tv-content {
-                flex: 1;
+            .france-three-image {
+                
+                img {
+                    max-width: 220px;
+                }
             }
         }
     }
@@ -167,9 +206,14 @@
             }
         }
 
-        .luxe-tv-broadcast {
+        .luxe-tv-broadcast,
+        .france-three-broadcast {
             padding: 5rem 2rem;
             gap: 2rem;
+        }
+
+
+        .luxe-tv-broadcast {
 
             .luxe-tv-image {
                 flex: 0 0 420px;
@@ -183,6 +227,25 @@
                 max-width: 650px;
             }
         }
+
+
+        .france-three-broadcast {
+
+            .france-three-image {
+                flex: 0 0 420px;
+                display: flex;
+                justify-content: center;
+
+                img {
+                    max-width: 250px;
+                }
+            }
+
+            .france-three-content {
+                max-width: 650px;
+            }
+        }
+
 
         .editorial-reports,
         .broadcast-quality {
