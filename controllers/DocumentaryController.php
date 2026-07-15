@@ -3,8 +3,6 @@
 namespace Controllers;
 
 use Repositories\DocumentaryRepository;
-use Services\ProtectedSectionService;
-use Repositories\ProtectedSectionRepository;
 
 class DocumentaryController extends BaseController {
 
@@ -46,18 +44,8 @@ class DocumentaryController extends BaseController {
             exit;
         }
 
-        // check if unlocked
-        $isUnlocked = ProtectedSectionService::isDocumentaryUnlocked($documentary);
-
-        // get section key for overlay link
-        $sectionRepo = new ProtectedSectionRepository();
-        $section = $sectionRepo->getProtectedSectionById($documentary['protected_section_id']);
-        $sectionKey = $section['section_key'] ?? '';
-
         $this->render('views/documentaries/detailDocumentaryView.php', [
             'documentary' => $documentary,
-            'isUnlocked' => $isUnlocked,
-            'sectionKey' => $sectionKey
         ]);
     }
 }

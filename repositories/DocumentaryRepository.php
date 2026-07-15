@@ -13,34 +13,18 @@ class DocumentaryRepository {
         $this -> pdo = $db -> getConnexionDb();
     }
 
-    // Method to retrieve all documentaries belonging to a protected section
-    public function getDocumentariesByProtectedSectionId(int $protectedSectionId): array {
-        $stmt = $this->pdo->prepare("
-            SELECT *
-            FROM documentaries
-            WHERE protected_section_id = :protected_section_id
-            ORDER BY display_order ASC
-        ");
-
-        $stmt->execute([
-            ':protected_section_id' => $protectedSectionId
-        ]);
-
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
     // Method to retrieve all documentaries  with their protected section label
     public function getAllDocumentaries(): array {
-        $stmt = $this->pdo->query("
+        $stmt = $this -> pdo ->query("
             SELECT
                 documentaries.*,
-                protected_sections.label as category
+                documentary_categories.label as category
             FROM documentaries
             
-            INNER JOIN protected_sections
-                ON documentaries.protected_section_id = protected_sections.id
+            INNER JOIN documentary_categories
+                ON documentaries.category_id = documentary_categories.id
             ORDER BY
-                protected_sections.id ASC,
+                documentary_categories.id ASC,
                 documentaries.display_order ASC
         ");
 
@@ -48,12 +32,15 @@ class DocumentaryRepository {
     }
     // Method to retrieve a documentary by its id
     public function getDocumentaryById(int $id): array|false {
-        $stmt = $this->pdo->prepare("
-            SELECT *
+        $stmt = $this -> pdo -> prepare("
+            SELECT
+                documentaries.*,
+                documentary_categories.label AS category
             FROM documentaries
-            WHERE id = :id
-            LIMIT 1
-        ");
+            INNER JOIN documentary_categories
+                ON documentaries.category_id = documentary_categories.id
+            WHERE documentaries.id = :id
+    ");
 
         $stmt->execute([
             ':id' => $id

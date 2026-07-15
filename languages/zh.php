@@ -246,18 +246,6 @@ return [
     'no_account' => '没有账号？',
 
 
-    // PROTECTED SECTION (VERIFIER SI CA SERT SINON JE SUPPR)
-    'protected_title' => '受保护访问',
-
-    'protected_description' => '此部分受到保护。请输入密码以继续。',
-
-    'password_placeholder' => '输入密码',
-
-    'access_content' => '访问内容',
-
-    'invalid_credentials' => '凭据无效。',
-
-
     // CHECKOUT PAGE (delivery form)
     'delivery' => '配送',
 

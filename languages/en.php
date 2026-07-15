@@ -262,19 +262,7 @@ return [
 
     'no_account' => "Don't have an account?",
 
-
-    // PROTECTED SECTION (VERIFIER SI CA SERT SINON JE SUPPR)
-    'protected_title' => 'Protected access',
-
-    'protected_description' => 'This section is protected. Please enter the password to continue.',
-
-    'password_placeholder' => 'Enter password',
-
-    'access_content' => 'Access content',
-
-    'invalid_credentials' => 'Invalid credentials.',
-
-
+    
     // CHECKOUT PAGE (delivery form)
     'delivery' => 'Delivery',
 

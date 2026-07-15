@@ -264,18 +264,6 @@ return [
     'no_account' => 'Pas de compte ?',
 
 
-    // PROTECTED SECTION (VERIFIER SI CA SERT SINON JE SUPPRIME)
-    'protected_title' => 'Accès protégé',
-
-    'protected_description' => 'Cette section est protégée. Veuillez entrer le mot de passe pour continuer.',
-
-    'password_placeholder' => 'Entrer le mot de passe',
-
-    'access_content' => 'Accéder au contenu',
-
-    'invalid_credentials' => 'Identifiants incorrects.',
-
-
     // CHECKOUT PAGE (delivery form)
     'delivery' => 'Livraison',
 
