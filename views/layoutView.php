@@ -54,27 +54,27 @@
 
                 <div class="language-menu">
                     <a href="index.php?page=change-language&lang=fr">
-                        <img src="public/assets/img/flags/flag-fr.png" alt="">
+                        <img src="public/assets/img/flags/flag-fr.png" alt="Français">
                         Français
                     </a>
 
                     <a href="index.php?page=change-language&lang=en">
-                        <img src="public/assets/img/flags/flag-en.png" alt="">
+                        <img src="public/assets/img/flags/flag-en.png" alt="English">
                         English
                     </a>
 
                     <a href="index.php?page=change-language&lang=es">
-                        <img src="public/assets/img/flags/flag-spanish.png" alt="">
+                        <img src="public/assets/img/flags/flag-spanish.png" alt="Spanish">
                         Español
                     </a>
 
                     <a href="index.php?page=change-language&lang=zh">
-                        <img src="public/assets/img/flags/flag-china.png" alt="">
+                        <img src="public/assets/img/flags/flag-china.png" alt="中文">
                         中文
                     </a>
 
                     <a href="index.php?page=change-language&lang=it">
-                        <img src="public/assets/img/flags/flag-italiano.png" alt="">
+                        <img src="public/assets/img/flags/flag-italiano.png" alt="Italiano">
                         Italiano
                     </a>
                 </div>

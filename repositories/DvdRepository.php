@@ -14,10 +14,31 @@ class DvdRepository {
         $this -> pdo = $db -> getConnexionDb();
     }
 
+    // Get a DVD with the translated description
     public function findDvd(int $id): ?DvdModel {
-        $request = $this -> pdo -> prepare("SELECT * FROM dvds WHERE id = :id");
+        $request = $this -> pdo -> prepare("
+            SELECT
+                dvd.id,
+                dvd.title,
+                translation.description,
+                dvd.price,
+                dvd.cover_image_url,
+                dvd.stock,
+                dvd.created_at,
+                dvd.updated_at,
+                dvd.movie_id,
+                dvd.category,
+                dvd.is_active
+            FROM dvds AS dvd
+            INNER JOIN dvd_description_translations AS translation
+                ON dvd.id = translation.dvd_id
+            WHERE dvd.id = :id
+            AND translation.language = :language
+        ");
+        
         $request ->execute([
             ':id' => $id,
+            ':language' => $_SESSION['language'] ?? 'fr'
         ]);
         
         $result = $request -> fetch(PDO::FETCH_ASSOC);
@@ -27,7 +48,29 @@ class DvdRepository {
     }
     
     public function findAll(): array {
-        $request = $this->pdo->query("SELECT * FROM dvds");
+        $request = $this -> pdo -> prepare("
+            SELECT
+                dvd.id,
+                dvd.title,
+                translation.description,
+                dvd.price,
+                dvd.cover_image_url,
+                dvd.stock,
+                dvd.created_at,
+                dvd.updated_at,
+                dvd.movie_id,
+                dvd.category,
+                dvd.is_active
+            FROM dvds AS dvd
+            INNER JOIN dvd_description_translations AS translation
+                ON dvd.id = translation.dvd_id
+            WHERE translation.language = :language
+        ");
+        
+        $request->execute([
+            ':language' => $_SESSION['language'] ?? 'fr'
+        ]);
+        
         $results = $request->fetchAll(PDO::FETCH_ASSOC);
         
         // Return an empty array if there are no dvds :
