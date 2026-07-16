@@ -31,22 +31,33 @@ class DocumentaryRepository {
         return $stmt -> fetchAll(PDO::FETCH_ASSOC);
     }
     // Method to retrieve a documentary by its id
-    public function getDocumentaryById(int $id): array|false {
+    public function getDocumentaryById(int $id, string $language = 'fr'): array|false {
         $stmt = $this -> pdo -> prepare("
             SELECT
                 documentaries.*,
-                documentary_categories.label AS category
+                documentary_categories.label AS category,
+                documentary_translations.description AS translated_description
             FROM documentaries
             INNER JOIN documentary_categories
                 ON documentaries.category_id = documentary_categories.id
+            LEFT JOIN documentary_translations
+                ON documentaries.id = documentary_translations.documentary_id
+                AND documentary_translations.language = :language
             WHERE documentaries.id = :id
-    ");
+        ");
 
         $stmt->execute([
-            ':id' => $id
+            ':id' => $id,
+            ':language' => $language,
         ]);
 
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        $documentary = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($documentary && !empty($documentary['translated_description'])) {
+            $documentary['description'] = $documentary['translated_description'];
+        }
+        
+        return $documentary;
     }
 
     public function getHomeDocumentaries(): array {

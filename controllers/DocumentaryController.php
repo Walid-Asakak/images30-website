@@ -37,7 +37,10 @@ class DocumentaryController extends BaseController {
         }
 
         $documentaryRepository = new DocumentaryRepository();
-        $documentary = $documentaryRepository->getDocumentaryById($id);
+
+        $language = $_SESSION['language'] ?? 'fr';
+
+        $documentary = $documentaryRepository->getDocumentaryById($id, $language);
 
         if (!$documentary) {
             header('Location: index.php?page=documentaries');
