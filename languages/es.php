@@ -5,18 +5,18 @@ return [
     'search' => 'Buscar',
     'language' => 'Idioma',
 
-    'login' => 'Iniciar sesión',
-    'logout' => 'Cerrar sesión',
+    'login' => 'INICIAR SESIÓN',
+    'logout' => 'CERRAR SESIÓN',
 
-    'home' => 'Inicio',
-    'cinema' => 'Cine',
-    'communication' => 'Comunicación',
-    'distribution' => 'Distribución',
-    'team' => 'Equipo',
-    'events' => 'Eventos',
-    'buy_dvd' => 'Comprar el DVD',
+    'home' => 'INICIO',
+    'cinema' => 'CINE',
+    'communication' => 'COMUNICATIÓN',
+    'distribution' => 'DISTRIBUCIÓN',
+    'team' => 'EQUIPO',
+    'events' => 'EVENTOS',
+    'buy_dvd' => 'COMPRAR EL DVD',
 
-    'navigation' => 'Navegación',
+    'navigation' => 'NAVEGACIÓN',
     'contact' => 'Contacto',
 
     'email' => 'Correo electrónico',
