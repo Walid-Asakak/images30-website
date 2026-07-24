@@ -51,9 +51,11 @@
     <section class="services">
 
         <article class="services-card">
-            <i class="fa-solid fa-video"></i>
-            <h3><?= $translations['formulas_services'] ?></h3>
-
+            <div class="services-title">
+                <i class="fa-solid fa-video"></i>
+                <h3><?= $translations['formulas_services'] ?></h3>
+            </div>
+            
             <p>
                 <?= $translations['formulas_description'] ?>
             </p>
@@ -62,8 +64,10 @@
         </article>
 
         <article class="services-card">
-            <i class="fab fa-servicestack"></i>
-            <h3><?= $translations['additional_services'] ?></h3>
+            <div class="services-title">
+                <i class="fab fa-servicestack"></i>
+                <h3><?= $translations['additional_services'] ?></h3>
+            </div>
 
             <p>
                 <?= $translations['additional_description'] ?>
@@ -73,8 +77,10 @@
         </article>
 
         <article class="services-card">
-            <i class="fas fa-film"></i>
-            <h3><?= $translations['distribution_programs'] ?></h3>
+            <div class="services-title">
+                <i class="fas fa-film"></i>
+                <h3><?= $translations['distribution_programs'] ?></h3>
+            </div>
 
             <p>
                 <?= $translations['distribution_description'] ?>

@@ -168,8 +168,21 @@
                 transform: translateY(-5px);
             }
 
-            h3 {
+            .services-title {
+                display: flex;
+                align-items: center;
+                gap: .8rem;
                 margin-bottom: 1rem;
+            
+                i {
+                    font-size: 35px;
+                    color: #4f5bd5;
+                    flex-shrink: 0;
+                }
+            
+                h3 {
+                    margin: 0;
+                }
             }
 
             p {
