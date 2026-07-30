@@ -109,8 +109,8 @@
 .website-header .header-right .search-bar .search-menu {
   position: absolute;
   top: 65px;
-  right: 0;
-  width: 400px;
+  right: -85px;
+  width: calc(100vw - 1rem);
   background: white;
   opacity: 0;
   pointer-events: none;
