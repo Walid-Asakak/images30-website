@@ -123,7 +123,7 @@
 
     <div class="footer-container">
 
-        <div class="footer-column">
+        <div class="footer-column footer-logo-column">
             <div class="footer-logo">
                 <a href="index.php?page=home">
                     <img src="public/assets/img/logo.png" alt="Logo Studio Cinéma Joël Daguerre">
