@@ -280,6 +280,14 @@
 @media (min-width: 768px) {
 
     .website-header {
+        .header-right {
+            .search-bar {
+                .search-menu {
+                    width: 550px;
+                    right: 0;
+                }
+            }
+        }
 
         .header-top {
             padding: 0 1rem;
